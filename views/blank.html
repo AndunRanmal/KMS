@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Responsive Admin</title>
+  <!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+     <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.js"></script>
+   <script type="text/javascript" src="assets/js/script.js"></script> 
+</head>
+<body>
+     
+           
+          
+    <div id="wrapper">
+         <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="adjust-nav">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                   <!--      <img src="assets/img/logo.png" />
+ -->
+                    </a>
+                    
+                </div>
+           
+                <span class="logout-spn" >
+                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a>  
+
+                </span>
+            </div>
+        </div>
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                 
+
+
+                    <li>
+                        <a href="index.html" ><i class="fa fa-desktop "></i>Dashboard <!-- <span class="badge">Included</span> --></a>
+                        <!-- <img src="assets/img/man.jpeg" height="200px" width="250px" style="padding-bottom: 15px;
+    padding-left: 15px;"> -->
+                    </li>
+                   
+
+                    <li>
+                        <a href="ui.html"><i class="fa fa-table "></i> Notifications </a>
+                    </li>
+                    <li>
+                        <a href="blank.html"><i class="fa fa-edit "></i>Purchase Requisition</a>
+                    </li>
+
+
+                    <li>
+                        <a href="#"><i class="fa fa-edit "></i>Purchase Order</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i>Stock Handling</a>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-edit "></i>Bin Card </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-qrcode "></i>Profile settings</a>
+                    </li>
+                     
+                    
+                </ul>
+                            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                      <!-- <h3>Purchase requsition</h3> --> 
+                      
+                      <form style="float: right;">
+                        <div class="form-group">
+                        <input type="text" name="search" class="form-control" placeholder="Search a Purchase requsition" size="30">
+                        <!-- <input type="submit" name="submit" class="fa fa-search"> -->
+                        <button class="btn btn-info"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div> 
+                      </form>
+                      <button class="btn btn-primary" autofocus onclick="location.href='pr.html'">Add New</button>
+                    </div>
+                </div><br/>
+                <!-- <div class="btn-group">
+                  <button class=" btn btn-info" onclick="openTab(event,'Active')">Active</button>
+                  <button class="btn btn-info" onclick="openTab(event,'All')">All</button>
+                  <button class="btn btn-info" onclick="openTab(event,'Complete')">Completed</button>
+                  <button class="btn btn-info" onclick="openTab(event,'Add')">Add New</button>
+                  
+                </div> -->              
+                 <!-- /. ROW  -->
+                <hr />
+                
+                <div class="col-md-12">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#home" data-toggle="tab">Active</a>
+                            </li>
+                            <li class=""><a href="#profile" data-toggle="tab">Completed</a>
+                            </li>
+                            <li class=""><a href="#messages" data-toggle="tab">New</a>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade active in" id="home">
+                                <!-- <h4>Active</h4> --><br>
+                                <p>
+                                    Active Purchase Requisitions are displayed here whichneed to be approved by manager 
+                                </p>
+                                <div>
+                                  <table class="table" id="active">
+                                      <thead>
+                                        <tr>
+                                          <td><input type="checkbox" name="id" ></td>
+                                          <td></td>
+                                          <td>Requisition #</td>
+                                          <td>Status</td>
+                                          <td>Created</td>
+                                          <td>Last Updated</td>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr class="tablerow" data-href="fffd.html">
+                                          <td><input type="checkbox" name="id" ></td>
+                                          <td><i class="fa fa-file-word-o" aria-hidden="true"></i></td>
+                                          <td><a href="pr_report.html">PR_0001</a></td>
+                                          <td><a href=""> Active</a></td>
+                                          <td><a href="">23/04/2017</a></td>
+                                          <td><a href="">23/04/2017</a></td> 
+                                        </tr>
+                                        <tr class="tablerow" data-href="fffd.html">
+                                          <td><input type="checkbox" name="id" ></td>
+                                          <td><i class="fa fa-file-word-o" aria-hidden="true"></i></td>
+                                          <td><a href="">PR_0002</a></td>
+                                          <td><a href="">Active</a></td>
+                                          <td><a href="">23/04/2017</a></td>
+                                          <td><a href="">23/04/2017</a></td> 
+                                        </tr>
+                                        <tr class="tablerow" data-href="fffd.html">
+                                          <td><input type="checkbox" name="id" ></td>
+                                          <td><i class="fa fa-file-word-o" aria-hidden="true"></i></td>
+                                          <td><a href="">PR_0003</a></td>
+                                          <td><a href="">Active</a></td>
+                                          <td><a href="">23/04/2017</a></td>
+                                          <td><a href="">23/04/2017</a></td> 
+                                        </tr>
+                                        <tr class="tablerow" data-href="fffd.html">
+                                          <td><input type="checkbox" name="id" ></td>
+                                          <td><i class="fa fa-file-word-o" aria-hidden="true"></i></td>
+                                          <td><a href="">PR_0004</a></td>
+                                          <td><a href=""> Active</a></td>
+                                          <td><a href="">23/04/2017</a></td>
+                                          <td><a href="">23/04/2017</a></td> 
+                                        </tr>
+                                        <tr class="tablerow" data-href="fffd.html">
+                                          <td><input type="checkbox" name="id" ></td>
+                                          <td><i class="fa fa-file-word-o" aria-hidden="true"></i></td>
+                                          <td><a href="">PR_0005</a></td>
+                                          <td><a href=""> Active</a></td>
+                                          <td><a href="">23/04/2017</a></td>
+                                          <td><a href="">23/04/2017</a></td> 
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                                  </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile">
+                                <!-- <h4>Profile Tab</h4> --><br>
+                                <p>
+                                    Purchase Requisitions that are approved by manager are displayed here. 
+                                </p>  
+                                <div>
+                                  <table class="table" id="active">
+                                      <thead>
+                                        <tr>
+                                          <td><input type="checkbox" name="id" ></td>
+                                          <td></td>
+                                          <td>Requisition #</td>
+                                          <td>Status</td>
+                                          <td>Created</td>
+                                          <td>Last Updated</td>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr class="tablerow" data-href="fffd.html">
+                                          <td><input type="checkbox" name="id" ></td>
+                                          <td><i class="fa fa-file-word-o" aria-hidden="true"></i></td>
+                                          <td><a href="pr_report.html">PR_0001</a></td>
+                                          <td><a href=""> Completed</a></td>
+                                          <td><a href="">23/04/2017</a></td>
+                                          <td><a href="">23/04/2017</a></td> 
+                                        </tr>
+                                        <tr class="tablerow" data-href="fffd.html">
+                                          <td><input type="checkbox" name="id" ></td>
+                                          <td><i class="fa fa-file-word-o" aria-hidden="true"></i></td>
+                                          <td><a href="">PR_0002</a></td>
+                                          <td><a href="">Completed</a></td>
+                                          <td><a href="">23/04/2017</a></td>
+                                          <td><a href="">23/04/2017</a></td> 
+                                        </tr>
+                                        <tr class="tablerow" data-href="fffd.html">
+                                          <td><input type="checkbox" name="id" ></td>
+                                          <td><i class="fa fa-file-word-o" aria-hidden="true"></i></td>
+                                          <td><a href="">PR_0003</a></td>
+                                          <td><a href="">Completed</a></td>
+                                          <td><a href="">23/04/2017</a></td>
+                                          <td><a href="">23/04/2017</a></td> 
+                                        </tr>
+                                        <tr class="tablerow" data-href="fffd.html">
+                                          <td><input type="checkbox" name="id" ></td>
+                                          <td><i class="fa fa-file-word-o" aria-hidden="true"></i></td>
+                                          <td><a href="">PR_0004</a></td>
+                                          <td><a href=""> Completed</a></td>
+                                          <td><a href="">23/04/2017</a></td>
+                                          <td><a href="">23/04/2017</a></td> 
+                                        </tr>
+                                        <tr class="tablerow" data-href="fffd.html">
+                                          <td><input type="checkbox" name="id" ></td>
+                                          <td><i class="fa fa-file-word-o" aria-hidden="true"></i></td>
+                                          <td><a href="">PR_0005</a></td>
+                                          <td><a href=""> Completed</a></td>
+                                          <td><a href="">23/04/2017</a></td>
+                                          <td><a href="">23/04/2017</a></td> 
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                                  </div>
+                            </div>
+                            <div class="tab-pane fade" id="messages">
+                                <!-- <h4>Messages Tab</h4> --><br>
+                                <p>
+                                    To make a new Purchase Requisition
+                                    <input type="button" value="Add" class="btn btn-info" onClick="addRow('tableid')" /> 
+                                </p>
+                                <div>
+                                  <form style="text-align: center;" action="../php/pr.php"  method="post">
+                                     <table class="table table-striped">
+                                       <thead>
+                                        <tr>
+                                          <td>Item Code</td>
+                                          <td>Description</td>
+                                          <td>Requested Date</td>
+                                          <td>Quantity</td>
+                                          <td>Unit Price</td>
+                                          <td>Vendor</td>
+                                          <td>Remarks</td>
+                                        </tr>   
+                                       </thead>
+                                       </table>
+                                       <table class="table table-striped" id="tableid">
+                                       <tbody>
+                                         <!-- <tr id="dataTable">
+                                           <td><label>Item_Code</label><input type="text" name="Item_code[]" class="form-control"></td>
+                                           <td><label>Description</label><input type="text" name="Description[]" class="form-control"></td>
+                                           <td><label>Requested Date</label><input type="Date" name="Req_date[]" class="form-control"></td>
+                                           <td><label>Quantity</label><input type="number" name="Quantity[]" min="1" class="form-control"></td>
+                                           <td><label>Unit Price</label><input type="number" name="Unit[]" step="0.01" min="0.01" class="form-control"></td>
+                                           <td><label>Vendor</label><select class="form-control" name="Vendor[]">
+                                             <option>Vendor1</option>
+                                             <option>Vendor2</option>
+                                             <option>Vendor3</option>
+                                             <option>Vendor4</option>
+                                           </select></td>
+                                           <td><label>Remarks</label><input type="text" name="Remarks[]" class="form-control"></td>
+                                         </tr> -->
+                                         <tr>
+                                           <td><input type="text" name="Item_code[]" class="form-control"></td>
+                                           <td><input type="text" name="Description[]" class="form-control"></td>
+                                           <td><input type="Date" name="Req_date[]" class="form-control"></td>
+                                           <td><input type="number" name="Quantity[]" min="1" class="form-control"></td>
+                                           <td><input type="number" name="Unit[]" step="0.01" min="0.01" class="form-control"></td>
+                                           <td><select class="form-control" name="Vendor[]">
+                                             <option>Vendor1</option>
+                                             <option>Vendor2</option>
+                                             <option>Vendor3</option>
+                                             <option>Vendor4</option>
+                                           </select></td>
+                                           <td><input type="text" name="Remarks[]" class="form-control"></td>
+                                         </tr>
+                                         <tr>
+                                           <td><input type="text" name="Item_code[]" class="form-control"></td>
+                                           <td><input type="text" name="Description[]" class="form-control"></td>
+                                           <td><input type="Date" name="Req_date[]" class="form-control"></td>
+                                           <td><input type="number" name="Quantity[]" min="1" class="form-control"></td>
+                                           <td><input type="number" name="Unit[]" step="0.01" min="0.01" class="form-control"></td>
+                                           <td><select class="form-control" name="Vendor[]">
+                                             <option>Vendor1</option>
+                                             <option>Vendor2</option>
+                                             <option>Vendor3</option>
+                                             <option>Vendor4</option>
+                                           </select></td>
+                                           <td><input type="text" name="Remarks[]" class="form-control"></td>
+                                         </tr>
+                                       </tbody>
+                                      </table>
+                                      <input type="submit" name="submit" value="Forward"> 
+                                     </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                <script type="text/javascript">
+                  // function openTab(Active){
+                  //   document.getElementById(active).style.display="block";
+                  //   document.getElementById(all).style.display="none";
+                  //   }
+                  // }
+                  
+                  $('.tablerow').click(function(){
+                    window.location = 'pr_report.html';
+                  });
+     </script>
+                </script>
+              
+                 <!-- /. ROW  -->           
+        </div>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+        </div>
+    <div class="footer">
+      
+    
+             <div class="row">
+                <div class="col-lg-12" >
+                   <!--  &copy;  2014 yourdomain.com | Design by: <a href="http://binarytheme.com" style="color:#fff;"  target="_blank">www.binarytheme.com</a> -->
+                </div>
+        </div>
+        </div>
+          
+
+     <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+    
+   
+</body>
+</html>
