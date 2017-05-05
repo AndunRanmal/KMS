@@ -1,44 +1,45 @@
 <?php
 
-// include("../config/config.php");
-
-// if(isset($_POST["submit"])){
-	// $code = $_POST["Item_code"];
-	// $des = $_POST["Description"];
-	// $req_date = $_POST["Req_date"];
-	// $quantity = $_POST["Quantity"];
-	// $unit = $_POST["Unit"];
-	// $vendor = $_POST["Vendor"];
-	// $remarks = $_POST["Remarks"];
+ include("../config/config.php");
 
 
-	// $sql = "insert into `department_requisition` (`Item_code`,`Description`,`Unit_price`,`Quantity`,`Date_wanted`,`Vendor_Id`,`Date`) values ('$code','$des',$req_date,$quantity,$unit,'$vendor','$remarks')";
-	// if(mysqli_query($conn,$sql)){
-// 		echo "<script>
-// 			alert('New Topic added successfully');
-// 			window.location.href=../views/blank.html;
-// 			</script>";
-// 	}else{
-// 		echo "<script>
-// 			alert('Something went wrong');
-// 			</script>";
-// 	}
-// }
 
 if(isset($_POST["submit"])){
-	foreach ($_POST['submit'] as $key => $value) {
-		$code = $_POST["Item_code[]"][$key];
-		$des = $_POST["Description[]"][$key];
-		$req_date = $_POST["Req_date[]"][$key];
-		$quantity = $_POST["Quantity[]"][$key];
-		$unit = $_POST["Unit[]"][$key];
-		$vendor = $_POST["Vendor[]"][$key];
-		$remarks = $_POST["Remarks[]"][$key];
 
-		$sql = "insert into `department_requisition` (`Item_code`,`Description`,`Unit_price`,`Quantity`,`Date_wanted`,`Vendor_Id`,`Date`) values ('$code','$des',$req_date,$quantity,$unit,'$vendor','$remarks')";
-		if(mysqli_query($conn,$sql));
+	$id = $_POST["Requisition_id"];
 
+	$sql1 = "INSERT INTO `requisition_overview` (`Id`,`Issued_date`) VALUES ('$id',NOW())";
+	mysqli_query($conn,$sql1);
+
+	foreach ($_POST['Item_code'] as $key => $value) {
+		$code = $_POST["Item_code"][$key];
+		$des = $_POST["Description"][$key];
+		$req_date = $_POST["Req_date"][$key];
+		$quantity = $_POST["Quantity"][$key];
+		$unit = $_POST["Unit"][$key];
+		$vendor = $_POST["Vendor"][$key];
+		$remarks = $_POST["Remarks"][$key];
+
+
+		$sql = "INSERT INTO `department_requisition` (`Item_code`,`Description`,`Unit_price`,`Quantity`,`Date_wanted`,`Vendor_Id`,`Date`,`Remarks`,`Requisition_id`) VALUES ('$code','$des',$unit,$quantity,'$req_date','$vendor',NOW(),'$remarks','$id')";
+		if(mysqli_query($conn,$sql)){
+			echo "<script>
+			alert('Purchase requisition successfully forwarded to Manager')
+			window.location('../views/blank.php');
+			</script>";
+		}else{
+			echo "<script>
+			alert('Something went wrong');
+			</script>";
+			
+		}
+
+
+		
 	}
+		
 }
+
+	 
 
 ?>
