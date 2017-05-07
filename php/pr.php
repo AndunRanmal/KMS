@@ -40,6 +40,20 @@ if(isset($_POST["submit"])){
 		
 }
 
+if(isset($_POST["save"])){
+
+	$id = $_POST['pr_code'];
+
+	foreach ($_POST['Item_code'] as $key => $value) {
+		$code = $_POST["Item_code"][$key];
+		$des = $_POST["Description"][$key];
+		$req_date = $_POST["Req_date"][$key];
+		$quantity = $_POST["Quantity"][$key];
+		$unit = $_POST["Unit"][$key];
+		$vendor = $_POST["Vendor"][$key];
+		$remarks = $_POST["Remarks"][$key];
+}
+
 	 
 
 ?>
