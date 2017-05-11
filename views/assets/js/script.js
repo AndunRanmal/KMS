@@ -20,7 +20,7 @@ function addRow(tableID) {
 			newcell.innerHTML = table.rows[0].cells[i].innerHTML;
 		}
 	}else{
-		 alert("Maximum Passenger per ticket is 10.");
+		 alert("Maximum items per purchase requisition is 10.");
 			   
 	}
 }
