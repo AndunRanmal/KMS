@@ -10,9 +10,8 @@ include("../include/stock_keeper.php");
     
     $n++;
   }
-  echo $n; 
 
-  ?>
+?>
   
 
 
@@ -22,6 +21,10 @@ include("../include/stock_keeper.php");
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
+                    <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blank.php">PR</a></li>
+                    </ol>
                       <!-- <h3>Purchase requsition</h3> --> 
                       
                       <form style="float: right;">
@@ -31,13 +34,13 @@ include("../include/stock_keeper.php");
                         <button class="btn btn-info"><i class="fa fa-search" aria-hidden="true"></i></button>
                         </div> 
                       </form>
-                      <button class="btn btn-primary" autofocus onclick="location.href='pr.html'">Add New</button>
+                      <!-- <button class="btn btn-primary" autofocus onclick="location.href='pr.html'">Add New</button> -->
                     </div>
                 </div><br/>       
                  <!-- /. ROW  -->
                 <hr />
                 
-                <div class="col-md-12">
+                <div>
                         <ul class="nav nav-tabs">
                         	<li class="active"><a href="#messages" data-toggle="tab">New</a>
                             </li>
@@ -178,7 +181,7 @@ include("../include/stock_keeper.php");
                                       </thead>
                                       <tbody>
                                         <?php
-                                            $sql2 = "SELECT * FROM `requisition_overview` WHERE `Status`=0 ";
+                                            $sql2 = "SELECT * FROM `requisition_overview` WHERE `Status`=0 ORDER BY `Issued_date` ";
                                             $res = mysqli_query($conn,$sql2);
                                             while ($row = mysqli_fetch_assoc($res)) {
                                               $id = $row['Id'];

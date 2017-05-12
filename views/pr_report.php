@@ -12,9 +12,14 @@ include("../include/stock_keeper.php");
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
+                      <ol class="breadcrumb">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="blank.php">PR</a></li>
+                      <li><a href="blank.php">PR Report</a></li>
+                      </ol>
                      <h3 style="text-align: center;font-weight: bold;">Purchase Requisition Report </h3>
-                     <button class="btn btn-primary fa fa-download" style="float: right;padding-bottom: 12px;">Download</button>
-                     <button class="btn btn-primary  fa fa-print" style="float: right; padding-right: 29px;padding-left: 29px;padding-bottom: 12px;margin-right: 5px;">Print</button>
+                     <!-- <button class="btn btn-primary fa fa-download" style="float: right;padding-bottom: 12px;">Download</button>
+                     <button class="btn btn-primary  fa fa-print" style="float: right; padding-right: 29px;padding-left: 29px;padding-bottom: 12px;margin-right: 5px;">Print</button> -->
                      <button class="btn btn-primary  fa fa-print" style="float: right; padding-right: 29px;padding-left: 29px;padding-bottom: 12px;margin-right: 5px;" onclick="location.href='pdf.php?ref=<?php echo $_GET["ref"] ?>'">Preview</button>
                     </div>
 
@@ -29,9 +34,9 @@ include("../include/stock_keeper.php");
                                      <table class="table table-striped" id="tableid">
                                        <thead>
                                         <tr>
-                                          <td>Item Code</td>
-                                          <td>Description</td>
-                                          <td>Requested Date</td>
+                                          <td>Item Name</td>
+                                          <!-- <td>Description</td> -->
+                                          <td>Delivery Date</td>
                                           <td>Quantity</td>
                                           <td>Unit</td>
                                           <td>Unit Price</td>
@@ -49,32 +54,36 @@ include("../include/stock_keeper.php");
 
                                         while($row = mysqli_fetch_assoc($res)){
                                           $code = $row['Item_code'];
-                                          $des = $row['Description'];
+                                          // $des = $row['Description'];
                                           $date = $row['Date_wanted'];
                                           $quantity = $row['Quantity'];
                                           $unit = $row['Unit'];
                                           $unit_price =$row['Unit_price'];
                                           $vendor = $row['Vendor_Id'];
                                           $remarks = $row['Remarks']; 
+                                          // echo $unit;
+                                          echo $vendor;
                                        ?>
                                          <tr>
-                                           <td><input type="text" name="Item_code" class="form-control" value="<?php echo $code ?>"></td>
-                                           <td><input type="text" name="Description" class="form-control" value="<?php echo $des ?>"></td>
-                                           <td><input type="Date" name="Req_date" class="form-control" value="<?php echo $date ?>"></td>
-                                           <td><input type="number" name="Quantity" min="1" class="form-control" value="<?php echo $quantity ?>"></td>
-                                           <td><select class="form-control" value="<?php echo $unit ?>">
-                                             <option>kg</option>
-                                             <option>L</option>
-                                             <option>pcs</option>
+                                           <td><input type="text" name="Item_code[]" class="form-control" value="<?php echo $code ?>"></td>
+                                           <!-- <td><input type="text" name="Description" class="form-control" value="<?php echo $des ?>"></td> -->
+                                           <td><input type="Date" name="Req_date[]" class="form-control" value="<?php echo $date ?>"></td>
+                                           <td><input type="number" name="Quantity[]" min="1" class="form-control" value="<?php echo $quantity ?>"></td>
+                                           <td><select class="form-control" name="Unit[]" value="<?php echo $unit ?>">
+                                               <option><?php echo $unit ?></option>
+                                               <option>kg</option>
+                                               <option>L</option>
+                                               <option>pcs</option>
                                            </select></td>
-                                           <td><input type="number" name="Unit" step="0.01" min="0.01" class="form-control" value="<?php echo $unit_price ?>"></td>
-                                           <td><select class="form-control" value="<?php echo $vendor ?>">
+                                           <td><input type="number" name="Unit_price[]" step="0.01" min="0.01" class="form-control" value="<?php echo $unit_price ?>"></td>
+                                           <td><select class="form-control" name="Vendor[]" value="<?php echo $vendor ?>">
+                                             <option><?php echo $vendor ?></option>
                                              <option>Vendor1</option>
                                              <option>Vendor2</option>
                                              <option>Vendor3</option>
                                              <option>Vendor4</option>
                                            </select></td>
-                                           <td><input type="text" name="Remarks" class="form-control" value="<?php echo $remarks ?>"></td>
+                                           <td><input type="text" name="Remarks[]" class="form-control" value="<?php echo $remarks ?>"></td>
                                          </tr>
                                          <?php 
                                    }

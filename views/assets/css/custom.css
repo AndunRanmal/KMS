@@ -201,4 +201,11 @@ table, td, th,{
 }
 
 
+@media print
+{
+body * { visibility: hidden; }
+#content * { visibility: visible; }
+/*.div2 { position: absolute; top: 40px; left: 30px; }*/
+}
+
 
