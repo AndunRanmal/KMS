@@ -207,5 +207,13 @@ body * { visibility: hidden; }
 #content * { visibility: visible; }
 /*.div2 { position: absolute; top: 40px; left: 30px; }*/
 }
+.dropdown-menu {
+    background-color: #fff
+}
 
+.dropdown-menu>li>a:focus,.dropdown-menu>li>a:hover,.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:focus,.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:focus,.navbar-inverse .navbar-nav>.open>a:hover,.navbar-inverse .navbar-nav>li>a:focus,.navbar-inverse .navbar-nav>li>a:hover
+    {
+    background-color: #91c448;
+    color: #fff
+}
 
