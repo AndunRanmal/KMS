@@ -9,6 +9,7 @@
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+    <script src="assets/js/autofill.js"></script>
 </head>
 <body>
 <?php
@@ -65,88 +66,20 @@ include("../include/stock_keeper.php");
                                 	To make a new Purchase Requisition 
                                 </p>
                                 <div>
-                                	<!-- <form class="inline">
-                                		<div class="form-group">
-	                                		<label for="Vendor">Vendor:</label>
-	                                		<input type="text" id="Vendor" list="vendor" name="Vendor" class="form-control" size="30" style="width: 300px;">
-	                                		<datalist id="vendor">
-	                                			<option>Vendor 1</option>
-	                                			<option>Vendor 2</option>
-	                                			<option>Vendor 3</option>
-	                                			<option>Vendor 4</option>
-	                                		</datalist>
-                                		</div>
-                                	</form> -->
+                                	
                                 	<form class="form-horizontal">
 									  	<div class="form-group" >
 									    	<label for="vendor" class="control-label col-sm-2">Vendor: </label>
-									    	<input type="text" class="form-control" id="vendor" name="Vendor[]" list="Vendor" size="30" style="width: 250px;">
-									    	<!-- <datalist id="Vendor">
-	                                			<option>Vendor 1</option>
-	                                			<option>Vendor 2</option>
-	                                			<option>Vendor 3</option>
-	                                			<option>Vendor 4</option>
-	                                		</datalist> -->
+									    	<input type="text" class="form-control" id="vendor" name="Vendor" list="Vendor" size="30" style="width: 250px;">
+									    	
 
 									  	</div>
 									  	<div class="form-group">
 									    	<label for="address" class="control-label col-sm-2">Address: </label>
 									    	<textarea class="form-control" rows="4" id="address" style="width: 250px;"></textarea>
 									  	</div>
-									  	<div class="form-group">
-									    	<label for="date" class="control-label col-sm-2">Due Date: </label>
-									    	<input type="Date" name="due_date" class="form-control" style="width: 250px;"">
-									  	</div>
-									  	<table class="table table-striped">
-                                        <thead>
-                                        <tr>
-                                          <td style="text-align: center;">Item Name</td>
-                                          <!-- <td>Description</td> -->
-                                          <!-- <td>Requested Date</td> -->
-                                          <td style="text-align: center;">Quantity</td>
-                                          <td style="text-align: center;">Unit</td>
-                                          <td style="text-align: center;">Unit Price</td>
-                                          <td style="text-align: center;">Total</td>
-                                          <!-- <td>Vendor</td>
-                                          <td>Remarks</td -->
-                                        </tr>   
-                                       </thead>
-                                       <tbody>
-                                         <tr>
-                                           <td> 
-                                            <input list="ingridents" type="text" name="Item_code[]" id="ingrident" class="form-control">
-                                            <datalist id="ingridents">
-                                              <option>Dhal</option>
-                                              <option>Cheese</option>
-                                              <option>Chicken</option>
-                                              <option>Pork</option> 
-                                                                                      
-                                            </datalist>
-                                            
-                                           
-                                           </td>
-                                           <!-- <td><input type="text" name="Description[]" class="form-control"></td> -->
-                                           <!-- <td><input type="Date" name="Req_date[]" class="form-control"></td> -->
-                                           <td><input type="number" name="Quantity[]" min="1" class="form-control" id="Quantity"></td>
-                                           <td>
-	                                            <select class="form-control" name="Unit[]" id="Unit">
-	                                           		<option>kg</option>
-	                                           		<option>L</option>
-	                                           		<option>pcs</option>
-	                                            </select>
-	                                        </td>
-                                           <td><input type="number" name="Unit_price[]" step="0.01" min="0.01" class="form-control" id="Price"></td>
-                                           <td><input type="number" name="Total[]" step="0.01" min="0.01" class="form-control" id="Total"></td>
-                                           <!-- <td><select class="form-control" name="Vendor[]">
-                                             <option>Vendor1</option>
-                                             <option>Vendor2</option>
-                                             <option>Vendor3</option>
-                                             <option>Vendor4</option>
-                                           </select></td>
-                                           <td><input type="text" name="Remarks[]" class="form-control"></td> -->
-                                         </tr>
-                                         </tbody>
-                                         </table>
+									  	<div id="result">
+                      </div>
 									  	
 										</form>
 
@@ -178,7 +111,7 @@ include("../include/stock_keeper.php");
                         </div>
                     </div>
 
-                <script type="text/javascript">
+               <!--  <script type="text/javascript">
                   // function openTab(Active){
                   //   document.getElementById(active).style.display="block";
                   //   document.getElementById(all).style.display="none";
@@ -189,7 +122,7 @@ include("../include/stock_keeper.php");
                     window.location = 'pr_report.html';
                   });
      </script>
-                </script>
+                </script> -->
               
                  <!-- /. ROW  -->           
         </div>
@@ -206,7 +139,8 @@ include("../include/stock_keeper.php");
                 </div>
         </div>
         </div>
-          
+
+         
 
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
