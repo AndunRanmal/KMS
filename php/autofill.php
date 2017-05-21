@@ -9,11 +9,20 @@ if($_POST['type']=='vendor_table'){
 	$data = array();
 	while($row = mysqli_fetch_assoc($res)){
 		$item = $row['Vendor_Id'];
-		// $item = $row['Vendor_Id'].'|'. $row['Item_code']. '|'. $row['Unit_price']. '|'. $row['Quantity']. '|'. $row['Unit'];
 		array_push($data,$item);
 	}
 	echo json_encode($data);
 }
+// if($_POST['type']=='vendor_table'){
+// 	$vendor = $_POST['vendor'];
+
+// 	$sql2 = "SELECT * FROM `vendor` WHERE `Name`='$vendor'";
+// 	$res = mysqli_query($conn, $sql2);
+// 	while($row = mysqli_fetch_assoc($res)){
+// 		$address = $row["Address"];
+// 	}
+// }
+
 $output = '';
 if($_POST['type']=='vendor'){
 	$vendor = $_POST['vendor'];
@@ -52,24 +61,12 @@ if($_POST['type']=='vendor'){
 							<td style="text-align: center;">'.$row['Unit_price'] * $row['Quantity'].'</td>
 							<td style="text-align: center;">'.$row['Date_wanted'].'</td>
 						</tr>';
-
-		// echo $item;
-		// array_push($data,$item);
 	}
 		$output .='</table>
                     </div>
-                    <button class="btn btn-info">Proceed to Order</button>';
+                    <a href="../views/PO_report.php?ref='.$vendor.'" class="btn btn-info">Procees to Complete</a>';
 		echo $output;
 	}
-	// while($row = mysqli_fetch_assoc($result) ){
-	// 	$item = $row['Vendor_Id'].'|'. $row['Item_code']. '|'. $row['Unit_price']. '|'. $row['Quantity']. '|'. $row['Unit'];
-	// 	$rowNo+=1;
-
-	// 	// echo $item;
-	// 	array_push($data,$item);
-	// }
-	// echo json_encode($data);
-	// echo $rowNo;
 }
 
 ?>
