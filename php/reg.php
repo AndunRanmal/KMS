@@ -1,9 +1,7 @@
-<?php require 'connection.php';?>
-<?php
+<?php 
+
+include("../config/config.php");
 $error="";
-if ($con->connect_error) {
-    die("Connection failed: " . $con->connect_error);
-} 
 if(isset($_POST['user'])){
 	session_start();
     
@@ -34,7 +32,7 @@ if(isset($_POST['user'])){
     $Address=$_POST['Address'];
     $Contact=$_POST['ContactNumber'];
     $Email=$_POST['EMail'];
-    $sql=$con->query("INSERT INTO employees(fname,lname,gender,birthday,designation,address,contact,email,image)
+    $sql=$conn->query("INSERT INTO employees(fname,lname,gender,birthday,designation,address,contact,email,image)
 	Values('{$FName}','{$LName}','{$Gender}','{$Birthday}','{$Designation}', '{$Address}','{$Contact}','{$Email}', 'assets/img/".$file_name."' )");
 	
 	echo "$sql";

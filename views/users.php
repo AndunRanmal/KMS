@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
-    <!-- BOOTSTRAP STYLES-->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FONTAWESOME STYLES-->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
-    <!-- CUSTOM STYLES-->
-    <link href="assets/css/custom.css" rel="stylesheet" />
-
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>-->
-    <!-- GOOGLE FONTS-->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+<?php
+    include("../include/nav.php");
+    include("../include/cashier.php");
+?>
 
 
 
@@ -96,96 +83,10 @@
     
    
    </script>  
-    
-    <style>
 
-
-
-</style>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</head>
 
 <body>
-
-    <div id="wrapper">
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="adjust-nav">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">
-                        <!--<img src="assets/img/logo.png" /> -->
-                    </a>
-                </div>
-
-                <span class="logout-spn">
-                  <a href="#" style="color:#fff;">LOGOUT</a>  
-
-                </span>
-            </div>
-        </div>
-
-        <!--side bar -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-
-
-
-                    <li>
-                        <a href="main.html"><i class="fa fa-desktop "></i>Dashboard </a>
-                    </li>
-
-
-
-                    <li>
-                        <a href="orders.html"><i class="fa fa-edit "></i>New Orders  </a>
-                    </li>
-
-
-
-
-
-                    <li>
-                        <a href="users.html"><i class="fa fa-edit "></i>User Profile </a>
-                    </li>
-
-                    <li>
-                        <a href="ui.html"><i class="fa fa-edit "></i>Notifications </a>
-                    </li>
-
-
-                    <li>
-                        <a href="menu.html"><i class="fa fa-edit "></i>View Menus  </a>
-                    </li>
-
-
-
-
-                </ul>
-            </div>
-
-        </nav>
+        
         <div id="page-wrapper">
             <div id="page-inner">
                 <div class="row">
@@ -197,7 +98,7 @@
                 <div class="col-md-6">  
             
             
-                    <form class="form-inline" action="reg.php" name="myForm"  method="POST" enctype="multipart/form-data" onsubmit="return(validate());">
+                    <form class="form-inline" action="../php/reg.php" name="myForm"  method="POST" enctype="multipart/form-data" onsubmit="return(validate());">
 						<fieldset id="profilepic_controls">
 
                         <input type="file" name="Photo" id="camerainput1" accept="image/png ,image/jpeg,image/jpg"  size="2mb" capture>
@@ -250,7 +151,7 @@
                         <tr>
                             <td allign="right"> <b>Designation :</b> </td>
                             </br>
-                            <td> <select id="Designation" name="Designation"> 
+                            <td> <select id="Designation" name="Designation" class="form-control"> 
                <option value="Manager">Manager</option>
                <option value="Chef">Chef</option>
                <option value="Stock-Keeper">Stock-Keeeper</option>
