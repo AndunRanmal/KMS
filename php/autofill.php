@@ -52,6 +52,7 @@ if($_POST['type']=='vendor'){
                             </thead>
                         ';
         while($row = mysqli_fetch_assoc($result) ){
+        	$pr = $row["Requisition_id"];
 			$output .= '
 						<tr>
 							<td style="text-align: center;">'.$row['Item_code'].'</td>
@@ -64,7 +65,7 @@ if($_POST['type']=='vendor'){
 	}
 		$output .='</table>
                     </div>
-                    <a href="../views/PO_report.php?ref='.$vendor.'" class="btn btn-info">Procees to Complete</a>';
+                    <a href="../php/po_accept.php?ref='.$vendor.'&id='.$pr.'" class="btn btn-info">Procees to Complete</a>';
 		echo $output;
 	}
 }

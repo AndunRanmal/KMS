@@ -91,7 +91,21 @@ include("../include/stock_keeper.php");
                                     Purchase Requisitions that are approved by manager are displayed here. 
                                 </p>  
                                 <div>
-                                  
+                                  <table class="table" id="active">
+                                      <thead>
+                                        <tr>
+                                          <!-- <td><input type="checkbox" name="id" ></td> -->
+                                          <td></td>
+                                          <td>Requisition #</td>
+                                          <td>Status</td>
+                                          <td>Created</td>
+                                          <td>Last Updated</td>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                      
+                                      </tbody>
+                                  </table>
                                   </div>
                             </div>
                             <div class="tab-pane fade" id="messages">

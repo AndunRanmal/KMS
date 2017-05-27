@@ -54,7 +54,10 @@
 						$date = $row["Date_wanted"];
 						$count += 1;
                         $sum += $quantity * $unit_price ;
-				?>	
+                        // $sql ="INSERT INTO `purchase_order` (`Item_code`,`Quantity`,`Unit`,`Unit_price`,`Date_wanted`,`Vendor_Id`)VALUES('$item',$quantity,'$unit',$unit_price,'$date','$vendor')";
+                        // // echo $sql;
+                        // mysqli_query($conn,$sql);
+				?>		
 						<tr>
 							<td style="text-align: center;"><?php echo $item; ?></td>
 							<td style="text-align: center;"><?php echo "$quantity" ,"$unit"; ?></td>

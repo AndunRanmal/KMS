@@ -27,10 +27,10 @@ include("../include/stock_keeper.php");
                     </ol>
                       <!-- <h3>Purchase requsition</h3> --> 
                       
-                      <form style="float: left;">
+                      <form style="float: left;" method="POST">
                         <div class="form-group">
                         <input type="text" name="search" class="form-control" placeholder="Search a Purchase Order" size="30">
-                        <!-- <input type="submit" name="submit" class=" btn btn-info fa fa-search" value="SEARCH"> -->
+                        <input type="submit" name="submit" class=" btn btn-info fa fa-search" value="SEARCH">
                         <!-- <button class="btn btn-info"><i class="fa fa-search" aria-hidden="true"></i></button> -->
                         </div> 
                       </form>
