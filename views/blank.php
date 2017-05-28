@@ -59,7 +59,7 @@ include("../include/stock_keeper.php");
                                 <div>
                                   <form style="text-align: center;" action="../php/pr.php"  method="post">
                                     <!-- <label class="form-control">Requiition Id</label> -->
-                                    <input type="text" name="Requisition_id" value="<?php echo 'PR_'.+$n ?>" class="form-control" style="width: 100px;">
+                                    <input type="hidden" name="Requisition_id" value="<?php echo 'PR_'.+$n ?>" class="form-control" style="width: 100px;">
                                      <table class="table table-striped">
                                        <thead>
                                         <tr>

@@ -28,7 +28,7 @@ if(isset($_POST["submit"])){
 		 
 	}
 
-	$sql2 = "SELECT `Date` AS label, `Stock_in_hand` AS y FROM `store_requisition` WHERE `Item_Name` LIKE '%$val%'";
+	$sql2 = "SELECT `Date` AS label, `Quantity_Issued` AS y FROM `store_requisition` WHERE `Item_Name` LIKE '%$val%' LIMIT 10";
 	$result = mysqli_query($conn, $sql2);
 	$var = array();
 	while($row = mysqli_fetch_assoc($result)){
@@ -50,9 +50,10 @@ if(isset($_POST["submit"])){
 		    <div id="content" class="col-md-12">
 
 		        <div id="chartContainer1" style="width: 500px; height: 300px;display: inline-block;"></div> 
-<div id="chartContainer2" style="width: 500px; height: 300px;display: inline-block;"></div><br/>
+<div id="chartContainer2" style="width: 500px; height: 300px;display: inline-block;padding-left: 120px;"></div><br/>
 		            <script type="text/javascript">
 		            var chart1 = new CanvasJS.Chart("chartContainer1",{
+		            	
 						    title :{
 						        text: "Stock In Hand"
 						    },

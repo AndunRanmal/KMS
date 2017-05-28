@@ -15,19 +15,19 @@
                         <a href="ui.html"><i class="fa fa-table "></i> Notifications </a>
                     </li>
                     <li>
-                        <a href="blank.html"><i class="fa fa-edit "></i>Purchase Requisition</a>
+                        <a href="../views/blank.php"><i class="fa fa-edit "></i>Purchase Requisition</a>
                     </li>
 
 
                     <li>
-                        <a href="#"><i class="fa fa-edit "></i>Purchase Order</a>
+                        <a href="../views/po.php"><i class="fa fa-edit "></i>Purchase Order</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o"></i>Stock Handling</a>
+                        <a href="../views/stock_handling.php"><i class="fa fa-bar-chart-o"></i>Stock Handling</a>
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-edit "></i>Bin Card </a>
+                        <a href="../views/bin.php"><i class="fa fa-edit "></i>Bin Card </a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-qrcode "></i>Profile settings</a>
