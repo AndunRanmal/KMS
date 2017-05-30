@@ -7,30 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Responsive Admin</title>
     <!-- BOOTSTRAP STYLES-->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../views/assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="../views/assets/css/font-awesome.css" rel="stylesheet" />
     <!-- CUSTOM STYLES-->
-    <link href="assets/css/custom.css" rel="stylesheet" />
+    <link href="../views/assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="../views/assets/js/jquery-1.10.2.js"></script>
       <!-- BOOTSTRAP SCRIPTS -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="../views/assets/js/bootstrap.min.js"></script>
       <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
+    <script src="../views/assets/js/custom.js"></script>
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
 
-
-   <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>-->
-
-   <!-- <script>
-        $(document).ready(function() {
-            $("#datepicker").datepicker();
-        });
-    </script> -->
     
      <script type="text/javascript">
         <!--
@@ -125,65 +115,14 @@
 
 <body>
 
+<?php
+include("../include/nav.php");
+include("../include/cashier.php");
 
+?>
 
-    <div id="wrapper">
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="adjust-nav">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">
-                       <!-- <img src="assets/img/logo.png" /> -->
-                    </a>
-                </div>
-
-                <span class="logout-spn">
-                  <a  class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a>  
-
-                </span>
-            </div>
-        </div>
-        <!-- /. NAV TOP  -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-
-
-                    <li>
-                        <a href="main.html"><i class="fa fa-desktop "></i>Dashboard </a>
-                    </li>
-
-
-
-                    <li class="active-link">
-                        <a href="orders.html"> <i class="fa fa-edit "></i>New Orders </a>
-                    </li>
-
-
-
-
-
-                    <li>
-                        <a href="users.html"><i class="fa fa-edit "></i>User Profile </a>
-                    </li>
-
-                    <li>
-                        <a href="#"><i class="fa fa-edit "></i>Notifications </a>
-                    </li>
-
-                    <li>
-                        <a href="menu.html"><i class="fa fa-edit "></i>   View Menus   </a>
-                    </li>
-
-                </ul>
-            </div>
-
-        </nav>
-        <!-- /. NAV SIDE  -->
+    
+        
         <div id="page-wrapper">
             <div id="page-inner">
                 <div class="row">
@@ -339,7 +278,7 @@
     $('#Menu_Type').change(function(){
             $.ajax({
                 method: "POST",
-                url: "http://localhost/kitchen/select_item.php",
+                url: "http://localhost/KMS/KMS/new-nimantha/select_item.php",
                 data:{
                     type:"menu",
                     menu:$(this).val()
@@ -353,7 +292,7 @@
     $('#quantity').change(function(){
             $.ajax({
                 method: "POST",
-                url: "http://localhost/kitchen/get_total.php",
+                url: "http://localhost/KMS/KMS/new-nimantha/get_total.php",
                 data:{
                     type:"menu",
                     no_of:$(this).val(),
@@ -372,11 +311,11 @@
     <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="../views/assets/js/jquery-1.10.2.js"></script>
     <!-- BOOTSTRAP SCRIPTS -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="../views/assets/js/bootstrap.min.js"></script>
     <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
+    <script src="../views/assets/js/custom.js"></script>
 
 
 </body>

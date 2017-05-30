@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Responsive Admin</title>
 	<!-- BOOTSTRAP STYLES-->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../views/assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="../views/assets/css/font-awesome.css" rel="stylesheet" />
         <!-- CUSTOM STYLES-->
-    <link href="assets/css/custom.css" rel="stylesheet" />
+    <link href="../views/assets/css/custom.css" rel="stylesheet" />
     
    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>-->
      <!-- GOOGLE FONTS-->
@@ -24,65 +24,11 @@
    
    <body>
        
-       <div id ="wrapper">
-       <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="adjust-nav">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">
-                       <!-- <img src="assets/img/logo.png" />-->
-                    </a>
-                </div>
-                 
-                 <span class="logout-spn" >
-                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a>  
+<?php
+include("../include/nav.php");
+include("../include/cashier.php");
+?>
 
-                </span>
-             </div>
-        </div>
-       
-         <!--side bar -->  
-           <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-                 
-
-
-                     <li> 
-                        <a href="main.html" ><i class="fa fa-desktop "></i>Dashboard </a>
-                    </li>
-                   
-
-
-                    <li>
-                        <a href="orders.html"><i class="fa fa-edit "></i>New Orders  </a>
-                    </li>
-
-
-
-                    
-
-                    <li>
-                        <a href="users.html"><i class="fa fa-edit "></i>User Profile </a>
-                    </li>
-                   
-                     <li>
-                        <a href="ui.html"><i class="fa fa-edit "></i>Notifications </a>
-                    </li>
-                    
-                    <li>
-                        <a href="menu.html"><i class="fa fa-edit "></i>View Menus </a>
-                    </li>
-                    
-                    
-                </ul>
-                            </div>
-
-        </nav>
        <div id="page-wrapper" >
          <div id="page-inner">
                <div class="row">
@@ -96,7 +42,7 @@
         
         
         <?php
-		include(  'kms/config/config.php');
+		include('../config/config.php');
 		
 	?>
        <!-- <p  align="left"> <font size="4">  <b> Sandwiches: </b></font> </p> <a href="menu2.php?id=<?php echo $Menu_Id ?> " > 
@@ -139,78 +85,7 @@
            </tbody>  
        
        
-       <!--
-            <p>
-        <p  align="left"> <font size="4">  <b> Beverages: </b></font> </p> <a href=""   > 
-    <img border="3" alt="W3Schools" src="assets/img/beve.jpg" width="300" height="200">
-    </a>
-           </p> </br>
        
-        <p>
-        <p  align="left"> <font size="4">  <b>Salads: </b></font> </p> <a href=""   > 
-    <img border="3" alt="W3Schools" src="assets/img/salad.jpg" width="300" height="200">
-    </a>
-     </p>
-       
-       
-       
-       
-       
-       
-       </div>     
-           
-<div class="col-md-4"> 
-    <p>
-        <p  align="left"> <font size="4">  <b> Desserts: </b></font> </p> <a href=""   > 
-    <img border="3" alt="W3Schools" src="assets/img/dessert.jpg" width="300" height="200">
-    </a>
-    </p> </br>
-
-  <p>
-        <p  align="left"> <font size="4">  <b> Spicy Bites: </b></font> </p> <a href=""   > 
-    <img border="3" alt="W3Schools" src="assets/img/spicy.jpg" width="300" height="200">
-    </a>
-</p> </br>
-  <p>
-        <p  align="left"> <font size="4">  <b> Sea Foods: </b></font> </p> <a href=""   > 
-    <img border="3" alt="W3Schools" src="assets/img/sea.jpg" width="300" height="200">
-    </a>
-     </p>
-
-
-
-
-
-
-
-
-</div> 
- 
- <div class="col-md-4">
-
-    <p>
-        <p  align="left"> <font size="4">  <b> Light Meals: </b></font> </p> <a href=""   > 
-    <img border="3" alt="W3Schools" src="assets/img/light.jpg" width="300" height="200">
-    </a>
-     </p>  </br>
-
-     <p >
-        <p  align="left"><font size="4"> <b> Appertizers : </b> </font> </p> <a href=""   > 
-    <img border="3" alt="W3Schools" src="assets/img/app.jpeg" width="300" height="200">
-    </a>
-    </p> </br>
-
-
-
-     <p>
-    <p  align="left"> <font size="4"> <b> Soup: </b> </font> </p> <a href=""   > 
-    <img border="3" alt="W3Schools" src="assets/img/soup.jpg" width="300" height="200">
-    </a>
-    </p>           
-           
-</div> -->
-             
-           
 
 </div>
 </div>
@@ -224,10 +99,10 @@
                 </div> 
         </div>
         </div>
-<script src="assets/js/jquery-1.10.2.js"></script>
+<script src="../views/assets/js/jquery-1.10.2.js"></script>
       <!-- BOOTSTRAP SCRIPTS -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="../views/assets/js/bootstrap.min.js"></script>
       <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
+    <script src="../views/assets/js/custom.js"></script>
    </body>
 </html>

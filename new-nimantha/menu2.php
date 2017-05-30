@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Responsive Admin</title>
 	<!-- BOOTSTRAP STYLES-->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../views/assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="../views/assets/css/font-awesome.css" rel="stylesheet" />
         <!-- CUSTOM STYLES-->
-    <link href="assets/css/custom.css" rel="stylesheet" />
+    <link href="../views/assets/css/custom.css" rel="stylesheet" />
     
    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>-->
      <!-- GOOGLE FONTS-->
@@ -23,68 +23,13 @@
    </head>
    
    <body>
-       
-       <div id ="wrapper">
-       <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="adjust-nav">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">
-                       <!-- <img src="assets/img/logo.png" />-->
-                    </a>
-                </div>
-                 
-                 <span class="logout-spn" >
-                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a>  
-
-                </span>
-             </div>
-        </div>
-       
-         <!--side bar -->  
-           <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-                 
-
-
-                     <li> 
-                        <a href="main.html" ><i class="fa fa-desktop "></i>Dashboard </a>
-                    </li>
-                   
-
-
-                    <li>
-                        <a href="orders.html"><i class="fa fa-edit "></i>New Orders  </a>
-                    </li>
-
-
-
-                    
-
-                    <li>
-                        <a href="users.html"><i class="fa fa-edit "></i>User Profile </a>
-                    </li>
-                   
-                     <li>
-                        <a href="ui.html"><i class="fa fa-edit "></i>Notifications </a>
-                    </li>
-                    
-                    <li>
-                        <a href="menu.html"><i class="fa fa-edit "></i>View Menus </a>
-                    </li>
-                    
-                    
-                </ul>
-                            </div>
-
-        </nav>
+<?php
+include("../include/nav.php");
+include("../include/cashier.php");
+?>    
+      
     <?php
-           include("kms/config/config.php");
+           include("../config/config.php");
            $id = $_GET["id"];
            echo $id;
            $sql2 = "SELECT `Image` FROM `menus` WHERE `Menu_Id` = $id";
@@ -136,7 +81,9 @@
 </div> 
  
  
-             
+ </div>
+ 
+
            
 
 </div>
