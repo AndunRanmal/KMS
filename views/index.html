@@ -36,9 +36,16 @@
                 </div>
            
                 <span class="logout-spn" >
-                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a>  
+                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a> 
+
 
                 </span>
+                <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;"></span> <span class="glyphicon glyphicon-envelope" style="font-size:18px;"></span></a>
+       <ul class="dropdown-menu"></ul>
+      </li>
+     </ul>
             </div>
         </div>
         <!-- /. NAV TOP  -->
@@ -198,6 +205,63 @@
     <script src="assets/js/bootstrap.min.js"></script>
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
+
+<script>
+$(document).ready(function(){
+ 
+ function load_unseen_notification(view = '')
+ {
+  $.ajax({
+   url:"http://localhost/kms/kms/php/fetxh.php",
+   method:"POST",
+   data:{view:view},
+   dataType:"json",
+   success:function(data)
+   {
+    $('.dropdown-menu').html(data.notification);
+    if(data.unseen_notification > 0)
+    {
+     $('.count').html(data.unseen_notification);
+    }
+   }
+  });
+ }
+ 
+ load_unseen_notification();
+ 
+ // $('#comment_form').on('submit', function(event){
+ //  event.preventDefault();
+ //  if($('#subject').val() != '' && $('#comment').val() != '')
+ //  {
+ //   var form_data = $(this).serialize();
+ //   $.ajax({
+ //    url:"insert.php",
+ //    method:"POST",
+ //    data:form_data,
+ //    success:function(data)
+ //    {
+ //     $('#comment_form')[0].reset();
+ //     load_unseen_notification();
+ //    }
+ //   });
+ //  }
+ //  else
+ //  {
+ //   alert("Both Fields are Required");
+ //  }
+ // });
+ 
+ $(document).on('click', '.dropdown-toggle', function(){
+  $('.count').html('');
+  load_unseen_notification('yes');
+ });
+ 
+ setInterval(function(){ 
+  load_unseen_notification();; 
+ }, 5000);
+ 
+});
+</script>
     
    
 </body>
