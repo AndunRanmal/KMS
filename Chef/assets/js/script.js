@@ -1,4 +1,4 @@
-3
+
 
 function addRow(tableID) {
 	var table = document.getElementById(tableID);
