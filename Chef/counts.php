@@ -12,7 +12,7 @@ include("../include/chef.php");
                 </div>              
                  <!-- /. ROW  -->
                   <hr />
-				  <?php include './datetime.php';?>
+				  <!-- <?php include './datetime.php';?> -->
 				  <div class="row">
 				  <form action="calculate.php"  method= "post">
               <div class="col-lg-1 col-md-1">

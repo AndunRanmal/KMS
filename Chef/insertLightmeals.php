@@ -1,81 +1,7 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-      <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
-	<!-- BOOTSTRAP STYLES-->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-     <!-- FONTAWESOME STYLES-->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
-        <!-- CUSTOM STYLES-->
-    <link href="assets/css/custom.css" rel="stylesheet" />
-     <!-- GOOGLE FONTS-->
-   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />-->
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-   
-   
-</head>
-<body>
-     
-           
-          
-    <div id="wrapper">
-         <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="adjust-nav">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    
-                </div>
-              
-                 <span class="logout-spn" >
-                  <a href="#" style="color:#fff;">LOGOUT</a>  
-
-                </span>
-            </div>
-        </div>
-        <!-- /. NAV TOP  -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-                 
-
- <li >
-                       <li class="active-link">
-                       
-                    </li>
-
-                    <li>
-                        <a href=""><i class="fa fa-table "></i> Notifications  <span class="badge"></span></a>
-                    </li>
-                    <li>
-                        <a href="menumanage.html"><i class="fa fa-edit "></i>Manage Menus  <span class="badge"></span></a>
-                    </li>
-
-
-                    <li>
-                        <a href="recipes.html"><i class="fa fa-qrcode "></i>Manage recipes</a>
-                    </li>
-                    <li>
-                        <a href="request.html"><i class="fa fa-bar-chart-o"></i>Store Requestion</a>
-                    </li>
-
-                    <li>
-                        <a href="counts.php"><i class="fa fa-edit "></i>Calculate Ingredients </a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-table "></i>View remaining amounts</a>
-                    </li>
-                </ul>
-                            </div>
-
-        </nav>
+<?php
+include("../include/nav.php");
+include("../include/chef.php");
+?>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
@@ -210,15 +136,10 @@
             </div>
          <!-- /. PAGE WRAPPER  -->
         </div>
-    <div class="footer">
-      
-    
-             <div class="row">
-                <div class="col-lg-12" >
-                    &copy;  2014 yourdomain.com | Design by: <a href="http://binarytheme.com" style="color:#fff;"  target="_blank">www.binarytheme.com</a>
-                </div>
-        </div>
-        </div>
+
+<?php
+include("../include/footer.php");
+?>
           
 
      <!-- /. WRAPPER  -->
