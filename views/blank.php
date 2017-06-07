@@ -116,10 +116,23 @@ include("../include/stock_keeper.php");
 	                                        </td>
                                            <td><input type="number" name="Unit_price[]" step="0.01" min="0.01" class="form-control"></td>
                                            <td><select class="form-control" name="Vendor[]">
-                                             <option>Vendor1</option>
+                                           <option>Select Vandor</option>
+                                           <?php
+                                           $sql3 = "SELECT `Name` FROM `vendor`";
+                                           $result = mysqli_query($conn,$sql3);
+                                           while($row=mysqli_fetch_assoc($result)){
+                                            $name = $row["Name"];
+                                            // echo $name;
+                                           ?>
+
+                                           <option value="<?php echo $name; ?>"><?php echo $name ?></option>
+                                           <?php
+                                           } 
+                                           ?>
+                                             <!-- <option>Vendor1</option>
                                              <option>Vendor2</option>
                                              <option>Vendor3</option>
-                                             <option>Vendor4</option>
+                                             <option>Vendor4</option> -->
                                            </select></td>
                                            <td><input type="text" name="Remarks[]" class="form-control"></td>
                                          </tr>
@@ -149,10 +162,24 @@ include("../include/stock_keeper.php");
                                            </select></td>
                                            <td><input type="number" name="Unit_price[]" step="0.01" min="0.01" class="form-control"></td>
                                            <td><select class="form-control" name="Vendor[]">
-                                             <option>Vendor1</option>
+                                             <option>Select Vandor</option>
+                                           <?php
+                                           $sql3 = "SELECT `Name` FROM `vendor`";
+                                           $result = mysqli_query($conn,$sql3);
+                                           while($row=mysqli_fetch_assoc($result)){
+                                            $name = $row["Name"];
+                                            // echo $name;
+                                           ?>
+
+                                           <option value="<?php echo $name; ?>"><?php echo $name ?></option>
+                                           <?php
+                                           } 
+                                           ?>
+                                             <!-- <option>Vendor1</option>
                                              <option>Vendor2</option>
                                              <option>Vendor3</option>
-                                             <option>Vendor4</option>
+                                             <option>Vendor4</option> -->
+                                           </select></td>
                                            </select></td>
                                            <td><input type="text" name="Remarks[]" class="form-control"></td>
                                          </tr>

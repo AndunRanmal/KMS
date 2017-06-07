@@ -8,7 +8,7 @@ if(isset($_POST["view"]))
   $update_query = "UPDATE `department_requisition` SET `Notification`=1 WHERE `Notification`=0";
   mysqli_query($conn, $update_query);
  }
- $query = "SELECT * FROM `department_requisition` ORDER BY `Dep_req_Id` DESC LIMIT 5";
+ $query = "SELECT * FROM `requisition_overview` ORDER BY `Dep_req_Id` DESC LIMIT 5";
  $result = mysqli_query($conn, $query);
  $output = '';
  

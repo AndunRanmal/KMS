@@ -17,7 +17,7 @@ if($_POST["type"]=='menu'){
         
 ?>
 
-<option value=""> Select the item</option>
+
 	<option value="<?php echo $name; ?>"><?php echo $name; ?></option>
 <?php
 	}
