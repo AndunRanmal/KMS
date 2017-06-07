@@ -12,7 +12,7 @@ if(isset($_POST["cat_search"])){
 	$cat = $_POST["category"];
 	
 
-	$sql = "SELECT `Item_Name` AS label, `Quantity` AS y FROM `items` WHERE `Category`='$cat'";
+	$sql = "SELECT `Item_Name` AS label, `Quantity` AS y FROM `stock` WHERE `Category`='$cat'";
 	
 	$res = mysqli_query($conn, $sql);
 	$item = array();

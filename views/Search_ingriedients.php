@@ -10,7 +10,7 @@ include("../config/config.php");
 if(isset($_POST["submit"])){
 	$val = $_POST["search"];
 
-	$sql1 = "SELECT `Item_Name` AS label , `Quantity` AS y FROM `items` WHERE `Item_Name` LIKE '%$val%'";
+	$sql1 = "SELECT `Item_Name` AS label , `Quantity` AS y FROM `stock` WHERE `Item_Name` LIKE '%$val%'";
 	$res = mysqli_query($conn,$sql1);
 	$items = array();
 	while($row = mysqli_fetch_assoc($res)){
@@ -35,7 +35,7 @@ if(isset($_POST["submit"])){
 		array_push($var, $row);
 	}
 
-	$sql3 = "SELECT * FROM `items`, `vendor` WHERE items.Item_Name = 'Carrot'  AND items.Vendor_Id=vendor.Vendor_Id";
+	$sql3 = "SELECT * FROM `stock`, `vendor` WHERE stock.Item_Name = 'Carrot'  AND stock.Vendor_Id=vendor.Vendor_Id";
 	$result2 = mysqli_query($conn,$sql3);
 	while($row = mysqli_fetch_assoc($result2)){
 		$vendor = $row["Name"];

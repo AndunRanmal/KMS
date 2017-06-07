@@ -1,7 +1,6 @@
 <head>
 	<script src="assets/js/script.js"></script>
-</head>
-<head>
+
 	<script src="assets/js/canvasjs.min.js"></script>
 	<script src="assets/js/jquery-1.10.2.js"></script>
 </head>
@@ -10,7 +9,7 @@ include("../config/config.php");
 include("../include/nav.php");
 include("../include/stock_keeper.php");
 
-	$sql1 = "SELECT `Item_Name` AS label , `Quantity` AS y FROM `items`";
+	$sql1 = "SELECT `Item_Name` AS label , `Quantity` AS y FROM `stock`";
 	$res = mysqli_query($conn,$sql1);
 	$items = array();
 	while($row = mysqli_fetch_assoc($res)){
@@ -45,11 +44,11 @@ include("../include/stock_keeper.php");
                 	    <input list="items" type="text" name="search" class="form-control" placeholder="Search an Ingredient" size="30">
                 	    <datalist id="items">
                 	    	<?php 
-                                $sql = "SELECT * FROM `items`";
+                                $sql = "SELECT * FROM `stock`";
                                 $res = mysqli_query($conn,$sql);
                                 while($row = mysqli_fetch_assoc($res)){
                                     $item = $row['Item_Name'];
-                                    echo $item;
+                                    // echo $item;
                                     ?>
                                     <option><?php echo $item; ?></option>
                             <?php    
@@ -112,16 +111,16 @@ include("../include/stock_keeper.php");
                                             <input list="ingridents" type="text" name="Item_name[]" class="form-control" style="width: 250px;">
                                             <datalist id="ingridents">
                                             <?php 
-                                              $sql = "SELECT * FROM `ingriedents`";
-                                              $res = mysqli_query($conn,$sql);
-                                              while($row = mysqli_fetch_assoc($res)){
-                                                $item = $row['Ingriedents_Name'];
-                                                echo $item;
-                                            ?>
-                                            <option><?php echo $item; ?></option>
+                                                $sql = "SELECT * FROM `stock`";
+                                                $res = mysqli_query($conn,$sql);
+                                                while($row = mysqli_fetch_assoc($res)){
+                                                    $item = $row['Item_Name'];
+                                                    // echo $item;
+                                                    ?>
+                                                    <option><?php echo $item; ?></option>
                                             <?php    
-                                              }
-                                            ?>             
+                                                }
+                                            ?>         
                                             </datalist>
                                            </td>
                                            <td><input type="number" name="Quantity[]" min="1" class="form-control" style="width: 250px;"></td>
@@ -172,3 +171,5 @@ include("../include/stock_keeper.php");
         </div>
     </div>
 </div>
+</body>
+</html>

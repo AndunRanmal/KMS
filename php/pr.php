@@ -26,8 +26,8 @@ if(isset($_POST["submit"])){
 		echo $sql;
 		if(mysqli_query($conn,$sql)){
 			echo "<script>
-			
-			window.location('../views/blank.php');
+			alert('Successfully Purchase Order Added');
+			window.location=('../views/blank.php');
 			</script>";
 		}else{
 			echo "<script>

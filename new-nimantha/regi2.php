@@ -1,9 +1,7 @@
-<?php require 'connection.php';?>
+
 <?php
-$error="";
-if ($con->connect_error) {
-    die("Connection failed: " . $con->connect_error);
-} 
+include("../config/config.php");
+
 if(isset($_POST["submit"])){
 	
 	$Onumber=$_POST['OrderNumber'];
@@ -14,13 +12,16 @@ if(isset($_POST["submit"])){
     $Date=$_POST['Date'];
     $Time=$_POST['Time'];
     $Customercount=$_POST['Customers'];
-    $Price=$_POST['total']
+    $Price=$_POST['total'];
    
     $sql=("INSERT INTO `new_orders`(Order_number,Meal_type,Type_of_menu,Type_of_item,Quantity,Date,Time,Customers_count, price )
 	Values('{$Onumber}','{$Mtype}','{$Tomenu}','{$Toitem}',{$Quantity}, '{$Date}','{$Time}','{$Customercount}','{$Price}')");
-	mysqli_query($con,$sql);
+	mysqli_query($conn,$sql);
 	echo "$sql";
-		
+	echo "<script>
+			alert('Successfully New Order Added');
+			window.location=('../new-nimantha/orders.php');
+		</script>";	
 		
 
 } 

@@ -5,13 +5,13 @@
 
 
                     <li>
-                        <a href="main.html"><i class="fa fa-desktop "></i>Dashboard </a>
+                        <a href="main.php"><i class="fa fa-desktop "></i>Dashboard </a>
                     </li>
 
 
 
                     <li>
-                        <a href="orders.html"><i class="fa fa-edit "></i>New Orders  </a>
+                        <a href="orders.php"><i class="fa fa-edit "></i>New Orders  </a>
                     </li>
 
 

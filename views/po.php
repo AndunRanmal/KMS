@@ -37,16 +37,34 @@ include("../include/stock_keeper.php");
                         </div> 
                       </form>
                       <button class="btn btn-info" onclick="location.href='pr.html'"><i class="fa fa-search" aria-hidden="true"></i></button>
+                      <br/>
                     </div>
-                </div><br/>
-                <!-- <div class="btn-group">
-                  <button class=" btn btn-info" onclick="openTab(event,'Active')">Active</button>
-                  <button class="btn btn-info" onclick="openTab(event,'All')">All</button>
-                  <button class="btn btn-info" onclick="openTab(event,'Complete')">Completed</button>
-                  <button class="btn btn-info" onclick="openTab(event,'Add')">Add New</button>
-                  
-                </div> -->              
+                </div>
                  <!-- /. ROW  -->
+                <br/>
+                <div class="col-md-12">
+                <h4>Pending Purchase Orders: </h4>
+                <?php
+                include("../config/config.php");
+                $sql = "SELECT DISTINCT `Vendor_Id` FROM `department_requisition` WHERE `PO_Id`=0 ";
+                $res= mysqli_query($conn,$sql);
+                if(mysqli_num_rows($res)==0){
+                  echo "<p>No pending Purchase Orders!</p>";
+                }else{
+                while($row = mysqli_fetch_assoc($res)){
+                  $name = $row["Vendor_Id"];
+                  echo $name;
+                ?>
+
+                <?php
+                }
+                }
+                ?>
+                  
+                </div><br>
+
+                             
+
                 <hr />
                 
                 <div class="col-md-12">
@@ -63,7 +81,7 @@ include("../include/stock_keeper.php");
                             <div class="tab-pane fade active in" id="home">
                                 <!-- <h4>Active</h4> --><br>
                                 <p>
-                                	To make a new Purchase Requisition 
+                                	Procced to a new Purchase Order 
                                 </p>
                                 <div>
                                 	
@@ -88,7 +106,7 @@ include("../include/stock_keeper.php");
                             <div class="tab-pane fade" id="profile">
                                 <!-- <h4>Profile Tab</h4> --><br>
                                 <p>
-                                    Purchase Requisitions that are approved by manager are displayed here. 
+                                    <!-- Purchase Requisitions that are approved by manager are displayed here. --> 
                                 </p>  
                                 <div>
                                   <table class="table" id="active">
@@ -110,9 +128,9 @@ include("../include/stock_keeper.php");
                             </div>
                             <div class="tab-pane fade" id="messages">
                                 <!-- <h4>Messages Tab</h4> --><br>
-                                <p>
+                                <!-- <p>
                                     Active Purchase Requisitions are displayed here whichneed to be approved by manager
-                                </p>
+                                </p> -->
                                 <div>
                                   <!-- <form style="text-align: center;" action="../php/pr.php"  method="post">
                                      

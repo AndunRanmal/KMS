@@ -1,3 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Responsive Admin</title>
+  <!-- BOOTSTRAP STYLES-->
+    <link href="../views/assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="../views/assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <link href="../views/assets/css/custom.css" rel="stylesheet" />
+    
+   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>-->
+     <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+  
+    
+   
+   
+      
+     
+   </head>
+   
+   <body>
 <?php
 include("../include/nav.php");
 include("../include/chef.php");
