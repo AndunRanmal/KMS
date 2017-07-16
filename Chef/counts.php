@@ -39,25 +39,27 @@ include("../include/chef.php");
                   <hr />
 				   <?php include './datetime.php';?> 
 				  <div class="row">
-				  <form action="calculate.php"  method= "post">
+				  <form action="menulist.php"  method= "post">
               <div class="col-lg-1 col-md-1">
 			  </div>
 			  <div class="col-lg-3 col-md-3">
 			  
 			  <div class="form-group">
                             <label>Date</label><br><br>
-							<label>Enter Number of Customers</label><br>
+							<label>Enter Number of Customers</label><br><br>
+                            <label>Time Duration (hours)</label>
                             
-							Select Menus :
+
                             
                         </div>
 			  </div>
 			  
-			  <div class="col-lg-3 col-md-3">
+			  <div class="col-lg-2 col-md-2">
 			  <div class="form-group">
                             
                             <input type="Date" class="form-control"  name="date"   /><br>
-							<input type="text" class="form-control" name="count"  />
+							<input type="number" class="form-control" name="count" min="1" max="250" /><br>
+                             <input type="number" class="form-control" name="time" min="1" max="24" />
 							
                             
                         </div>
@@ -65,15 +67,18 @@ include("../include/chef.php");
 			  <div class="col-lg-1 col-md-1">
 			  </div>
 			  <div class="col-lg-2 col-md-2">
-			  <label>Time</label><br><br>
-			  <label>Name Of the contact person</label><br><br>
+                  <h4><b>Contact Details</b></h4>
+			  <label>Contact Person</label><br><br>
+			  <label>Contact Number</label><br>
 			  </div>
-			  <div class="col-lg-2 col-md-2">
-			  <input type="text" class="form-control"  name="timeperiod"   /><br>
-			  <input type="text" class="form-control" name="person"  />
+			  <div class="col-lg-3 col-md-3">
+			  <br>
+			  <input type="text" class="form-control" name="person"  /><br>
+                  <input type="text" class="form-control" name="number"  />
 			  </div>
 			 
 			  </div>
+
 			  <div class="row">
 			  <div class="col-lg-1 col-md-1">
 			  </div>

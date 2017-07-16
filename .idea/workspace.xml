@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="471fab02-f639-4550-8c29-f17c0025890c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Chef/menulist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Chef/calculate.php" afterPath="$PROJECT_DIR$/Chef/calculate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Chef/counts.php" afterPath="$PROJECT_DIR$/Chef/counts.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Chef/ingredients.php" afterPath="$PROJECT_DIR$/Chef/ingredients.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Chef/insertSoup.php" afterPath="$PROJECT_DIR$/Chef/insertSoup.php" />
+    </list>
+    <ignored path="KMS.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="KMS" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="counts.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chef/counts.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.846154" vertical-offset="754" max-vertical-offset="3655">
+              <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insertSoup.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chef/insertSoup.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-18.038462" vertical-offset="1911" max-vertical-offset="3910">
+              <caret line="140" column="16" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="16" />
+              <folding>
+                <marker date="1500198925571" expanded="true" signature="985:1056" placeholder="INSERT INTO ..." />
+                <marker date="1500198925571" expanded="true" signature="1763:1782" placeholder="select * fro..store..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calculate.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Chef/calculate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.36813188" vertical-offset="360" max-vertical-offset="1989">
+              <caret line="39" column="144" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="144" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#2;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#3;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#4;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#5;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1500187828677" expanded="true" signature="16:119" placeholder="INSERT INTO ..." />
+                <marker date="1500187828677" expanded="true" signature="1002:1026" placeholder="SELECT Count..counts..." />
+                <marker date="1500187828677" expanded="true" signature="1219:1237" placeholder="DELETE FROM ..." />
+                <marker date="1500187828677" expanded="true" signature="112:215" placeholder="INSERT INTO ..." />
+                <marker date="1500187828677" expanded="true" signature="480:504" placeholder="SELECT Count..counts..." />
+                <marker date="1500187828677" expanded="true" signature="641:916" placeholder="SELECT ingre..ingredients..." />
+                <marker date="1500187828677" expanded="true" signature="719:737" placeholder="DELETE FROM ..." />
+                <marker date="1500187828677" expanded="true" signature="1237:1262" placeholder="INSERT INTO ..." />
+                <marker date="1500187828677" expanded="true" signature="1372:1396" placeholder="SELECT Count..counts..." />
+                <marker date="1500187828677" expanded="true" signature="1372:1399" placeholder="SELECT Count..counts..." />
+                <marker date="1500187828677" expanded="true" signature="1523:1623" placeholder="SELECT item...item..." />
+                <marker date="1500187828677" expanded="true" signature="2115:2205" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menulist.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chef/menulist.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-35.307693" vertical-offset="2703" max-vertical-offset="4148">
+              <caret line="213" column="22" selection-start-line="213" selection-start-column="22" selection-end-line="213" selection-end-column="22" />
+              <folding>
+                <marker date="1500196070570" expanded="true" signature="601:624" placeholder="DELETE FROM ..." />
+                <marker date="1500196070570" expanded="true" signature="881:900" placeholder="DELETE FROM ..." />
+                <marker date="1500196070570" expanded="true" signature="1176:1203" placeholder="SELECT item ..insertitem..." />
+                <marker date="1500196070570" expanded="true" signature="1432:1494" placeholder="INSERT INTO ..." />
+                <marker date="1500196070570" expanded="true" signature="1815:1865" placeholder="INSERT INTO ..." />
+                <marker date="1500196070570" expanded="true" signature="1897:1960" placeholder="Update item ..." />
+                <marker date="1500196070570" expanded="true" signature="2016:2062" placeholder="SELECT Item_..item..." />
+                <marker date="1500196070570" expanded="true" signature="2803:2906" placeholder="INSERT INTO ..." />
+                <marker date="1500196070570" expanded="true" signature="3183:3207" placeholder="SELECT Count..counts..." />
+                <marker date="1500196070570" expanded="true" signature="3328:3603" placeholder="SELECT ingre..ingredients..." />
+                <marker date="1500196070570" expanded="true" signature="3632:3650" placeholder="DELETE FROM ..." />
+                <marker date="1500196070570" expanded="true" signature="4102:4192" placeholder="INSERT INTO ..." />
+                <marker date="1500196070570" expanded="true" signature="4508:4559" placeholder="select Date,..." />
+                <marker date="1500196070570" expanded="true" signature="6342:6366" placeholder="SELECT Count..counts..." />
+                <marker date="1500196070570" expanded="true" signature="6448:6558" placeholder="SELECT item...item..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ingredients.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chef/ingredients.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-22.384615" vertical-offset="47" max-vertical-offset="1836">
+              <caret line="37" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+              <folding>
+                <marker date="1500184830753" expanded="true" signature="356:407" placeholder="select Date,..." />
+                <marker date="1500184830753" expanded="true" signature="1558:1621" placeholder="select menu_..total..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connect.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chef/connect.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="272">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Chef/ingredients.php" />
+        <option value="$PROJECT_DIR$/Chef/calculate.php" />
+        <option value="$PROJECT_DIR$/Chef/menulist.php" />
+        <option value="$PROJECT_DIR$/Chef/counts.php" />
+        <option value="$PROJECT_DIR$/Chef/insertSoup.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="5" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../yiitest" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="471fab02-f639-4550-8c29-f17c0025890c" name="Default" comment="" />
+      <created>1500178143224</created>
+      <option name="number" value="Default" />
+      <updated>1500178143224</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="5" y="0" width="1382" height="744" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Chef/insertApp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.562271" vertical-offset="1399" max-vertical-offset="3502">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1496814288243" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1496814288243" expanded="true" signature="-1:-1" placeholder="select * fro..insertApp..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chef/connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chef/ingredients.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.384615" vertical-offset="47" max-vertical-offset="1836">
+          <caret line="37" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding>
+            <marker date="1500184830753" expanded="true" signature="356:407" placeholder="select Date,..." />
+            <marker date="1500184830753" expanded="true" signature="1558:1621" placeholder="select menu_..total..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chef/menulist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-35.307693" vertical-offset="2703" max-vertical-offset="4148">
+          <caret line="213" column="22" selection-start-line="213" selection-start-column="22" selection-end-line="213" selection-end-column="22" />
+          <folding>
+            <marker date="1500196070570" expanded="true" signature="601:624" placeholder="DELETE FROM ..." />
+            <marker date="1500196070570" expanded="true" signature="881:900" placeholder="DELETE FROM ..." />
+            <marker date="1500196070570" expanded="true" signature="1176:1203" placeholder="SELECT item ..insertitem..." />
+            <marker date="1500196070570" expanded="true" signature="1432:1494" placeholder="INSERT INTO ..." />
+            <marker date="1500196070570" expanded="true" signature="1815:1865" placeholder="INSERT INTO ..." />
+            <marker date="1500196070570" expanded="true" signature="1897:1960" placeholder="Update item ..." />
+            <marker date="1500196070570" expanded="true" signature="2016:2062" placeholder="SELECT Item_..item..." />
+            <marker date="1500196070570" expanded="true" signature="2803:2906" placeholder="INSERT INTO ..." />
+            <marker date="1500196070570" expanded="true" signature="3183:3207" placeholder="SELECT Count..counts..." />
+            <marker date="1500196070570" expanded="true" signature="3328:3603" placeholder="SELECT ingre..ingredients..." />
+            <marker date="1500196070570" expanded="true" signature="3632:3650" placeholder="DELETE FROM ..." />
+            <marker date="1500196070570" expanded="true" signature="4102:4192" placeholder="INSERT INTO ..." />
+            <marker date="1500196070570" expanded="true" signature="4508:4559" placeholder="select Date,..." />
+            <marker date="1500196070570" expanded="true" signature="6342:6366" placeholder="SELECT Count..counts..." />
+            <marker date="1500196070570" expanded="true" signature="6448:6558" placeholder="SELECT item...item..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chef/counts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.846154" vertical-offset="754" max-vertical-offset="3655">
+          <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chef/insertSoup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.038462" vertical-offset="1911" max-vertical-offset="3910">
+          <caret line="140" column="16" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="16" />
+          <folding>
+            <marker date="1500198925571" expanded="true" signature="985:1056" placeholder="INSERT INTO ..." />
+            <marker date="1500198925571" expanded="true" signature="1763:1782" placeholder="select * fro..store..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chef/calculate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36813188" vertical-offset="360" max-vertical-offset="1989">
+          <caret line="39" column="144" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="144" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#2;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#3;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#4;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#5;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1500187828677" expanded="true" signature="16:119" placeholder="INSERT INTO ..." />
+            <marker date="1500187828677" expanded="true" signature="1002:1026" placeholder="SELECT Count..counts..." />
+            <marker date="1500187828677" expanded="true" signature="1219:1237" placeholder="DELETE FROM ..." />
+            <marker date="1500187828677" expanded="true" signature="112:215" placeholder="INSERT INTO ..." />
+            <marker date="1500187828677" expanded="true" signature="480:504" placeholder="SELECT Count..counts..." />
+            <marker date="1500187828677" expanded="true" signature="641:916" placeholder="SELECT ingre..ingredients..." />
+            <marker date="1500187828677" expanded="true" signature="719:737" placeholder="DELETE FROM ..." />
+            <marker date="1500187828677" expanded="true" signature="1237:1262" placeholder="INSERT INTO ..." />
+            <marker date="1500187828677" expanded="true" signature="1372:1396" placeholder="SELECT Count..counts..." />
+            <marker date="1500187828677" expanded="true" signature="1372:1399" placeholder="SELECT Count..counts..." />
+            <marker date="1500187828677" expanded="true" signature="1523:1623" placeholder="SELECT item...item..." />
+            <marker date="1500187828677" expanded="true" signature="2115:2205" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
