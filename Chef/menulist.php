@@ -1,3 +1,7 @@
+<head>
+    <title>Customer Report</title>
+    <script src="assets/js/html2canvas.js"></script>
+</head>
 <?php
 include("../include/nav.php");
 include("../include/chef.php");
@@ -5,10 +9,18 @@ include("../include/chef.php");
 <!-- /. NAV SIDE  -->
 <div id="page-wrapper" >
     <div id="page-inner">
-        <div class="row">
-            <div class="col-md-3">
-            </div>
-            <div class="col-md-8">
+        
+
+            
+                <div>
+                <ol class="breadcrumb">
+                    <li><a href="chef.html">Home</a></li>
+                    <li><a href="counts.php">Bulk Order</a></li>
+                    <li><a href="menulist.php">Menu List</a></li>
+                </ol>
+                </div>
+			<div id="content">	
+			<div class="col-md-12">
                 <?php
                 include './connect.php';
                 $date = $_POST['date'];
@@ -113,8 +125,15 @@ include("../include/chef.php");
                 }
                 $a = mysqli_query($conn,"select Date,time, Count, person, number from counts");
                 while($b = mysqli_fetch_array($a)){?>
-                    <div class="col-md-4">
+                
+                    <div class="col-md-6">
+                        <tr><h3><b>Sanmira Renaissance Hotel</b></h3></tr>
+                        <tr><h5>407 C, Matara Road, Unawatuna</h5></tr>
+                        <tr><h5>077 322 7555</h5></tr>
+                    </div>
+                    <div class="col-md-3">
                         <tr>
+
                             <td align="left"><b>Date</b></td><br>
 
                         </tr>
@@ -133,7 +152,7 @@ include("../include/chef.php");
                             <td align="left"><b>Contact Number</b></td><br>
                         </tr>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <?php
                         echo $b[0].'<br>';
                         echo $b[1].'<br>';
@@ -147,7 +166,7 @@ include("../include/chef.php");
 
                 ?>
 
-            </div>
+            
 
         </div>
         <!-- /. ROW  -->
@@ -214,6 +233,18 @@ include("../include/chef.php");
                 ?></b>
             </div>
             </div>
+			</div>
+            
+        <div class="row">
+            <div class="col-lg-5 col-md-5">
+                </div>
+            <div class="col-lg-2 col-md-2">
+
+            <button onclick="download();" class="btn btn-primary fa fa-download" style="float: right;padding-bottom: 12px;" id="btn">Download</button>
+            </div>
+                <div class="col-lg-5 col-md-5">
+            </div>
+        </div>
 
         </div>
     <!-- /. PAGE INNER  -->
@@ -227,11 +258,26 @@ include("../include/footer.php");
 <!-- /. WRAPPER  -->
 <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
 <!-- JQUERY SCRIPTS -->
+<script type="text/javascript">
+    function download(){
+        html2canvas($("#content"), {
+            onrendered: function(canvas) {
+                var imgData = canvas.toDataURL(
+                    'image/jpeg');
+                var doc = new jsPDF('l', 'pt','a4');
+                doc.addImage(imgData, 'jpeg',7 ,7 );
+                doc.save('menu_list.pdf');
+            }
+        });
+    }
+</script>
+
 <script src="assets/js/jquery-1.10.2.js"></script>
 <!-- BOOTSTRAP SCRIPTS -->
 <script src="assets/js/bootstrap.min.js"></script>
 <!-- CUSTOM SCRIPTS -->
 <script src="assets/js/custom.js"></script>
+<script src="assets/js/html2canvas.js"></script>
 
 
 </body>

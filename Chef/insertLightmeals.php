@@ -7,6 +7,11 @@ include("../include/chef.php");
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
+                        <ol class="breadcrumb">
+                            <li><a href="chef.html">Home</a></li>
+                            <li><a href="menumanage.php">Menu Manage</a></li>
+                            <li><a href="insertLightmeals.php">Light Meals</a></li>
+                        </ol>
                      <center><h3>Light Meals </h3>  </center> 
                     </div>
                 </div> 

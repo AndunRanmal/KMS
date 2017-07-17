@@ -32,6 +32,11 @@ include("../include/chef.php");
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
+                        <ol class="breadcrumb">
+                            <li><a href="chef.html">Home</a></li>
+                            <li><a href="counts.php">Bulk Order</a></li>
+
+                        </ol>
                      <h2> Calculation for Bulk orders </h2>   
                     </div>
                 </div>              
