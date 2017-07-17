@@ -65,7 +65,7 @@ include("../include/cashier.php");
              <p  align="left">
                  <font size="4">  <b> <?php echo $Menu_Name ?> </b></font> 
              </p> 
-           <a href="menu2.php?id=<?php echo $Menu_Id ?> " > 
+    <a href="menu2.php?id=<?php echo $Menu_Id ?> " > 
     <img border="3" alt="W3Schools" src="<?php echo $Image ?>" width="300" height="200">
     </a>
             <?php

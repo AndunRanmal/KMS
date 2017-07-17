@@ -41,7 +41,7 @@ include("../include/cashier.php");
          <div id="page-inner">
                <div class="row">
                     <div class="col-md-12">
-                        <img  src='<?php echo $Image ?>'/>
+                        <img  src='<?php echo $Image ?>'width="300" height="200"/>
                         <?php
                         }
                         ?>

@@ -42,8 +42,17 @@ include("../include/stock_keeper.php");
                 </div>
                  <!-- /. ROW  -->
                 <br/>
-                <div class="col-md-12">
+                <div class="col-md-6">
                 <h4>Pending Purchase Orders: </h4>
+                <table border="1" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                    <th style="width:40%;text-align: center;">Vendor Name</th>
+                    <th style="width: 30%;text-align: center;">Status</th>
+                   <!--  <th style="width:30%;text-align: center;"></th> -->
+                    <!-- <th>Requisition Date</th> -->
+                    </tr>
+                  </thead>
                 <?php
                 include("../config/config.php");
                 $sql = "SELECT DISTINCT `Vendor_Id` FROM `department_requisition` WHERE `PO_Id`=0 ";
@@ -53,15 +62,21 @@ include("../include/stock_keeper.php");
                 }else{
                 while($row = mysqli_fetch_assoc($res)){
                   $name = $row["Vendor_Id"];
-                  echo $name;
-                ?>
-
+                  
+                  // echo $name;
+                ?>                
+                  <tbody>
+                    <td><?php echo $name; ?></td>
+                    <td>Pending</td>
+<!--                     <td><button class="btn btn-primary btn-sm">Proceed</button> <a class="btn btn-primary" href="">Proceed</td>
+ -->                  </tbody>
+                
                 <?php
                 }
                 }
-                ?>
-                  
-                </div><br>
+                ?>   
+                </table><br>
+                </div><br><br>
 
                              
 
@@ -73,8 +88,8 @@ include("../include/stock_keeper.php");
                             </li>
                             <li class=""><a href="#profile" data-toggle="tab">Completed</a>
                             </li>
-                            <li class=""><a href="#messages" data-toggle="tab">Active</a>
-                            </li>
+                            <!-- <li class=""><a href="#messages" data-toggle="tab">Active</a>
+                            </li> -->
 
                         </ul>
                         <div class="tab-content">
@@ -113,16 +128,33 @@ include("../include/stock_keeper.php");
                                       <thead>
                                         <tr>
                                           <!-- <td><input type="checkbox" name="id" ></td> -->
-                                          <td></td>
-                                          <td>Requisition #</td>
-                                          <td>Status</td>
-                                          <td>Created</td>
-                                          <td>Last Updated</td>
+                                          <th></th>
+                                          <th>Purchase Order</th>
+                                          <th>Vendor</th>
+                                          <th>Date Created</th><!-- 
+                                          <th>Last Updated</th> -->
                                         </tr>
                                       </thead>
+                                      <?php
+                                        $po = "SELECT * FROM `po_overview` ORDER BY `Issued_date` DESC LIMIT 10"; 
+                                        $res=mysqli_query($conn,$po);
+                                        while($row = mysqli_fetch_assoc($res)){
+                                          $id = $row["O_Id"];
+                                          $vendor = $row["Vendor"];
+                                          $date = $row["Issued_date"];
+                                        
+                                      ?>
                                       <tbody>
-                                      
+                                        <tr>
+                                          <td><i class="fa fa-file-word-o" aria-hidden="true"></i></td>
+                                          <td><a href="PO_report.php?ref=<?php echo $id ?>"><?php echo $id ?></a></td>
+                                          <td><a href="PO_report.php?ref=<?php echo $id ?>"><?php echo $vendor ?></a></td>
+                                          <td><a href="PO_report.php?ref=<?php echo $id ?>"><?php echo $date ?></a></td>
+                                          </tr>
                                       </tbody>
+                                      <?php
+                                    }
+                                    ?>
                                   </table>
                                   </div>
                             </div>

@@ -7,7 +7,7 @@ $sql = "SELECT * FROM `po_overview`";
     
     $n++;
   }
-  $O_id = "PR_".+$n;
+  $O_id = "PO_".+$n;
   echo $O_id;
 
 

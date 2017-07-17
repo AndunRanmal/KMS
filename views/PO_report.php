@@ -12,37 +12,45 @@
 			<div class="col-md-12">
 				<?php
 					
-					$vendor = $_GET['ref'];
-					// echo $vendor;
-					$sql = "SELECT * FROM `vendor` WHERE `Name`='$vendor'";
+					$id = $_GET['ref'];
+					$sql = "SELECT `Vendor` FROM `po_overview` WHERE `O_Id`='$id'";
 					$res = mysqli_query($conn,$sql);
 					while($row = mysqli_fetch_assoc($res)){
-						$address = $row["Address"];
-						$tel = $row["Contact_No"];
-					}
+						$vendor = $row["Vendor"];
+						
+						$sql2 = "SELECT * FROM `vendor` WHERE `Name` = '$vendor'";
+						$res2 = mysqli_query($conn,$sql2);
+						while($row2 = mysqli_fetch_assoc($res2)){
+							$address = $row2["Address"];
+							$tel = $row2["Contact_No"];
+						}
+					
 					// echo $address;
 				?>
 				<h3>Purchase Order Report</h3>
 				<h4>Sanmira Renaissance</h4>
 				<h5>407 C, Matara Road, Unawatuna</h5>
 				<hr/>
-				<h5><span style="font-weight: bold;">PO No: </span> </h5>
+				<h5><span style="font-weight: bold;">PO No: </span> <?php echo $id ?> </h5>
 				<h5><span style="font-weight: bold;">Vendor:</span> <?php echo $vendor ?> </h5>
 				<h5><span style="font-weight: bold;">Address:</span> <?php echo $address ?> </h5> 
 				<h5><span style="font-weight: bold;">Tel:</span> <?php echo $tel ?></h5>
 				<hr/>
+				<?php
+				}
+				?>
 				<table class="table table-bordered">
 					<thead>
-						<td style="text-align: center;">Item Name</td>
-						<td style="text-align: center;">Quantity</td>
-						<td style="text-align: center;">Unit Price</td>
-						<td style="text-align: center;">Delivary Date</td>
-						<td style="text-align: center;">Total(Rs.)</td>
+						<th style="text-align: center;">Item Name</th>
+						<th style="text-align: center;">Quantity</th>
+						<th style="text-align: center;">Unit Price</th>
+						<th style="text-align: center;">Delivary Date</th>
+						<th style="text-align: center;">Total(Rs.)</th>
 					</thead>
 					<tbody>
 				<?php
-					$vendor = $_GET["ref"];
-					$ven = "SELECT * FROM `department_requisition` WHERE `PO_Id`='0' AND `Vendor_Id`='$vendor' ";
+					$id = $_GET["ref"];
+					$ven = "SELECT * FROM `purchase_order` WHERE `Order_id`='$id'";
 					$result = mysqli_query($conn,$ven); 
 					$count = 0;
 					$sum = 0;
@@ -80,3 +88,26 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	function doit(){
+	if (!window.print){
+	alert("You need NS4.x to use this print button!")
+	return
+	}
+	window.print()
+	}
+</script>
+<script type="text/javascript">
+	function download(){
+	  html2canvas($("#content"), {
+	    onrendered: function(canvas) {         
+	        var imgData = canvas.toDataURL(
+	            'image/jpeg');              
+	        var doc = new jsPDF('l', 'pt','a4');
+	        doc.addImage(imgData, 'jpeg',7 ,7 );
+	        doc.save('sample-file.pdf');
+	    }
+	});
+	}
+</script>

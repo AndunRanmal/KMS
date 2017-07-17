@@ -49,7 +49,7 @@ include("../include/cashier.php");
                             <div class="row text-center pad-top">
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
-                           <a href="orders.html" >
+                           <a href="orders.php" >
  <i class="fa fa-circle-o-notch fa-5x"></i>
                       <h4> New Orders</h4>
                       </a>
@@ -86,7 +86,7 @@ include("../include/cashier.php");
                                 
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
-                           <a href="menu.html" id="trigger" >
+                           <a href="menu.<?php  ?>" id="trigger" >
  <i class="fa fa-eye fa-5x"></i>
                       <h4>View Menus</h4>
                       </a>

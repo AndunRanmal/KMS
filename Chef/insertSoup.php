@@ -7,6 +7,11 @@ include("../include/chef.php");
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
+                        <ol class="breadcrumb">
+                            <li><a href="chef.html">Home</a></li>
+                            <li><a href="menumanage.php">Menu Manage</a></li>
+                            <li><a href="insertSoup.php">Soup</a></li>
+                        </ol>
                      <center><h3>Soup </h3>  </center> 
                     </div>
                 </div> 
@@ -123,17 +128,17 @@ include("../include/chef.php");
 				 <label>Price </label>
 				 </div>
 				 <div class="col-lg-1 col-md-1">
-				 <input type="text" class="form-control" name="price"  />
+				 <input type="number" class="form-control" name="price" min="1" />
 				</div>
 				<div class="col-lg-1 col-md-1"> 
-				<input type="submit" name="submit" value="Add" class="btn btn-primary">
+				<!--<input type="submit" name="submit" value="Add" class="btn btn-primary">-->
 				
 				<!-- <input value="Add" type="submit" name="submit"> -->
 				 </div>
 				 <div class="col-lg-1 col-md-1">
-				 <button type="button" name="btn_delete" id="btn_delete" class="btn btn-primary">Delete</button>
+				 <!--<button type="button" name="btn_delete" id="btn_delete" class="btn btn-primary">Delete</button>-->
 				</div>
-				</form>
+
 				
 				
 				
@@ -143,11 +148,13 @@ include("../include/chef.php");
 				<div class="row">
 				<center>
 				
-				<!--<input type="submit" name="submit" value="Add" class="btn btn-primary">-->
-				
-				</center>
+				<input type="submit" name="submit" value="Add" class="btn btn-primary">
+                    <button type="button" name="btn_delete" id="btn_delete" class="btn btn-primary">Delete</button>
+                </center>
+                </div>
+
 				</form>
-				</div>
+
 
                   <hr />
               

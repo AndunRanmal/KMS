@@ -11,29 +11,35 @@ include("../include/chef.php");
                     <div class="col-md-8">
 					<?php 
 					include './connect.php';
-					$a = mysqli_query($conn,"select Date, Count, timeperiod, person from counts");
+					$a = mysqli_query($conn,"select Date,time, Count, person, number from counts");
 					while($b = mysqli_fetch_array($a)){?>
 					<div class="col-md-4">
 					<tr>
 						<td align="left"><b>Date</b></td><br>
                         
 					</tr>
-					<tr>
-					<td align="left"><b>Time Period</b></td><br>
-					</tr>
+                        <tr>
+                            <td align="left"><b>Time Duration (hours)</b></td><br>
+
+                        </tr>
+
 					<tr>
 					<td align="left"><b>Number Of Customers</b></td><br>
 					</tr>
 					<tr>
 					<td align="left"><b>Contact Person</b></td><br>
 					</tr>
+                        <tr>
+                            <td align="left"><b>Contact Number</b></td><br>
+                        </tr>
 					</div>
 					<div class="col-md-4">
 					<?php
 						echo $b[0].'<br>';
-						echo $b[2].'<br>';
 						echo $b[1].'<br>';
+						echo $b[2].'<br>';
 						echo $b[3].'<br>';
+                        echo $b[4].'<br>';
 						?>
 						</div>
 					<?php	

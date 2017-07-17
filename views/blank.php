@@ -1,4 +1,7 @@
-﻿<?php
+﻿<head>
+  <title>Puchase Requisition</title>
+</head>
+<?php
 include("../config/config.php");
 include("../include/nav.php");
 include("../include/stock_keeper.php");
@@ -27,14 +30,19 @@ include("../include/stock_keeper.php");
                     </ol>
                       <!-- <h3>Purchase requsition</h3> --> 
                       
-                      <form style="float: left;" method="POST" action="search_Pr.php">
+                      <form style="float: left;" method="POST" action="search_Pr.php" id="search" class="form-inline" id="search">
                         <div class="form-group">
-                        <input type="text" name="search" class="form-control" placeholder="Search a Purchase Requisition" size="30">
+                        <input type="text" name="search" class="form-control" placeholder="Search a Purchase Requisition" size="30" ">
+                        </div>
+                        <div class="form-group">
                         <input type="submit" name="submit" class=" btn btn-info fa fa-search" value="SEARCH">
                         <!-- <button class="btn btn-info"><i class="fa fa-search" aria-hidden="true"></i></button> -->
+                        <!-- <button type="submit" form="search" class="btn btn-info"><i class="fa fa-search" aria-hidden="true" form="search"></i></button> -->
                         </div> 
+
                       </form>
-                      <button class="btn btn-info" onclick="location.href='pr.html'"><i class="fa fa-search" aria-hidden="true"></i></button>
+                      
+
                       <!-- <button class="btn btn-primary" autofocus onclick="location.href='pr.html'">Add New</button> -->
                     </div>
                 </div><br/>       
@@ -63,14 +71,14 @@ include("../include/stock_keeper.php");
                                      <table class="table table-striped">
                                        <thead>
                                         <tr>
-                                          <td>Item Name</td>
+                                          <td style="text-align: center;">Item Name</td>
                                           <!-- <td>Description</td> -->
-                                          <td>Requested Date</td>
-                                          <td>Quantity</td>
-                                          <td>Unit</td>
-                                          <td>Unit Price</td>
-                                          <td>Vendor</td>
-                                          <td>Remarks</td>
+                                          <td style="text-align: center;">Requested Date</td>
+                                          <td style="width:10%;text-align: left;">Quantity</td>
+                                          <td style="width: 8%;text-align: left;">Unit</td>
+                                          <td style="width:10%;text-align: left;padding-right: 25px;">Unit Price</td>
+                                          <td style="">Vendor</td>
+                                          <td style="width:20%">Remarks</td>
                                         </tr>   
                                        </thead>
                                        </table>
@@ -80,7 +88,7 @@ include("../include/stock_keeper.php");
                                            <td>
                                              
                                               
-                                            <input list="ingridents" type="text" name="Item_code[]" class="form-control">
+                                            <input list="ingridents" type="text" name="Item_code[]" class="form-control" required>
                                             <datalist id="ingridents">
                                             <?php 
                                               $sql = "SELECT * FROM `ingriedents`";
@@ -105,17 +113,18 @@ include("../include/stock_keeper.php");
                                            
                                            </td>
                                            <!-- <td><input type="text" name="Description[]" class="form-control"></td> -->
-                                           <td><input type="Date" name="Req_date[]" class="form-control"></td>
-                                           <td><input type="number" name="Quantity[]" min="1" class="form-control"></td>
-                                           <td>
-	                                            <select class="form-control" name="Unit[]">
+                                           <td><input type="Date" name="Req_date[]" class="form-control" required pattern="(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d"></td>
+                                           <td style="width:10%">
+                                           <input type="number" name="Quantity[]" min="1" class="form-control" required pattern="/^\d+$/"></td>
+                                           <td style="width:8%;">
+	                                            <select class="form-control" name="Unit[]" required>
 	                                           		<option>kg</option>
 	                                           		<option>L</option>
 	                                           		<option>pcs</option>
 	                                            </select>
 	                                        </td>
-                                           <td><input type="number" name="Unit_price[]" step="0.01" min="0.01" class="form-control"></td>
-                                           <td><select class="form-control" name="Vendor[]">
+                                           <td style="width:10%;"><input type="number" name="Unit_price[]" step="0.01" min="0.01" class="form-control" required pattern="/^\d+$/"></td>
+                                           <td><select class="form-control" name="Vendor[]" required>
                                            <option>Select Vandor</option>
                                            <?php
                                            $sql3 = "SELECT `Name` FROM `vendor`";
@@ -134,12 +143,12 @@ include("../include/stock_keeper.php");
                                              <option>Vendor3</option>
                                              <option>Vendor4</option> -->
                                            </select></td>
-                                           <td><input type="text" name="Remarks[]" class="form-control"></td>
+                                           <td style="width:20%;"><input type="text" name="Remarks[]" class="form-control" required ></td>
                                          </tr>
                                          <tr>
                                            	<td>
                                              
-                                            <input list="ingridents" type="text" name="Item_code[]" class="form-control">
+                                            <input list="ingridents" type="text" name="Item_code[]" class="form-control" required>
                                             <datalist id="ingridents">
                                                 
                                             
@@ -153,15 +162,16 @@ include("../include/stock_keeper.php");
                                             
                                            </td>
                                            <!-- <td><input type="text" name="Description[]" class="form-control"></td> -->
-                                           <td><input type="Date" name="Req_date[]" class="form-control"></td>
-                                           <td><input type="number" name="Quantity[]" min="1" class="form-control"></td>
-                                           <td><select class="form-control" name="Unit[]">
+                                           <td><input type="Date" name="Req_date[]" class="form-control" required pattern="(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d"></td>
+                                           <td style="width:10%"><input type="number" name="Quantity[]" min="1" class="form-control" required pattern="/^\d+$/"></td>
+                                           <td style="width: 8%;"><select class="form-control" name="Unit[]" required>
                                            		<option>kg</option>
                                            		<option>L</option>
                                            		<option>pcs</option>
                                            </select></td>
-                                           <td><input type="number" name="Unit_price[]" step="0.01" min="0.01" class="form-control"></td>
-                                           <td><select class="form-control" name="Vendor[]">
+                                           <td style="width: 10%;">
+                                           <input type="number" name="Unit_price[]" step="0.01" min="0.01" class="form-control" required pattern="/^\d+$/"></td>
+                                           <td><select class="form-control" name="Vendor[]" required>
                                              <option>Select Vandor</option>
                                            <?php
                                            $sql3 = "SELECT `Name` FROM `vendor`";
@@ -181,13 +191,19 @@ include("../include/stock_keeper.php");
                                              <option>Vendor4</option> -->
                                            </select></td>
                                            </select></td>
-                                           <td><input type="text" name="Remarks[]" class="form-control"></td>
+                                           <td><input type="text" name="Remarks[]" class="form-control" required pattern="[\<|\>|\?|\!|\{|]"></td>
+                                         </tr>
+                                         <tr>
+                                           <td style="text-align: left;"><input type="button" value="Add a New Row" class="btn btn-info" onClick="addRow('tableid')" /></td>
+                                         </tr>
+                                         <tr>
+                                           <td style="text-align: left;"><input type="submit" name="submit" value="Forward" class="btn btn-primary"></td>
                                          </tr>
                                        </tbody>
                                       </table>
-                                      <input type="submit" name="submit" value="Forward" class="btn btn-primary"> 
+                                       
                                      </form>
-                                    <input type="button" value="Add a New Row" class="btn btn-info" onClick="addRow('tableid')" /> 
+                                     
                                 </div>
                             </div>
                             <div class="tab-pane fade " id="home">
@@ -201,7 +217,7 @@ include("../include/stock_keeper.php");
                                         <tr>
                                           <!-- <td><input type="checkbox" name="id" ></td> -->
                                           <td></td>
-                                          <td>Requisition #</td>
+                                          <td>Requisition Id</td>
                                           <td>Status</td>
                                           <td>Created</td>
                                           <td>Last Updated</td>
@@ -209,7 +225,7 @@ include("../include/stock_keeper.php");
                                       </thead>
                                       <tbody>
                                         <?php
-                                            $sql2 = "SELECT * FROM `requisition_overview` WHERE `Status`=0 ORDER BY `Issued_date` ";
+                                            $sql2 = "SELECT * FROM `requisition_overview` WHERE `Status`=0 ORDER BY `Issued_date` DESC LIMIT 10";
                                             $res = mysqli_query($conn,$sql2);
                                             while ($row = mysqli_fetch_assoc($res)) {
                                               $id = $row['Id'];
