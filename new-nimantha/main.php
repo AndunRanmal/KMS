@@ -25,13 +25,61 @@
    <body>
 <?php
 include("../include/nav.php");
-include("../include/cashier.php");
+// include("../include/cashier.php");
+
 ?>
+<nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li class="active-link">
+                        <a href="index.html" ><i class="fa fa-desktop "></i>Dashboard <!-- <span class="badge">Included</span> --></a>
+                        <img src="assets/img/cashier.jpg" height="200px" width="238px" style="border-radius: 50%;border: 1px solid #ddd;padding: 5px;">
+                    </li>
+
+
+
+                    <li>
+                        <a href="main.php"><i class="fa fa-desktop "></i>Dashboard </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="orders.php"><i class="fa fa-edit "></i>New Orders  </a>
+                    </li>
+
+
+
+
+
+                    <li>
+                        <a href="users.php"><i class="fa fa-edit "></i>User Profile </a>
+                    </li>
+
+                    <li>
+                        <a href="ui.html"><i class="fa fa-edit "></i>Notifications </a>
+                    </li>
+
+
+                    <li>
+                        <a href="menu.php"><i class="fa fa-edit "></i>View Menus  </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+
+        </nav>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
                     <div class="col-lg-12">
+                    <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    </ol>
                      <h2>Restaurant Cashier</h2>   
                     </div>
                 </div>              
@@ -56,22 +104,7 @@ include("../include/cashier.php");
                       </div>
                      
                      
-                  </div> 
-
-                   
-                  
-                                
-                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                      <div class="div-square">
-                           <a href="users.html" id="trigger" >
- <i class="fa fa-gear fa-5x"></i>
-                      <h4>User Profile</h4>
-                      </a>
-                      </div>
-                     
-                     
-                  </div>
-                                
+                  </div>               
                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
                            <a href="#" >
@@ -86,7 +119,7 @@ include("../include/cashier.php");
                                 
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
-                           <a href="menu.<?php  ?>" id="trigger" >
+                           <a href="menu.php" id="trigger" >
  <i class="fa fa-eye fa-5x"></i>
                       <h4>View Menus</h4>
                       </a>
@@ -94,7 +127,29 @@ include("../include/cashier.php");
                      
                      
                   </div>
-                             
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="menu.php" id="trigger" >
+ <i class="fa fa-eye fa-5x"></i>
+                      <h4>View Orders</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="users.php" id="trigger" >
+ <i class="fa fa-gear fa-5x"></i>
+                      <h4>User Profile</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div>
+                 
+                          
+
                   
                   
                  

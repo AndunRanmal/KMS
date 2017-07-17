@@ -1,27 +1,38 @@
-
+<?php require 'connection.php';?>
 <?php
-include("../config/config.php");
-
+$error="";
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+} 
 if(isset($_POST["submit"])){
 	
-	$Onumber=$_POST['OrderNumber'];
 	$Mtype=$_POST['Meal_Type'];
-	$Tomenu=$_POST['Menu_Type'];
-	$Toitem=$_POST['Item_Type'];
-	$Quantity=$_POST['quantity'];
-    $Date=$_POST['Date'];
+	$Date=$_POST['Date'];
     $Time=$_POST['Time'];
     $Customercount=$_POST['Customers'];
-    $Price=$_POST['total'];
+    $tempId=$_POST['tempId'];
+    
+    $sql0 = "select * from temporder where id = '".$tempId."'";
+    $res = mysqli_query($con,$sql0);
+    while($row = mysqli_fetch_assoc($res)){
+        $Menu=$row['menu'];
+        $item=$row['item'];
+        $qty=$row['qty'];
+        $price=$row['price'];
+        $sql=("INSERT INTO `new_orders`(Meal_type,Type_of_menu,Type_of_item,Quantity,Date,Time,Customers_count, price )
+            Values('{$Mtype}','{$Menu}','{$item}',{$qty}, '{$Date}','{$Time}','{$Customercount}','{$price}')");
+            mysqli_query($con,$sql);
+        
+    }
+    
+    $sql2 = "delete from temporder where id = '".$tempId."'";
+    mysqli_query($con,$sql2);
+    
+    
+    echo "<h1>Order Sent! </h1>";
    
-    $sql=("INSERT INTO `new_orders`(Order_number,Meal_type,Type_of_menu,Type_of_item,Quantity,Date,Time,Customers_count, price )
-	Values('{$Onumber}','{$Mtype}','{$Tomenu}','{$Toitem}',{$Quantity}, '{$Date}','{$Time}','{$Customercount}','{$Price}')");
-	mysqli_query($conn,$sql);
-	echo "$sql";
-	echo "<script>
-			alert('Successfully New Order Added');
-			window.location=('../new-nimantha/orders.php');
-		</script>";	
+	
+		
 		
 
 } 

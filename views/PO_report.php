@@ -1,3 +1,8 @@
+<head>
+	<title>Purchase Order Report</title>
+	<script type="text/javascript" src="assets/js/html2canvas.js"></script>
+	<script src="assets/js/jspdf.min.js"></script>
+</head>
 <?php
 	include("../config/config.php");
 	include("../include/nav.php");
@@ -27,6 +32,7 @@
 					
 					// echo $address;
 				?>
+				<div id="content">
 				<h3>Purchase Order Report</h3>
 				<h4>Sanmira Renaissance</h4>
 				<h5>407 C, Matara Road, Unawatuna</h5>
@@ -84,6 +90,7 @@
 
 				</tbody>
 				</table>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -106,8 +113,9 @@
 	            'image/jpeg');              
 	        var doc = new jsPDF('l', 'pt','a4');
 	        doc.addImage(imgData, 'jpeg',7 ,7 );
-	        doc.save('sample-file.pdf');
+	        doc.save('po.pdf');
 	    }
 	});
 	}
 </script>
+<script src="assets/js/jspdf.min.js"></script>

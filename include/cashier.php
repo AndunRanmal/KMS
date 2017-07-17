@@ -19,7 +19,7 @@
 
 
                     <li>
-                        <a href="users.html"><i class="fa fa-edit "></i>User Profile </a>
+                        <a href="users.php"><i class="fa fa-edit "></i>User Profile </a>
                     </li>
 
                     <li>
@@ -28,7 +28,7 @@
 
 
                     <li>
-                        <a href="menu.html"><i class="fa fa-edit "></i>View Menus  </a>
+                        <a href="menu.php"><i class="fa fa-edit "></i>View Menus  </a>
                     </li>
 
 

@@ -25,7 +25,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Simple Responsive Admin</title>
+        <title>Orders</title>
         <!-- BOOTSTRAP STYLES-->
         <link href="assets/css/bootstrap.css" rel="stylesheet" />
         <!-- FONTAWESOME STYLES-->
@@ -187,7 +187,7 @@
 
 
                         <li>
-                            <a href="main.html"><i class="fa fa-desktop "></i>Dashboard </a>
+                            <a href="main.php"><i class="fa fa-desktop "></i>Dashboard </a>
                         </li>
 
 
@@ -201,7 +201,7 @@
 
 
                         <li>
-                            <a href="users.html"><i class="fa fa-edit "></i>User Profile </a>
+                            <a href="users.php"><i class="fa fa-edit "></i>User Profile </a>
                         </li>
 
                         <li>
@@ -209,7 +209,7 @@
                         </li>
 
                         <li>
-                            <a href="menu.html"><i class="fa fa-edit "></i>   View Menus   </a>
+                            <a href="menu.php"><i class="fa fa-edit "></i>   View Menus   </a>
                         </li>
 
                     </ul>
@@ -221,6 +221,10 @@
                 <div id="page-inner">
                     <div class="row">
                         <div class="col-md-12">
+                    <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="orders.php">Purchase Order</a></li>
+                    </ol>
                             <h2>New Orders </h2>
                         </div>
                     </div>
@@ -383,7 +387,7 @@
 
                                     <div class="container">
                                         <div class="row clearfix">
-                                            <div class="col-md-12">
+                                            <div class="col-md-9">
                                                 <table class="table table-bordered table-hover" id="tab_logic">
                                                     <thead>
                                                         <tr>

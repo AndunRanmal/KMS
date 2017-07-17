@@ -33,9 +33,13 @@ include("../include/cashier.php");
          <div id="page-inner">
                <div class="row">
                     <div class="col-md-12">
-                        <h2> Types of Menus</h2>
+                    <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="orders.php">View Menus</a></li>
+                    </ol>
+                        <h2 style="color: black"> Types of Menus</h2>
                     </div>
-             </div>  </br> </br>
+             </div>  
            
            
     <div class="col-md-4">  <p>

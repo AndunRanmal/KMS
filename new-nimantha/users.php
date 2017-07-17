@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
+    <title>Edit Profile</title>
     <!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
@@ -122,29 +122,14 @@
     
 </head>
 
+
 <body>
 
     <div id="wrapper">
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="adjust-nav">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">
-                        <!--<img src="assets/img/logo.png" /> -->
-                    </a>
-                </div>
-
-                <span class="logout-spn">
-                  <a href="#" style="color:#fff;">LOGOUT</a>  
-
-                </span>
-            </div>
-        </div>
-
+        
+<?php
+include("../include/nav.php");
+?>
         <!--side bar -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
@@ -153,13 +138,13 @@
 
 
                     <li>
-                        <a href="main.html"><i class="fa fa-desktop "></i>Dashboard </a>
+                        <a href="main.php"><i class="fa fa-desktop "></i>Dashboard </a>
                     </li>
 
 
 
                     <li>
-                        <a href="orders.html"><i class="fa fa-edit "></i>New Orders  </a>
+                        <a href="orders.php"><i class="fa fa-edit "></i>New Orders  </a>
                     </li>
 
 
@@ -167,7 +152,7 @@
 
 
                     <li>
-                        <a href="users.html"><i class="fa fa-edit "></i>User Profile </a>
+                        <a href="users.php"><i class="fa fa-edit "></i>User Profile </a>
                     </li>
 
                     <li>
@@ -176,7 +161,7 @@
 
 
                     <li>
-                        <a href="menu.html"><i class="fa fa-edit "></i>View Menus  </a>
+                        <a href="menu.php"><i class="fa fa-edit "></i>View Menus  </a>
                     </li>
 
 
@@ -190,6 +175,10 @@
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
+                    <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="orders.php">Edit Profile</a></li>
+                    </ol>
                         <h2> Edit profile</h2>
                     </div>
                 </div>
