@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2017 at 10:05 AM
+-- Generation Time: Jul 18, 2017 at 06:40 AM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.1
 
@@ -103,16 +103,17 @@ INSERT INTO `amount_of_ingredients` (`Item_id`, `menu_id`, `amount`) VALUES
 CREATE TABLE IF NOT EXISTS `counts` (
   `Date` date NOT NULL,
   `Count` int(50) NOT NULL,
-  `timeperiod` varchar(50) DEFAULT NULL,
-  `person` varchar(50) DEFAULT NULL
+  `time` varchar(50) NOT NULL,
+  `person` varchar(50) NOT NULL,
+  `number` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `counts`
 --
 
-INSERT INTO `counts` (`Date`, `Count`, `timeperiod`, `person`) VALUES
-('2017-05-17', 123, '12.00 a.m - 3.00 p.m.', 'Ridmi Shanika');
+INSERT INTO `counts` (`Date`, `Count`, `time`, `person`, `number`) VALUES
+('0000-00-00', 0, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -255,6 +256,7 @@ CREATE TABLE IF NOT EXISTS `item` (
   `Item_name` varchar(50) NOT NULL,
   `amount` varchar(10) NOT NULL,
   `unit` varchar(10) NOT NULL,
+  `unitprice` double NOT NULL,
   PRIMARY KEY (`Item_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -262,31 +264,31 @@ CREATE TABLE IF NOT EXISTS `item` (
 -- Dumping data for table `item`
 --
 
-INSERT INTO `item` (`Item_id`, `Item_name`, `amount`, `unit`) VALUES
-(1, 'Butter Baked Carrot Lentil Soup', '40', 'L'),
-(2, 'Diced vegetable Broth', '30', 'L'),
-(3, 'Curry Leaf Flavores Chicken Both', '40', 'L'),
-(4, 'Frsesh Fruit Juice ', '50', 'L'),
-(5, 'Stawberry Guava', '55', 'L'),
-(6, 'Onion', '25', 'Kg'),
-(7, 'Green Chilly with Cumin Yoghurt ', '35', 'Kg'),
-(8, ' Tomato', '35', 'Kg'),
-(9, 'Fresh Mint and Capsicum', '40', 'Kg'),
-(10, 'Spring Onion & Chutney', '35', 'Kg'),
-(11, 'Cold Meat & Sweet Peppers', '45', 'Kg'),
-(12, 'Chicken Fried Rice', '60', 'Kg'),
-(13, 'Vegetable Fried Rice', '55', 'Kg'),
-(14, 'Chicken Biriyani', '50', 'Kg'),
-(15, 'Steamed Bsmathi', '45', 'Kg'),
-(16, 'Noodles', '35', 'Kg'),
-(17, 'Fried Fish in Curry Leaf Bread', '100', 'Kg'),
-(18, 'Fish Lemon Stew ', '80', 'Kg'),
-(19, 'Devilled Fish', '70', 'Kg'),
-(20, 'Curried Assorted Seafood', '60', 'Kg'),
-(21, 'Chicken Pepper Curry Southern Style', '70', 'Kg'),
-(22, 'Pork Black Curry', '60', 'Kg'),
-(23, 'Chicken Biriyani', '60', 'Kg'),
-(24, 'Pork or Beef Sweet & sour', '60', 'Kg');
+INSERT INTO `item` (`Item_id`, `Item_name`, `amount`, `unit`, `unitprice`) VALUES
+(1, 'Butter Baked Carrot Lentil Soup', '40', 'L', 150),
+(2, 'Diced vegetable Broth', '30', 'L', 200),
+(3, 'Curry Leaf Flavores Chicken Both', '40', 'L', 200),
+(4, 'Frsesh Fruit Juice ', '50', 'L', 150),
+(5, 'Stawberry Guava', '55', 'L', 150),
+(6, 'Onion', '25', 'Kg', 100),
+(7, 'Green Chilly with Cumin Yoghurt ', '35', 'Kg', 200),
+(8, ' Tomato', '35', 'Kg', 150),
+(9, 'Fresh Mint and Capsicum', '40', 'Kg', 150),
+(10, 'Spring Onion & Chutney', '35', 'Kg', 250),
+(11, 'Cold Meat & Sweet Peppers', '45', 'Kg', 200),
+(12, 'Chicken Fried Rice', '60', 'Kg', 250),
+(13, 'Vegetable Fried Rice', '55', 'Kg', 200),
+(14, 'Chicken Biriyani', '50', 'Kg', 250),
+(15, 'Steamed Bsmathi', '45', 'Kg', 250),
+(16, 'Noodles', '35', 'Kg', 150),
+(17, 'Fried Fish in Curry Leaf Bread', '100', 'Kg', 150),
+(18, 'Fish Lemon Stew ', '80', 'Kg', 100),
+(19, 'Devilled Fish', '70', 'Kg', 200),
+(20, 'Curried Assorted Seafood', '60', 'Kg', 300),
+(21, 'Chicken Pepper Curry Southern Style', '70', 'Kg', 250),
+(22, 'Pork Black Curry', '60', 'Kg', 250),
+(23, 'Chicken Biriyani', '60', 'Kg', 250),
+(24, 'Pork or Beef Sweet & sour', '60', 'Kg', 250);
 
 -- --------------------------------------------------------
 
@@ -300,7 +302,7 @@ CREATE TABLE IF NOT EXISTS `store` (
   `image` varchar(200) DEFAULT NULL,
   `price` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
 
 --
 -- Dumping data for table `store`
@@ -308,7 +310,10 @@ CREATE TABLE IF NOT EXISTS `store` (
 
 INSERT INTO `store` (`Id`, `name`, `image`, `price`) VALUES
 (17, 'Chicken & Noodles With Sweet Corn', 'images/basmathi.jpg', '567.00'),
-(18, 'Cream of Tomato with Basil', 'images/cucucmber.jpg', '678.00');
+(18, 'Cream of Tomato with Basil', 'images/cucucmber.jpg', '678.00'),
+(20, 'Cream of Tomato with Basil', 'images/fish.jpg', '100.00'),
+(22, 'Cream of Tomato with Basil', 'images/chiken.jpg', '100.00'),
+(26, 'Chicken & Noodles With Sweet Corn', 'images/fried.jpg', '350.00');
 
 -- --------------------------------------------------------
 
@@ -328,54 +333,54 @@ CREATE TABLE IF NOT EXISTS `total` (
 --
 
 INSERT INTO `total` (`menu_id`, `menu_name`, `result`, `unit`) VALUES
-(101, 'olive oil', 8610, 'L'),
-(101, 'olive oil', 12300, 'L'),
-(101, 'olive oil', 8610, 'L'),
-(101, 'olive oil', 6150, 'L'),
-(101, 'olive oil', 9840, 'L'),
-(102, 'carrot', 36900, 'kg'),
-(103, 'onion', 6150, 'kg'),
-(103, 'onion', 6150, 'kg'),
-(103, 'onion', 7380, 'kg'),
-(104, 'cumin seeds', 6150, 'kg'),
-(104, 'cumin seeds', 3690, 'kg'),
-(105, 'celery', 3690, 'kg'),
-(106, 'garlic', 12300, 'kg'),
-(106, 'garlic', 8610, 'kg'),
-(106, 'garlic', 4920, 'kg'),
-(107, 'tomatoes', 24600, 'kg'),
-(107, 'tomatoes', 12300, 'kg'),
-(107, 'tomatoes', 6150, 'kg'),
-(108, 'salt', 1230, 'kg'),
-(108, 'salt', 1230, 'kg'),
-(108, 'salt', 1230, 'kg'),
-(108, 'salt', 1230, 'kg'),
-(108, 'salt', 2460, 'kg'),
-(109, 'black pepper', 3690, 'kg'),
-(109, 'black pepper', 3690, 'kg'),
-(112, 'guava', 123, ''),
-(113, 'strawberry', 984, ''),
-(114, 'sugar', 3690, 'kg'),
-(115, 'courgettes', 30750, 'kg'),
-(116, 'aubergines', 30750, 'kg'),
-(117, 'green peppers', 18450, 'kg'),
-(119, 'basmati rice', 24600, 'kg'),
-(119, 'basmati rice', 18450, 'kg'),
-(120, 'pudina leaves', 12300, 'kg'),
-(121, 'green capsicum', 9840, 'kg'),
-(122, ' ginger', 4920, 'kg'),
-(123, 'green chillies', 8610, 'kg'),
-(123, 'green chillies', 4920, 'kg'),
-(124, 'cocunut', 12, ''),
-(124, 'cocunut', 12, ''),
-(125, 'dhal', 7380, 'kg'),
-(126, 'coriander leaves', 6150, 'kg'),
-(127, 'rice', 22140, 'kg'),
-(128, 'soy sauce', 7380, 'L'),
-(129, 'bell pepper', 9840, 'kg'),
-(130, 'butter', 3075, 'kg'),
-(131, 'turmic', 1230, 'kg'),
-(132, 'chicken', 12300, 'kg');
+(101, 'olive oil', 0, 'L'),
+(101, 'olive oil', 0, 'L'),
+(101, 'olive oil', 0, 'L'),
+(101, 'olive oil', 0, 'L'),
+(101, 'olive oil', 0, 'L'),
+(102, 'carrot', 0, 'kg'),
+(103, 'onion', 0, 'kg'),
+(103, 'onion', 0, 'kg'),
+(103, 'onion', 0, 'kg'),
+(104, 'cumin seeds', 0, 'kg'),
+(104, 'cumin seeds', 0, 'kg'),
+(105, 'celery', 0, 'kg'),
+(106, 'garlic', 0, 'kg'),
+(106, 'garlic', 0, 'kg'),
+(106, 'garlic', 0, 'kg'),
+(107, 'tomatoes', 0, 'kg'),
+(107, 'tomatoes', 0, 'kg'),
+(107, 'tomatoes', 0, 'kg'),
+(108, 'salt', 0, 'kg'),
+(108, 'salt', 0, 'kg'),
+(108, 'salt', 0, 'kg'),
+(108, 'salt', 0, 'kg'),
+(108, 'salt', 0, 'kg'),
+(109, 'black pepper', 0, 'kg'),
+(109, 'black pepper', 0, 'kg'),
+(112, 'guava', 0, ''),
+(113, 'strawberry', 0, ''),
+(114, 'sugar', 0, 'kg'),
+(115, 'courgettes', 0, 'kg'),
+(116, 'aubergines', 0, 'kg'),
+(117, 'green peppers', 0, 'kg'),
+(119, 'basmati rice', 0, 'kg'),
+(119, 'basmati rice', 0, 'kg'),
+(120, 'pudina leaves', 0, 'kg'),
+(121, 'green capsicum', 0, 'kg'),
+(122, ' ginger', 0, 'kg'),
+(123, 'green chillies', 0, 'kg'),
+(123, 'green chillies', 0, 'kg'),
+(124, 'cocunut', 0, ''),
+(124, 'cocunut', 0, ''),
+(125, 'dhal', 0, 'kg'),
+(126, 'coriander leaves', 0, 'kg'),
+(127, 'rice', 0, 'kg'),
+(128, 'soy sauce', 0, 'L'),
+(129, 'bell pepper', 0, 'kg'),
+(130, 'butter', 0, 'kg'),
+(131, 'turmic', 0, 'kg'),
+(132, 'chicken', 0, 'kg');
 
 --
 -- Constraints for dumped tables
