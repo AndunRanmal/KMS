@@ -86,7 +86,7 @@
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>ADD NEW FOOD ITEM</h2>   
+                     <h2>FOOD ITEMS</h2>   
                     </div>
                 </div>              
                  <!-- /. ROW  -->
@@ -112,7 +112,7 @@ if(isset($_POST["submit"])){
    }
    else{
 	   move_uploaded_file($_FILES["file"]["tmp_name"],"image/" . $_FILES["file"]["name"]);
-	   echo"<font size = '5'><font color=\"#0CF44A\"><br>";
+	   //echo"<font size = '5'><font color=\"#0CF44A\"><br>";
 	   $file="image/".$_FILES["file"]["name"];
 	   
 	   $sql = "INSERT INTO `recipes` (`Title`,`Instructions`,`Add_info`,`Image`)
@@ -137,14 +137,53 @@ if(isset($_POST["submit"])){
    }
 	   
 }
+?>
+
+<div class="col-lg-12 col-md-12">
+		<div class="table-responsive">
+		<table class="table">
+		
+		<thead>
+                     <tr>
+                     
+                     <th>Title</th>
+                     <th>Image</th>
+                     
+					 </tr>
+		</thead>
+		
+	<?php
+	include "config/config.php";
+	include "datetime.php";
+	//$display = "select * from recipe";
+	$result = mysqli_query($conn, "select * from recipes");
+	
+	
+	
+	while($row = mysqli_fetch_array($result)){
+	?>
+	<tr id="<?php echo $row["Recipe_Id"]; ?>" class="">
+		<td><?php echo "<a href='display.php?id=". $row[1] ."'>$row[1]</a>";?></td>
+        <td><?php 
+		//echo '<img height="200" width="200" src='".$row[1]."'>';?>
+		<img src="<?php echo $row["Image"];?>" height="70" width="120">
+		</td>
+		
+        
+	</tr>
+	<?php
+		}
+		
+	
+?>
+
+
 
 	
-	
-	
-			
-			
-	 
-?>
+				   	
+</table>
+</div>
+</div>
 
 <!-- /. PAGE INNER  -->
             </div>
