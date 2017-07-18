@@ -64,6 +64,9 @@ include("../include/nav.php");
                     <li>
                         <a href="menu.php"><i class="fa fa-edit "></i>View Menus  </a>
                     </li>
+					<li>
+                        <a href="counts.php"><i class="fa fa-edit "></i>Select Menu </a>
+                    </li>
 
 
 
@@ -142,6 +145,16 @@ include("../include/nav.php");
                            <a href="users.php" id="trigger" >
  <i class="fa fa-gear fa-5x"></i>
                       <h4>User Profile</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div>
+				  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="counts.php" id="trigger">
+ <i class="fa fa-sort-amount-asc fa-5x" ></i>
+                      <h4 >Select Menu </h4>
                       </a>
                       </div>
                      
