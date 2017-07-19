@@ -41,6 +41,8 @@ if(isset($_POST["submit"])){
 		$vendor = $row["Name"];
 		$address = $row["Address"];
 		$tel = $row["Contact_No"];
+		$quantity = $row["Quantity"];
+		$unit = $row["Unit"];
 
 	
 ?>
@@ -49,8 +51,8 @@ if(isset($_POST["submit"])){
 		<div class="row">
 		    <div id="content" class="col-md-12">
 
-		        <div id="chartContainer1" style="width: 500px; height: 300px;display: inline-block;"></div> 
-<div id="chartContainer2" style="width: 500px; height: 300px;display: inline-block;padding-left: 120px;"></div><br/>
+		       <!--  <div id="chartContainer1" style="width: 500px; height: 300px;display: inline-block;"></div> --> 
+<div id="chartContainer2" style="width: 500px; height: 300px;display: inline-block;"></div><br/>
 		            <script type="text/javascript">
 		            var chart1 = new CanvasJS.Chart("chartContainer1",{
 		            	
@@ -62,7 +64,7 @@ if(isset($_POST["submit"])){
 						        dataPoints :<?php echo json_encode($items, JSON_NUMERIC_CHECK); ?>
 						    }]
 						});
-						var chart2 = new CanvasJS.Chart("chartContainer2",{
+						var chart1 = new CanvasJS.Chart("chartContainer2",{
 						    title :{
 							text: "Fluctuation in Last Few Days"
 						    },
@@ -81,9 +83,10 @@ if(isset($_POST["submit"])){
 		           
 		        
 		    </div>
-		    <div class="col-md-12" style="padding-left: 400px;">
+		    <div class="col-md-12" ;">
 		    <br>
 		    <br>
+		    	<h4>Stock in hand: <?php echo $quantity , $unit  ?></h4>
 		    	<h4>Vendor: <?php echo $vendor ?></h4>
 		    	<h4>Address: <?php echo $address ?></h4>
 		    	<h4>Contact No: <?php echo $tel ?></h4>

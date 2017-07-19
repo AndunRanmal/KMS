@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stock Keeper</title>
+    <title>Simple Responsive Admin</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -36,28 +36,21 @@
                 </div>
            
                 <span class="logout-spn" >
-                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a> 
-
+                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a>  
 
                 </span>
-                <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;"></span> <span class="glyphicon glyphicon-envelope" style="font-size:18px;"></span></a>
-       <ul class="dropdown-menu"></ul>
-      </li>
-     </ul>
             </div>
         </div>
         <!-- /. NAV TOP  -->
-        <nav class="navbar-default navbar-side" role="navigation" >
-            <div class="sidebar-collapse" >
-                <ul class="nav" id="main-menu" >
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
                  
 
 
                     <li class="active-link">
                         <a href="index.html" ><i class="fa fa-desktop "></i>Dashboard <!-- <span class="badge">Included</span> --></a>
-                        <img src="assets/img/man2.png" height="200px" width="238px" style="border-radius: 50%;border: 1px solid #ddd;padding: 5px;">
+                        <img src="assets/img/man2.png" height="200px" width="250px" style="border-radius: 50%;border: 1px solid #ddd;padding: 5px;">
                     </li>
                    
 
@@ -65,16 +58,20 @@
                         <a href="ui.html"><i class="fa fa-table "></i> Notifications </a>
                     </li>
                     <li>
-                        <a href="blank.php"><i class="fa fa-edit "></i>Purchase Requision </a>
+                        <a href="purreq.html"><i class="fa fa-edit "></i>Report Generation </a>
                     </li>
 
 
                     <li>
-                        <a href="po.php"><i class="fa fa-qrcode "></i>Purchase Order</a>
+                        <a href="viewStaff.php"><i class="fa fa-qrcode "></i>View Staff</a>
                     </li>
                     <li>
-                        <a href="stock_handling.php"><i class="fa fa-bar-chart-o"></i>Stock Handling</a>
+                        <a href="charttype1.php"><i class="fa fa-bar-chart-o"></i>Edit Staff</a>
                     </li>
+
+                    <!-- <li>
+                        <a href="compareyear.php"><i class="fa fa-edit "></i></a>
+                    </li> -->
                     <li>
                         <a href="#"><i class="fa fa-table "></i>Profile Setting</a>
                     </li>
@@ -91,7 +88,7 @@
                     	<ol class="breadcrumb">
                     <li><a href="index.html">Home</a></li>
                     </ol>
-                     <h2>STOCK-KEEPER DASHBOARD</h2>   
+                     <h2>ADMIN DASHBOARD</h2>   
                     </div>
                 </div>              
                  <!-- /. ROW  -->
@@ -108,57 +105,56 @@
                     <div class="row text-center pad-top">
                   		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       		<div class="div-square">
-                            <a href="blank.php" id="trigger">
- 							<i class="fa fa-circle-o-notch fa-5x"></i>
-                      		<h4>Purchase Requistion</h4>
+                            <a href="kms1/charttype1.php" id="trigger">
+ 							<i class="fa fa-clipboard fa-5x"></i>
+                      		<h4>Report Generation</h4>
                       		</a>
                         </div>
                      	</div>
 
                      	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       		<div class="div-square">
-                            <a href="po.php" id="trigger">
+                            <a href="#" id="trigger">
  							<i class="fa fa-circle-o-notch fa-5x"></i>
-                      		<h4>Purchase Order</h4>
+                      		<h4>View Staff</h4>
                       		</a>
                         </div>
                      	</div> 
                      	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       		<div class="div-square">
-                           		<a href="stock_handling.php" id="trigger" >
+                           		<a href="blank.html" >
 								<i class="fa fa-clipboard fa-5x"></i>
-                      			<h4>Stock Handling</h4>
+                      			<h4>Edit Staff</h4>
                       			</a>
                       		</div>
                   		</div>
-                  		
+                  		<!-- <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      		<div class="div-square">
+                           		<a href="blank.html" >
+								<i class="fa fa-clipboard fa-5x"></i>
+                      			<h4>Bin Card</h4>
+                      			</a>
+                      		</div>
+                  		</div>
                   		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       		<div class="div-square">
-                           		<a href="blank.html" id="trigger">
+                           		<a href="blank.html" >
  								<i class="fa fa-bell-o fa-5x"></i>
                       			<h4>Notifications </h4>
                       			</a>
                       		</div>
+                  		</div> -->
+                  		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      		<div class="div-square">
+                           		<a href="blank.html" >
+ 								<i class="fa fa-gear fa-5x"></i>
+                      			<h4>Profile Settings</h4>
+                      			</a>
+                      		</div><br><br>
+
                   		</div>
-                    		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                        		<div class="div-square">
-                             		<a href="blank.html" id="trigger">
-   								<i class="fa fa-gear fa-5x"></i>
-                        			<h4>Profile Settings</h4>
-                        			</a>
-                        		</div><br><br>
 
-                    		</div>
-
-                  		
-
-
-                
-
-				   
-                  <!-- /. ROW  --> 
-    					</div>
-    					<!-- <div class="col-lg-12 ">
+                  		<!-- <div class="col-lg-12 ">
                         <div class="alert alert-info" style="text-align: left;">
                              <strong>Notification 1 </strong> 
                         </div><br>
@@ -170,7 +166,13 @@
                         </div><br>
                        
                     </div> -->
-                    
+
+
+                
+
+				   
+                  <!-- /. ROW  --> 
+    					</div>
              <!-- /. PAGE INNER  -->
             </div>
          <!-- /. PAGE WRAPPER  -->
@@ -180,7 +182,7 @@
     
             <div class="row">
                 <div class="col-lg-12" >
-                    <p style="text-align: right;">Sanmira Renaissance Galle - <a>http://www.unawatunasanmirahotel.com</a></p>
+                    &copy;  2014 yourdomain.com | Design by: <a href="http://binarytheme.com" style="color:#fff;" target="_blank">www.binarytheme.com</a>
                 </div>
             </div>
         </div>
@@ -194,43 +196,6 @@
     <script src="assets/js/bootstrap.min.js"></script>
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
-
-<script>
-$(document).ready(function(){
- 
- function load_unseen_notification(view = '')
- {
-  $.ajax({
-   url:"http://localhost/kms/kms/php/fetxh.php",
-   method:"POST",
-   data:{view:view},
-   dataType:"json",
-   success:function(data)
-   {
-    $('.dropdown-menu').html(data.notification);
-    if(data.unseen_notification > 0)
-    {
-     $('.count').html(data.unseen_notification);
-    }
-   }
-  });
- }
- 
- load_unseen_notification();
- 
- 
- 
- $(document).on('click', '.dropdown-toggle', function(){
-  $('.count').html('');
-  load_unseen_notification('yes');
- });
- 
- setInterval(function(){ 
-  load_unseen_notification();; 
- }, 5000);
- 
-});
-</script>
     
    
 </body>

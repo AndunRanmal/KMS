@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
+    <title>Supplier Details</title>
   <!-- BOOTSTRAP STYLES-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -100,8 +100,9 @@
         <?php
 //include "config/config.php";
 //include "datetime.php";
+include("../config/config.php");
 if(isset($_POST["submit"])){
-  $db =mysqli_connect("localhost","root","","kms");
+  // $db =mysqli_connect("localhost","root","","kms");
   $name = $_POST["name1"];
   $number = $_POST["number"];
   $address = $_POST["address"];
@@ -120,7 +121,7 @@ if(isset($_POST["submit"])){
      $sql = "INSERT INTO `new_supplier` (`names`,`pnumber`,`address`,`image`)
      VALUES ('$name','$number','$address','$file')";
 
-     mysqli_query($db,$sql);
+     mysqli_query($conn,$sql);
      //echo $sql;
     // mysqli_query($conn,$sql);
   
@@ -166,9 +167,9 @@ if(isset($_POST["submit"])){
                     <div class="container">
     <div class="row">
         <?php
-          $db = mysqli_connect("localhost","root","","kms");
+          // $db = mysqli_connect("localhost","root","","kms");
           $sql = "SELECT * FROM `new_supplier`";
-          $result = mysqli_query($db,$sql);
+          $result = mysqli_query($conn,$sql);
           while ($row = mysqli_fetch_array($result)) {
             $id = $row['sid'];
             $name = $row['names'];

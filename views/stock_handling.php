@@ -1,4 +1,5 @@
 <head>
+  <title>Stock Handling</title>
 	<script src="assets/js/script.js"></script>
 
 	<script src="assets/js/canvasjs.min.js"></script>
@@ -73,7 +74,7 @@ include("../include/stock_keeper.php");
 <!--                 <button class="btn btn-info" onclick="location.href='pr.html'"><i class="fa fa-search" aria-hidden="true"></i></button>
  -->                <div><br><br><hr>
 
- 					<div id="chartContainer1" style="width: 100%; height: 300px;display: inline-block;"></div> 
+ 					<!-- <div id="chartContainer1" style="width: 100%; height: 300px;display: inline-block;"></div>  -->
 
 		            <script type="text/javascript">
 					window.onload = function () {
@@ -91,6 +92,38 @@ include("../include/stock_keeper.php");
 					    chart.render();
 					};
 					</script>
+          <div class="col-md-12">
+            <table class="table table-striped">
+              <thead>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Category</th>
+                <th>Supplier</th>
+              </thead>
+              <?php
+                $sql = "SELECT * FROM `stock`";
+                $res = mysqli_query($conn,$sql);
+                while($row = mysqli_fetch_assoc($res)){
+                  $name = $row["Item_Name"];
+                  $quantity = $row["Quantity"];
+                  $unit =$row["Unit"];
+                  $category = $row["Category"];
+
+                
+              ?>
+              <tbody>
+                <tr>
+                  <td><?php echo $name; ?></td>
+                  <td><?php echo $quantity, $unit ?></td>
+                  <td><?php echo $category ?></td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <?php
+            }
+            ?>
+            </table>
+          </div>
  					<hr/>
                 	<h4>Enter a New Stock</h4>
                 	<div>
