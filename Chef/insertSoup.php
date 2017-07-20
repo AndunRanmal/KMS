@@ -46,7 +46,35 @@ include("../include/chef.php");
 
    }
 }?>
+	<div class="row">
+				 <form enctype="multipart/form-data" action="insertSoup.php" method="post" name="changer">
+				 <div class="col-lg-1 col-md-1">
+				 </div>
+				 <div class="col-lg-1 col-md-1">
+					<label>Name </label>
+				 </div>
+				 <div class="col-lg-4 col-md-4">
+					<input type="text" class="form-control" name="name"  required/>
+				 </div>
+				 
+				 
+				 <div class="col-lg-3 col-md-3"> 
+				<input name="image" accept="image/jpeg" type="file" required>
+				</div>
+				<div class="col-lg-1 col-md-1"> 
+				 <label>Price </label>
+				 </div>
+				 <div class="col-lg-1 col-md-1">
+				 <input type="number" class="form-control" name="price" min="1" required/>
+				</div>
+				<div class="col-lg-1 col-md-1"> 
+				<input type="submit" name="submit" value="Add" class="btn btn-primary">
+				
+				
+				 </div>
+				 
 	<div class="col-lg-12 col-md-12">
+	
 		<div class="table-responsive">
 		<table class="table">
 		<thead>
@@ -55,6 +83,7 @@ include("../include/chef.php");
                      <th>Name</th>
                      <th>Image</th>
                      <th>Price</th>
+					 <th>Select</th>
 					 <th></th>
                       </tr>
                       </thead>
@@ -77,27 +106,7 @@ include("../include/chef.php");
                         <td><input type="checkbox" name="customer_id[]" class="delete_customer" value="<?php echo $row["Id"]; ?>" /></td>
                         </tr>
                   
-		<!--<div id="<?php //echo $row["Id"]; ?>">
-		<div id="<?php //echo $row["Id"]; ?>" class="col-lg-6 col-md-6">
-		<?php 
-		//echo $row[1].'<br>';
-		?>
-		</div>
-		<div id="<?php //echo $row["Id"]; ?>" class="col-lg-3 col-md-3">
-		<?php 
-		//echo '<img height="200" width="200" src='".$row[1]."'>';?>
-		<img src="<?php //echo $row["image"];?>" height="70" width="120"><br><br>
 		
-		</div>
-		<div id="<?php //echo $row["Id"]; ?>" class="col-lg-2 col-md-2">
-		<?php 
-		//echo $row[3].'<br>';
-		?>
-		</div>
-		<div id="<?php //echo $row["Id"]; ?>" class="col-lg-1 col-md-1">
-		<input type="checkbox" name="customer_id[]" class="delete_customer" value="<?php //echo $row["Id"]; ?>" />
-		</div>
-		</div>-->
 		
 		
 		<?php
@@ -110,34 +119,7 @@ include("../include/chef.php");
 		</div>
 				 
 				 </div>
-				 <div class="row">
-				 <form enctype="multipart/form-data" action="insertSoup.php" method="post" name="changer">
 				 
-				 <div class="col-lg-1 col-md-1">
-					<label>Name </label>
-				 </div>
-				 <div class="col-lg-4 col-md-4">
-					<input type="text" class="form-control" name="name"  />
-				 </div>
-				 
-				 
-				 <div class="col-lg-3 col-md-3"> 
-				<input name="image" accept="image/jpeg" type="file">
-				</div>
-				<div class="col-lg-1 col-md-1"> 
-				 <label>Price </label>
-				 </div>
-				 <div class="col-lg-1 col-md-1">
-				 <input type="number" class="form-control" name="price" min="1" />
-				</div>
-				<div class="col-lg-1 col-md-1"> 
-				<!--<input type="submit" name="submit" value="Add" class="btn btn-primary">-->
-				
-				<!-- <input value="Add" type="submit" name="submit"> -->
-				 </div>
-				 <div class="col-lg-1 col-md-1">
-				 <!--<button type="button" name="btn_delete" id="btn_delete" class="btn btn-primary">Delete</button>-->
-				</div>
 
 				
 				
@@ -146,11 +128,11 @@ include("../include/chef.php");
 				
 				</div>
 				<div class="row">
-				<center>
-				
-				<input type="submit" name="submit" value="Add" class="btn btn-primary">
+				<div class="col-lg-10 col-md-10">
+				</div>
+				<div class="col-lg-1 col-md-1">
                     <button type="button" name="btn_delete" id="btn_delete" class="btn btn-primary">Delete</button>
-                </center>
+                </div>
                 </div>
 
 				</form>
