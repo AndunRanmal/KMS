@@ -29,14 +29,14 @@ include("../include/stock_keeper.php");
                     </ol>
                       <!-- <h3>Purchase requsition</h3> --> 
                       
-                      <form style="float: left;">
+                      <form style="float: left;" id="search" action="PO_report.php" method="get">
                         <div class="form-group">
-                        <input type="text" name="search" class="form-control" placeholder="Search a Purchase Order" size="30">
+                        <input type="text" name="ref" class="form-control" placeholder="Search a Purchase Order" size="30">
                         <!-- <input type="submit" name="submit" class=" btn btn-info fa fa-search" value="SEARCH"> -->
                         <!-- <button class="btn btn-info"><i class="fa fa-search" aria-hidden="true"></i></button> -->
                         </div> 
                       </form>
-                      <button class="btn btn-info" onclick="location.href='pr.html'"><i class="fa fa-search" aria-hidden="true"></i></button>
+                      <button type="submit" class="btn btn-info" form="search"><i class="fa fa-search" aria-hidden="true"></i></button>
                       <br/>
                     </div>
                 </div>

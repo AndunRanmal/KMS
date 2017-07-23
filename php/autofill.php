@@ -65,7 +65,7 @@ if($_POST['type']=='vendor'){
 	}
 		$output .='</table>
                     </div>
-                    <a href="../php/po_accept.php?ref='.$vendor.'&id='.$pr.'" class="btn btn-info">Procees to Complete</a>';
+                    <a href="../php/po_accept.php?ref='.$vendor.'&id='.$pr.'" class="btn btn-info">Proceed to Complete</a>';
 		echo $output;
 	}
 }

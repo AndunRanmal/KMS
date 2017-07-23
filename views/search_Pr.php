@@ -21,6 +21,7 @@ if(isset($_POST["submit"])){
 	$Pr = $_POST["search"];
 	$sql1 = "SELECT * FROM `requisition_overview` WHERE `Id` = '$Pr'";
 	$result = mysqli_query($conn,$sql1);
+  if(mysqli_num_rows($result)==1){
 	while($row = mysqli_fetch_assoc($result)){
 		$issued_date = $row['Issued_date'];
 		$last_updated = $row['Last_updated'];
@@ -54,6 +55,7 @@ if(isset($_POST["submit"])){
                         <span style="font-weight: bold;">Approved by: </span> <?php echo $apprv_by; ?></p><br>
                         <?php 
                     }
+                    
                     ?>
                           <table class="table table-bordered" id="tableid">
                             <thead style="font-weight: bolder;text-align: center;">
@@ -108,6 +110,12 @@ if(isset($_POST["submit"])){
                         </p>
                     	</div>
                      <?php
+                     }else{
+                            echo '<script type="text/javascript">';
+                            echo 'alert("Sorry! Your PR Id is not Available");';
+                            echo 'window.location="../views/blank.php";';
+                            echo '</script>';
+                          }
                      }
 						?>   
                     </div>

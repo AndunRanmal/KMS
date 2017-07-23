@@ -72,7 +72,7 @@ font-size: 16px;
 
 background-color: #214761;
 border-color: #F0F0F0;
-min-height: 80px;
+min-height: 50px;
 }
 
 
@@ -104,6 +104,7 @@ min-height: 80px;
    -moz-border-radius:8px;
     border-radius:8px;
     margin:5px;
+    height: 150px;
 
 }
 
@@ -134,7 +135,8 @@ min-height: 80px;
  
  @media(min-width:768px) {
      #page-wrapper{
-               margin: 0 0 0 238px; /*edited from 250-238*/
+               margin: 0 0 0 238px;
+               margin-top: -19px; /*edited from 250-238*/
         padding: 15px 30px;
         min-height: 1050px;
 		
@@ -150,5 +152,68 @@ min-height: 80px;
 
  
 }
+.navbar-default .navbar-side{
+    padding-right: 21px;
+    margin-right: 40px;
+    padding-top: 19px;
+}
+div .tabs{
+    overflow: hidden;
+    /*border: 1px solid #ccc;
+    background-color: #f1f1f1*/
+}
+div.tabs button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    /*padding: 14px 16px;*/
+    transition: 0.3s;
+    font-size: 17px;
+    width: 120px;
+    color: #5e5e5e;
+    border: 1px solid #ddd;
+    font-weight: bold;
+}
+div.tabs button:hover {
+    background-color: #ddd;
+}
+div.tabs button.active {
+    background-color: #ccc;
+}
+tr.tablerow:hover{
+    cursor: pointer;
+    background-color: #ccc;
+}
+table tr td a:hover{
+    text-decoration: none;
+}
+#trigger:hover{
+    color: #00bfff;
+}
 
+table{
+    border-collapse: collapse;
+}
+table, td, th,{
+    border: 1px solid black;
+}
+
+
+@media print
+{
+body * { visibility: hidden; }
+#content * { visibility: visible; }
+/*.div2 { position: absolute; top: 40px; left: 30px; }*/
+}
+.dropdown-menu {
+    background-color: #fff
+}
+
+.dropdown-menu>li>a:focus,.dropdown-menu>li>a:hover,.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:focus,.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:focus,.navbar-inverse .navbar-nav>.open>a:hover,.navbar-inverse .navbar-nav>li>a:focus,.navbar-inverse .navbar-nav>li>a:hover
+    {
+    background-color: #91c448;
+    color: #fff
+}
 

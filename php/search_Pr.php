@@ -49,6 +49,7 @@ include("../include/stock_keeper.php");
 								$res = mysqli_query($conn,$sql);
 								$count = 0;
 								$sum = 0;
+								
 								while($row = mysqli_fetch_assoc($res)){
 									$code = $row['Item_code'];
 							        $des = $row['Description'];
@@ -71,7 +72,8 @@ include("../include/stock_keeper.php");
                                   <td><?php echo $remarks; ?></td>
                                 </tr>
                         <?php
-                            }
+                            	}
+                        	
 						}
 						?>
                           </tbody>
