@@ -110,9 +110,9 @@ include("../include/nav.php");
 			  <div class="col-lg-2 col-md-2">
 			  <div class="form-group">
                             
-                            <input type="Date" class="form-control"  name="date"   /><br>
-							<input type="number" class="form-control" name="count" min="1" max="250" /><br>
-                             <input type="number" class="form-control" name="time" min="1" max="24" />
+                            <input type="Date" class="form-control"  name="date" required  /><br>
+							<input type="number" class="form-control" name="count" min="1" max="250" required/><br>
+                             <input type="number" class="form-control" name="time" min="1" max="24" required/>
 							
                             
                         </div>
@@ -126,8 +126,8 @@ include("../include/nav.php");
 			  </div>
 			  <div class="col-lg-3 col-md-3">
 			  <br>
-			  <input type="text" class="form-control" name="person"  /><br>
-                  <input type="text" class="form-control" name="number"  />
+			  <input type="text" class="form-control" name="person" required /><br>
+                  <input type="text" class="form-control" name="number" required />
 			  </div>
 			 
 			  </div>

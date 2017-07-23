@@ -9,10 +9,7 @@ include("../include/nav.php");
 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-                    <li class="active-link">
-                        <a href="index.html" ><i class="fa fa-desktop "></i>Dashboard <!-- <span class="badge">Included</span> --></a>
-                        <!--<img src="assets/img/cashier.jpg" height="200px" width="238px" style="border-radius: 50%;border: 1px solid #ddd;padding: 5px;">-->
-                    </li>
+                    
 
 
 

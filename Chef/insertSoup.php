@@ -68,7 +68,7 @@ include("../include/chef.php");
 				 <input type="number" class="form-control" name="price" min="1" required/>
 				</div>
 				<div class="col-lg-1 col-md-1"> 
-				<input type="submit" name="submit" value="Add" class="btn btn-primary">
+				<input type="submit" name="submit" value="Add" class="btn btn-primary"><br><br><br>
 				
 				
 				 </div>
@@ -82,7 +82,7 @@ include("../include/chef.php");
                      
                      <th>Name</th>
                      <th>Image</th>
-                     <th>Price</th>
+                     <th>Price (Rs)</th>
 					 <th>Select</th>
 					 <th></th>
                       </tr>

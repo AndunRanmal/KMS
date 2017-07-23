@@ -30,9 +30,7 @@
                     <li>
                         <a href="counts.php"><i class="fa fa-edit "></i>Calculate Ingredients </a>
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-table "></i>View remaining amounts</a>
-                    </li>
+                    
                      
                     
                 </ul>
