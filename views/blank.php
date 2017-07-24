@@ -32,7 +32,7 @@ include("../include/stock_keeper.php");
                       
                       <form style="float: left;" method="POST" action="search_Pr.php" id="search" class="form-inline" id="search">
                         <div class="form-group">
-                        <input type="text" name="search" class="form-control" placeholder="Search a Purchase Requisition" size="30" ">
+                        <input type="text" name="search" class="form-control" placeholder="Search By Purchase Requisition ID" size="30" ">
                         </div>
                         <div class="form-group">
                         <input type="submit" name="submit" class=" btn btn-info fa fa-search" value="SEARCH">
@@ -278,10 +278,10 @@ include("../include/stock_keeper.php");
                                         <tr class="tablerow" data-href="fffd.html">
                                           <!-- <td><input type="checkbox" name="id" ></td> -->
                                           <td><i class="fa fa-file-word-o" aria-hidden="true"></i></td>
-                                          <td><a href="pr_report.php?ref=<?php echo $id ?>"><?php echo $id ?></a></td>
-                                          <td><a href="pr_report.php?ref=<?php echo $id ?>"> Completed</a></td>
-                                          <td><a href="pr_report.php?ref=<?php echo $id ?>"><?php echo $issue_date ?></a></td>
-                                          <td><a href="pr_report.php?ref=<?php echo $id ?>"></a></td> 
+                                          <td><a href="pr_doc.php?ref=<?php echo $id ?>"><?php echo $id ?></a></td>
+                                          <td><a href="pr_doc.php?ref=<?php echo $id ?>"> Completed</a></td>
+                                          <td><a href="pr_doc.php?ref=<?php echo $id ?>"><?php echo $issue_date ?></a></td>
+                                          <td><a href="pr_doc.php?ref=<?php echo $id ?>"></a></td> 
                                         </tr>
                                         <?php
                                           }

@@ -10,6 +10,13 @@
     <script src="assets/js/custom.js"></script>
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
     <script src="assets/js/autofill.js"></script>
+    <style>
+    #pagination div { display: inline-block; margin-right: 5px; margin-top: 5px }
+    #pagination .cell a { border-radius: 3px; font-size: 11px; color: #333; padding: 8px; text-decoration:none; border: 1px solid #d3d3d3; background-color: #f8f8f8; }
+    #pagination .cell a:hover { border: 1px solid #c6c6c6; background-color: #f0f0f0;  }
+    #pagination .cell_active span { border-radius: 3px; font-size: 11px; color: #333; padding: 8px; border: 1px solid #c6c6c6; background-color: #e9e9e9; }
+    #pagination .cell_disabled span { border-radius: 3px; font-size: 11px; color: #777777; padding: 8px; border: 1px solid #dddddd; background-color: #ffffff; }
+  </style>
 </head>
 <body>
 <?php
@@ -31,7 +38,7 @@ include("../include/stock_keeper.php");
                       
                       <form style="float: left;" id="search" action="PO_report.php" method="get">
                         <div class="form-group">
-                        <input type="text" name="ref" class="form-control" placeholder="Search a Purchase Order" size="30">
+                        <input type="text" name="ref" class="form-control" placeholder="Search By Purchase Order Id" size="30">
                         <!-- <input type="submit" name="submit" class=" btn btn-info fa fa-search" value="SEARCH"> -->
                         <!-- <button class="btn btn-info"><i class="fa fa-search" aria-hidden="true"></i></button> -->
                         </div> 
@@ -107,10 +114,10 @@ include("../include/stock_keeper.php");
 									    	
 
 									  	</div>
-									  	<div class="form-group">
+									  	<!-- <div class="form-group">
 									    	<label for="address" class="control-label col-sm-2">Address: </label>
 									    	<textarea class="form-control" rows="4" id="address" style="width: 250px;"></textarea>
-									  	</div>
+									  	</div> -->
 									  	<div id="result">
                       </div>
 									  	
@@ -123,40 +130,14 @@ include("../include/stock_keeper.php");
                                 <p>
                                     <!-- Purchase Requisitions that are approved by manager are displayed here. --> 
                                 </p>  
-                                <div>
-                                  <table class="table" id="active">
-                                      <thead>
-                                        <tr>
-                                          <!-- <td><input type="checkbox" name="id" ></td> -->
-                                          <th></th>
-                                          <th>Purchase Order</th>
-                                          <th>Vendor</th>
-                                          <th>Date Created</th><!-- 
-                                          <th>Last Updated</th> -->
-                                        </tr>
-                                      </thead>
-                                      <?php
-                                        $po = "SELECT * FROM `po_overview` ORDER BY `Issued_date` DESC LIMIT 10"; 
-                                        $res=mysqli_query($conn,$po);
-                                        while($row = mysqli_fetch_assoc($res)){
-                                          $id = $row["O_Id"];
-                                          $vendor = $row["Vendor"];
-                                          $date = $row["Issued_date"];
-                                        
-                                      ?>
-                                      <tbody>
-                                        <tr>
-                                          <td><i class="fa fa-file-word-o" aria-hidden="true"></i></td>
-                                          <td><a href="PO_report.php?ref=<?php echo $id ?>"><?php echo $id ?></a></td>
-                                          <td><a href="PO_report.php?ref=<?php echo $id ?>"><?php echo $vendor ?></a></td>
-                                          <td><a href="PO_report.php?ref=<?php echo $id ?>"><?php echo $date ?></a></td>
-                                          </tr>
-                                      </tbody>
-                                      <?php
-                                    }
-                                    ?>
-                                  </table>
+
+                                  <div id="articleArea"> </div>
+                                  <div id="pagination">
+                                    <!-- Just tell the system we start with page 1 (id=1) -->
+                                    <!-- See the .js file, we trigger a click when page is loaded -->
+                                    <div><a href="#" id="1"></a></div>
                                   </div>
+                                
                             </div>
                             <div class="tab-pane fade" id="messages">
                                 <!-- <h4>Messages Tab</h4> --><br>
@@ -216,6 +197,7 @@ include("../include/stock_keeper.php");
     <script src="assets/js/custom.js"></script>
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
     <script src="assets/js/autofill.js"></script>
+    <script type="text/javascript" src="pagination_po.js"></script>
     
    
 </body>

@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cashier Dashboard</title>
   <!-- BOOTSTRAP STYLES-->
-    <link href="../views/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
-    <link href="../views/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
         <!-- CUSTOM STYLES-->
-    <link href="../views/assets/css/custom.css" rel="stylesheet" />
+    <link href="assets/css/custom.css" rel="stylesheet" />
     
    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>-->
      <!-- GOOGLE FONTS-->
@@ -81,7 +81,7 @@ include("../include/nav.php");
                 <div class="row">
                     <div class="col-lg-12">
                     <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="main.php">Home</a></li>
                     </ol>
                      <h2>Restaurant Cashier</h2>   
                     </div>
@@ -130,7 +130,7 @@ include("../include/nav.php");
                      
                      
                   </div>
-                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                  <!-- <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
                            <a href="menu.php" id="trigger" >
  <i class="fa fa-eye fa-5x"></i>
@@ -139,7 +139,7 @@ include("../include/nav.php");
                       </div>
                      
                      
-                  </div>
+                  </div> -->
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
                            <a href="users.php" id="trigger" >
