@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
+    <title>Calculation For Bulk Order</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="../views/assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -98,6 +98,7 @@ include("../include/nav.php");
 			  <div class="col-lg-3 col-md-3">
 			  
 			  <div class="form-group">
+							<h4><b>Function Details</b></h4>
                             <label>Date</label><br><br>
 							<label>Enter Number of Customers</label><br><br>
                             <label>Time Duration (hours)</label>
@@ -109,7 +110,7 @@ include("../include/nav.php");
 			  
 			  <div class="col-lg-2 col-md-2">
 			  <div class="form-group">
-                            
+                            <br>
                             <input type="Date" class="form-control"  name="date" required  /><br>
 							<input type="number" class="form-control" name="count" min="1" max="250" required/><br>
                              <input type="number" class="form-control" name="time" min="1" max="24" required/>
@@ -131,29 +132,34 @@ include("../include/nav.php");
 			  </div>
 			 
 			  </div>
+			  <br>
 
 			  <div class="row">
 			  <div class="col-lg-1 col-md-1">
 			  </div>
 			  <div class="col-lg-2 col-md-2">
 				<div class="form-group">
+							<h4><b>Select Menu</b></h4>
                             <label>Soup</label><br><br>
 							
                         </div>
 			  </div>
 			  <div class="col-lg-4 col-md-4">
+			  <br>
 			  <input type="checkbox" name="menu[]" value="001"> Butter Baked Carrot Lentil Soup<br>
 			<input type="checkbox" name="menu[]" value="002" checked> Diced vegetable Broth<br>
-			<input type="checkbox" name="menu[]" value="003" checked> Curry Leaf Flavores Chicken Both<br>
+			<input type="checkbox" name="menu[]" value="003" checked> Curry Leaf Flavores Chicken Both<br><br>
 			
   
 			  </div>
 			  <div class="col-lg-2 col-md-2">
 				<div class="form-group">
+				<br>
                             <label>Welcome Drink</label><br><br>
 							</div>
 							</div>
 							<div class="col-lg-3 col-md-3">
+							<br>
 							<input type="checkbox" name="menu[]" value="004"> Frsesh Fruit Juice <br>
 							<input type="checkbox" name="menu[]" value="005" checked> Stawberry Guava<br><br><br>
                         </div>
