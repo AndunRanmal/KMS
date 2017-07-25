@@ -155,12 +155,12 @@ include("../include/nav.php");
                     echo "Error: " . $sql5 . "<br>" . mysqli_error($conn);
                 }
                 while($d = mysqli_fetch_array($c)){
-                    $result = ($d[1] * $b[0]);
-                    //echo $result;
+                    $result = ($d[1] * $b[0])/1000;
+                    echo $result;
                     //echo $d[0].' '. $result.'<br>';
                     $sql11 = "INSERT INTO total(menu_id,menu_name,result,unit) VALUES('$d[2]','$d[0]','$result','$d[3]')";
                     if (mysqli_query($conn, $sql11)) {
-                        //echo "New record created successfully";
+                        //echo "New record created successfully";   
                     } else {
                         echo "Error: " . $sql11 . "<br>" . mysqli_error($conn);
 
