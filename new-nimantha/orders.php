@@ -221,29 +221,29 @@
                 <div id="page-inner">
                     <div class="row">
                         <div class="col-md-12">
-                    <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="orders.php">Purchase Order</a></li>
-                    </ol>
-                            <h2>New Orders </h2>
-                        </div>
-                    </div>
-                    </br>
+                            <ol class="breadcrumb">
+                            <li><a href="main.php">Home</a></li>
+                            <li><a href="orders.php">New Order</a></li>
+                            </ol>
+                            <div>
+                        <!-- <h5>Orders</h5> -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#new" data-toggle="tab">New Order</a>
+                            </li>
+                            <li class=""><a href="#old" data-toggle="tab">Placed Orders</a>
+                            </li>
+                            <!-- <li class=""><a href="#messages" data-toggle="tab">Messages</a>
+                            </li> -->
 
-
-
-
-                    <div class="col-md-12">
-
-                        <form class="form-inline" action="regi2.php" method="post" name="myForm">
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade active in" id="new">
+                                <h4>Add a New Order</h4>
+                                <form class="form-inline" action="regi2.php" method="post" name="myForm">
 
 
                             <div class="col-md-6">
-                                <!--<tr>
-                                <td align="right"><b> Order Number : </b></br>
-                                </td>
-                                <td><input type="text" class="form-control" name="OrderNumber" /></td>
-                            </tr> -->
+                                
 
 
 
@@ -380,7 +380,7 @@
                                     </div>
 
                                 </tr>
-                                </br>
+                                <br/>
                                 </br>
 
                                 <tr>
@@ -460,6 +460,63 @@
                             </div>
 
                         </form>
+                            </div>
+                            <div class="tab-pane fade" id="old">
+                                <h4>Placed Orders</h4>
+                                <table class="table">
+                                    <thead>
+                                        <th>Order Id</th>
+                                        <th>Meal Type</th>
+                                        <th>Menu Type</th>
+                                        <th>Item</th>
+                                        <th>Quntity</th>
+                                        <th>Date</th>
+                                        <th>Price</th>
+                                    </thead>
+                                
+                                <?php
+                                include("../config/config.php");
+                                $sql = "SELECT * FROM `new_orders` ORDER BY `Order_number` DESC LIMIT 10";
+                                $res = mysqli_query($conn,$sql);
+                                while($row = mysqli_fetch_assoc($res)){
+                                    $id = $row["Order_number"];
+                                    $type = $row["Meal_type"];
+                                    $menu = $row["Type_of_menu"];
+                                    $item= $row["Type_of_item"];
+                                    $quantity = $row["Quantity"];
+                                    $date = $row["Date"];
+                                    $price = $row["price"];                                
+                                ?>
+                                    <tr>
+                                        <td><?php echo $id ?></td>
+                                        <td><?php echo $type ?></td>
+                                        <td><?php echo $menu ?></td>
+                                        <td><?php echo $item ?></td>
+                                        <td><?php echo $quantity ?></td>
+                                        <td><?php echo $date ?></td>
+                                        <td><?php echo $price ?></td>
+                                    </tr>
+                                <?php
+                                }
+                                ?>    
+                                </table>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+
+                            
+                        </div>
+                    </div>
+                    </br>
+
+
+
+
+                    <div class="col-md-12">
+
+                        
                     </div>
                     <!-- <div class="col-md-6"> <img src="assets/img/orders.jpg" style="width:100%; height:150%;"> </div>-->
 

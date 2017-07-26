@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
+    <title>Purchase Requisition</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -13,64 +13,11 @@
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
-<body>
-     
-           
-          
-    <div id="wrapper">
-         <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="adjust-nav">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                      <a class="navbar-brand" href="#">
-                   <!--      <img src="assets/img/logo.png" />
- -->
-                    </a>
-                    
-                </div>
-           
-                <span class="logout-spn" >
-                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a>  
+<?php
+include("../include/nav.php");
+include("../include/manager.php");
 
-                </span>
-            </div>
-        </div>
-        <!-- /. NAV TOP  -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-                 
-
-                     <li>
-                        <a href="ui.html"><i class="fa fa-table "></i> Notifications </a>
-                    </li>
-                  <li>
-                        <a href="purreq.php"><i class="fa fa-edit "></i>Purchase Requision </a>
-                    </li>
-
-
-                    <li>
-                        <a href="purorde.php"><i class="fa fa-qrcode "></i>Purchase Order</a>
-                    </li>
-                    <li>
-                        <a href="viewrep.php"><i class="fa fa-bar-chart-o"></i>Genarate Reports</a>
-                    </li>
-
-                    <li>
-                        <a href="supdeta.php"><i class="fa fa-edit "></i>Supplier Details </a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-table "></i>Profile Setting</a>
-                    </li>
-
-                </ul>
-                            </div>
-
-        </nav>
+?>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
@@ -79,7 +26,7 @@
                     <div class="col-md-12">
                      <ol class="breadcrumb">
                     <li><a href="manager.php">Home</a></li>
-                     <li class="active">PURCHASE REQUISTION </li>        
+                     <li class="active">Purchase Requisition</li>        
                     </ol>
                      <h2>PURCHASE REQUISTION </h2>   
                     </div>
@@ -97,69 +44,45 @@
       <tr>
         <th>#</th>
         <th>requistion</th>
-        <th>Last Update</th>
-        <th>approve/no</th>
+        <!-- <th>Last Update</th> -->
+        
         
       </tr>
     </thead>
     <tbody>
+    <?php
+      include("../config/config.php");
+      $sql = "SELECT * FROM  `requisition_overview`WHERE Status=0 ";
+      $result = mysqli_query($conn,$sql);
+      if(mysqli_num_rows($result)==0){
+        echo "There are no pending Purchase Requisition";
+      }else{
+        while($row = mysqli_fetch_assoc($result)){
+          $pr_id = $row["Id"];
+          $date = $row["Issued_date"];
+          // echo $pr_id;
+     
+
+    ?>
+    
       <tr>
-        <td>1</td>
-        <td><p><a href="reqveiw.php">special Oder1</a></p></td>
-        <td>2017/04/23</td>
-        <td>
+        <td><i class="fa fa-file-word-o" aria-hidden="true"></i></td>
+        <td><p><a href="reqveiw.php"><?php echo $pr_id; ?></a></p></td>
+        <td><a href="reqveiw.php"><?php echo $date ?></a></td>
+        <!-- <td>
 
          <label for="accept">accept</label>
         <input type="radio" name="approve" id="accept" value="accept">
         <label for="reject">reject</label>
         <input type="radio" name="approve" id="reject" value="reject">
 
-        </td>
+        </td> -->
         
       </tr>
-
-      <tr>
-        <td>2</td>
-        <td><p><a href="reqveiw.php">special Oder2</a></p></td>
-        <td>2017/04/25</td>
-        <td>
-
-         <label for="accept">accept</label>
-        <input type="radio" name="approve" id="accept" value="accept">
-        <label for="reject">reject</label>
-        <input type="radio" name="approve" id="reject" value="reject">
-
-        </td>
-        
-      </tr>
-      <tr>
-        <td>3</td>
-        <td><p><a href="reqveiw.php">special Oder3</a></p></td>
-        <td>2017/04/27</td>
-        <td>
-
-         <label for="accept">accept</label>
-        <input type="radio" name="approve" id="accept" value="accept">
-        <label for="reject">reject</label>
-        <input type="radio" name="approve" id="reject" value="reject">
-
-        </td>
-        
-      </tr>
-      <tr>
-        <td>4</td>
-        <td><p><a href="reqveiw.php">special Oder4</a></p></td>
-        <td>2017/04/29</td>
-        <td>
-
-         <label for="accept">accept</label>
-        <input type="radio" name="approve" id="accept" value="accept">
-        <label for="reject">reject</label>
-        <input type="radio" name="approve" id="reject" value="reject">
-
-        </td>
-        
-      </tr>
+      <?php
+   }
+      }
+      ?>
     </tbody>
   </table>
   </div>
@@ -167,7 +90,7 @@
              <!-- /. PAGE INNER  -->
             </div>
          <!-- /. PAGE WRAPPER  -->
-        </div>
+        
     
                       
 

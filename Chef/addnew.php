@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
+    <title>Add a New Recipe</title>
   <!-- BOOTSTRAP STYLES-->
     <link href="../views/assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -32,7 +32,12 @@ include("../include/chef.php");
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>ADD NEW FOOD ITEM</h2>   
+                    <ol class="breadcrumb">
+                      <li><a href="chef.html">Home</a></li>
+                        <li><a href="addnew.php">New Recipe</a></li>
+                        
+                    </ol>
+                     <h2>Add a New Recipe</h2>   
                     </div>
                 </div>              
                  <!-- /. ROW  -->

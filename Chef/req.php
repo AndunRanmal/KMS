@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
+    <title>Store Requisition</title>
     <!-- BOOTSTRAP STYLES-->
     <link href="../views/assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -32,7 +32,12 @@ include("../include/chef.php");
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>STORE REQUISITION</h2>   
+                    <ol class="breadcrumb">
+                      <li><a href="chef.html">Home</a></li>
+                        <li><a href="req.php">Store Requisition</a></li>
+                        
+                    </ol>
+                     <h3>Store Requisition</h3>   
                     </div>
                 </div>              
                  <!-- /. ROW  -->
@@ -59,11 +64,12 @@ include("../include/chef.php");
                                     
                                      <table class="table table-striped">
                                        <thead>
-                                        <tr>
-                                          <td>Item</td>
-                                          <td>Quantity Request</td>
-                                          <td>Remarks</td>
-                                        </tr>   
+                                        
+                                          <th>Item</th>
+                                          <th style="text-align: center">Quantity Request</th>
+                                          <th>Unit</th>
+                                          <th>Remarks</th>
+                                           
                                        </thead>
 									 </table>
 									 
@@ -71,9 +77,15 @@ include("../include/chef.php");
                                        <tbody>
                                         <tr>
                                         
-										<td><input type="text" name='item[]' class="form-control"/></td>
+										<td><input type="text" name='item[]' class="form-control"/ size="20"></td>
 										
-										<td><input type="text" name='qty_req[]' class="form-control"/></td>
+										<td><input type="number" name='qty_req[]' class="form-control"/ size="10"></td>
+
+                    <td><select class="form-control" name="unit">
+                      <option>kg</option>
+                      <option>l</option>
+                      <option>pcs</option>
+                    </select></td>
 										
 										<td><input type="text" name='remarks[]' class="form-control"/></td> 
                                         </tr>

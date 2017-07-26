@@ -34,7 +34,7 @@ include("../include/cashier.php");
                <div class="row">
                     <div class="col-md-12">
                     <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="main.php">Home</a></li>
                     <li><a href="orders.php">View Menus</a></li>
                     </ol>
                         <h2 style="color: black"> Types of Menus</h2>

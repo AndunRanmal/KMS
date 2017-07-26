@@ -12,6 +12,7 @@ if(isset($_POST["submit"])){
 
 	$sql1 = "SELECT `Item_Name` AS label , `Quantity` AS y FROM `stock` WHERE `Item_Name` LIKE '%$val%'";
 	$res = mysqli_query($conn,$sql1);
+	if(mysqli_num_rows($res)==1){
 	$items = array();
 	while($row = mysqli_fetch_assoc($res)){
 		// $item_name = $row["x"];
@@ -92,7 +93,13 @@ if(isset($_POST["submit"])){
 		    	<h4>Contact No: <?php echo $tel ?></h4>
 		    	<?php 
 		    		}
+				}else{
+					echo '<script type="text/javascript">';
+                    echo 'alert("Sorry! Search Ingredient could not be found");';
+                    echo 'window.location="../views/stock_handling.php";';
+                    echo '</script>';
 				}
+			}
 				?>
 		    </div>
 		</div>

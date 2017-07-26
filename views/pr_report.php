@@ -20,7 +20,7 @@ include("../include/stock_keeper.php");
                      <h3 style="text-align: center;font-weight: bold;">Purchase Requisition Report </h3>
                      <!-- <button class="btn btn-primary fa fa-download" style="float: right;padding-bottom: 12px;">Download</button>
                      <button class="btn btn-primary  fa fa-print" style="float: right; padding-right: 29px;padding-left: 29px;padding-bottom: 12px;margin-right: 5px;">Print</button> -->
-                     <button class="btn btn-primary  fa fa-print" style="float: right; padding-right: 29px;padding-left: 29px;padding-bottom: 12px;margin-right: 5px;" onclick="location.href='pdf.php?ref=<?php echo $_GET["ref"] ?>'">Preview</button>
+                     <!-- <button class="btn btn-primary  fa fa-print" style="float: right; padding-right: 29px;padding-left: 29px;padding-bottom: 12px;margin-right: 5px;" onclick="location.href='pdf.php?ref=<?php echo $_GET["ref"] ?>'">Preview</button> -->
                     </div>
 
                 </div>              
@@ -29,7 +29,8 @@ include("../include/stock_keeper.php");
               
                  <!-- /. ROW  -->
                  <div>
-                                  <form style="text-align: center;" action="" method="POST">
+                 				<?php $pr = $_GET["ref"]; ?>
+                                  <form style="text-align: center;" action="../php/update_stockkeeper.php" method="POST">
                                     <input type="hidden" name="pr_code" value="<?php echo $_GET['ref']; ?>">
                                      <table class="table table-striped" id="tableid">
                                        <thead>
@@ -46,7 +47,7 @@ include("../include/stock_keeper.php");
                                        </thead>
                                        <tbody>
                                        <?php
-                                        $pr = $_GET["ref"];
+                                        
                                         // echo $pr;
 
                                         $sql = "SELECT * FROM `department_requisition` WHERE `Requisition_id` = '$pr'";
@@ -64,7 +65,7 @@ include("../include/stock_keeper.php");
                                           // echo $unit;
                                           echo $vendor;
                                        ?>
-                                         <tr>
+                                         <tr><input type="hidden" name="pr_id" value="<?php echo $pr ?>">
                                            <td><input type="text" name="Item_code[]" class="form-control" value="<?php echo $code ?>"></td>
                                            <!-- <td><input type="text" name="Description" class="form-control" value="<?php echo $des ?>"></td> -->
                                            <td><input type="Date" name="Req_date[]" class="form-control" value="<?php echo $date ?>"></td>

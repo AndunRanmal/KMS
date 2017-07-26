@@ -60,6 +60,7 @@
 					$result = mysqli_query($conn,$ven); 
 					$count = 0;
 					$sum = 0;
+					if(mysqli_num_rows($result)==1){
 					while($row = mysqli_fetch_assoc($result)){
 						$item = $row["Item_code"];
 						$quantity = $row["Quantity"];
@@ -79,7 +80,13 @@
 							<td style="text-align: center;"><?php echo $date; ?></td>
 							<td style="text-align: center;"><?php echo $quantity * $unit_price ?></td>
 						</tr>
-				<?php }  
+				<?php }
+					}else{
+							echo '<script type="text/javascript">';
+                            echo 'alert("Sorry! Your PR Id is not Available");';
+                            echo 'window.location="po.php";';
+                            echo '</script>';
+					}  
 				?>		<tr>
 							<td style="text-align: center;"> Total </td>
 							<td></td>

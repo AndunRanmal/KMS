@@ -3,7 +3,7 @@
 function addRow(tableID) {
 	var table = document.getElementById(tableID);
 	var rowCount = table.rows.length;
-	if(rowCount < 10){							// limit the user from creating fields more than your limits
+	if(rowCount < 30){							// limit the user from creating fields more than your limits
 		var row = table.insertRow(rowCount);
 		var colCount = table.rows[0].cells.length;
 		for(var i=0; i<colCount; i++) {
