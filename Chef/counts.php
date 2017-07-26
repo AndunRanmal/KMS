@@ -50,6 +50,7 @@ include("../include/chef.php");
 			  <div class="col-lg-3 col-md-3">
 			  
 			  <div class="form-group">
+							<h4><b>Functon Details</b></h4>
                             <label>Date</label><br><br>
 							<label>Enter Number of Customers</label><br><br>
                             <label>Time Duration (hours)</label>
