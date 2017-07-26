@@ -18,6 +18,14 @@ body * { visibility: hidden; }
 
 <?php
 include("../include/nav.php");
+include './connect.php';
+$sql = "SELECT * FROM `counts`";
+  $count = mysqli_query($conn,$sql);
+  $n = 1;
+  while($row = mysqli_fetch_assoc($count)){
+    
+    $n++;
+  }
 ?>
 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
@@ -92,12 +100,12 @@ include("../include/nav.php");
                 } else {
                     echo "Error: " . $sql4 . "<br>" . mysqli_error($conn);
                 }
-                $sql5= "DELETE  FROM counts";
-                if (mysqli_query($conn, $sql5)) {
-                    //echo "New record created successfully";
-                } else {
-                    echo "Error: " . $sql5 . "<br>" . mysqli_error($conn);
-                }
+                // $sql5= "DELETE  FROM counts";
+                // if (mysqli_query($conn, $sql5)) {
+                //     //echo "New record created successfully";
+                // } else {
+                //     echo "Error: " . $sql5 . "<br>" . mysqli_error($conn);
+                // }
                 $a = mysqli_query($conn, "SELECT item FROM insertitem");
                 $checkBox = $_POST['menu'];
                 if(isset($_POST['submit']))
@@ -130,34 +138,35 @@ include("../include/nav.php");
                         }
                     }
                 }
-                $sql1 = "INSERT INTO counts(Date,Count,person,number,time) VALUES( '$date','$count','$person','$number','$time')";
+                $sql1 = "INSERT INTO counts(`Order`,`Date`,`Count`,`person`,`number`,`time`) VALUES( $n,'$date','$count','$person','$number','$time')";
                 if (mysqli_query($conn, $sql1)) {
                     //echo "New record created successfully";
                 } else {
                     echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
                 }
-                $a = mysqli_query($conn,"SELECT Count FROM counts");
+                $a = mysqli_query($conn,"SELECT Count FROM counts WHERE `Order`= $n");
                 $b = mysqli_fetch_array($a);
                 //echo $b[0];
                 $c = mysqli_query($conn, "SELECT ingredients.menu_name, amount_of_ingredients.amount, ingredients.menu_id, ingredients.unit FROM ingredients INNER JOIN amount_of_ingredients ON ingredients.menu_id = amount_of_ingredients.menu_id INNER JOIN insertitem ON insertitem.item = amount_of_ingredients.Item_id;");
-                $sql5= "DELETE  FROM total";
-                if (mysqli_query($conn, $sql5)) {
-                    //echo "New record created successfully";
-                } else {
-                    echo "Error: " . $sql5 . "<br>" . mysqli_error($conn);
-                }
+                // $sql5= "DELETE  FROM total";
+                // if (mysqli_query($conn, $sql5)) {
+                //     //echo "New record created successfully";
+                // } else {
+                //     echo "Error: " . $sql5 . "<br>" . mysqli_error($conn);
+                // }
                 while($d = mysqli_fetch_array($c)){
                     $result = ($d[1] * $b[0])/1000;
                     // echo $result;
                     //echo $d[0].' '. $result.'<br>';
-                    $sql11 = "INSERT INTO total(menu_id,menu_name,result,unit) VALUES('$d[2]','$d[0]','$result','$d[3]')";
+                    $sql11 = "INSERT INTO total(menu_id,menu_name,result,unit,order_id) VALUES('$d[2]','$d[0]','$result','$d[3]',$n)";
                     if (mysqli_query($conn, $sql11)) {
                         //echo "New record created successfully";   
                     } else {
                         echo "Error: " . $sql11 . "<br>" . mysqli_error($conn);
                     }
                 }
-                $a = mysqli_query($conn,"select Date,time, Count, person, number from counts");
+                $a = mysqli_query($conn,"select Date,time, Count, person, number from counts where `Order`= $n");
+
                 while($b = mysqli_fetch_array($a)){?>
                 
                     <div class="col-md-6">

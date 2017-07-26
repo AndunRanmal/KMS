@@ -1,6 +1,10 @@
+<head>
+	<title>Ingreidient List</title>
+</head>
 <?php
 include("../include/nav.php");
 include("../include/chef.php");
+ 
 ?>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
@@ -11,7 +15,8 @@ include("../include/chef.php");
                     <div class="col-md-8">
 					<?php 
 					include './connect.php';
-					$a = mysqli_query($conn,"select Date,time, Count, person, number from counts");
+					$id = $_GET["ref"];
+					$a = mysqli_query($conn,"select `Date`,`time`, `Count`, `person`, `number` from `counts` where `Order` = $id");
 					while($b = mysqli_fetch_array($a)){?>
 					<div class="col-md-4">
 					<tr>
@@ -59,7 +64,7 @@ include("../include/chef.php");
 				<div class="col-lg-6 col-md-6">
 					<?php
 					
-					$e = mysqli_query($conn,"select menu_name, sum(result), unit from total group by menu_id");
+					$e = mysqli_query($conn,"select `menu_name`, sum(result), `unit` from total where `order_id` = $id group by `menu_id`  ");
 					while($f = mysqli_fetch_array($e)){?>
 					<div class="col-lg-6 col-md-6">
 						<?php echo $f[0];?>
@@ -74,7 +79,7 @@ include("../include/chef.php");
 							}
 					}
 				?>
-			  </div>
+			  </div><a href="../views/test.php?ref=<?php echo $id ?>" class="btn btn-info">Comparison with the Current Stock</a>
 			  <div class="col-lg-3 col-md-3">
 			  </div>
 

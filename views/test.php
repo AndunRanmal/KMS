@@ -1,10 +1,16 @@
+<head>
+  <title>Comparisson</title>
+</head>
 <?php
 include("../config/config.php");
 include("../include/nav.php");
+include '../chef/connect.php';
 // include("../include/stock_keeper.php");
 
   // $sql1 = "SELECT `Item_Name` AS label , `Quantity` AS y FROM `stock`";
-  $sql2 = "SELECT `menu_name` AS label, sum(result) AS y from `total` group by `menu_id`";
+  $id = $_GET["ref"];
+  $sql2 = "SELECT `menu_name` AS label, sum(result) AS y from `total` WHERE `order_id`= $id GROUP BY `menu_id`";
+  // echo $sql2;
   $sql1  = "SELECT `menu_name`, `Item_Name` AS label, `Quantity` AS y, sum(result)/1000  FROM `stock`, `total` WHERE stock.Item_Name = total.menu_name GROUP BY `menu_id`";
   $res = mysqli_query($conn,$sql2);
   $result = mysqli_query($conn,$sql1);
@@ -31,6 +37,11 @@ include("../include/nav.php");
 ?>
 
   <div class="col-md-12">
+      <ol class="breadcrumb">
+          <li><a href="../chef/chef.php">Home</a></li>
+          <li><a href="../chef/bulkorder.php">Bulk Orders</a></li>
+          
+      </ol>
   <div id="chartContainer" style="height: 300px; width: 100%;">
   </div>
 
@@ -94,7 +105,7 @@ chart.render();
       <th>Stock In Hand</th>
     </thead>
     <?php
-  $sql = "SELECT `Item_Name`, `Quantity`, sum(result) AS remain FROM `stock` , `total`  WHERE stock.Item_Name = total.menu_name GROUP BY `menu_id`";
+  $sql = "SELECT `Item_Name`, `Quantity`, sum(result) AS remain FROM `stock` , `total`  WHERE stock.Item_Name = total.menu_name AND total.order_id = $id GROUP BY `menu_id`";
   $res = mysqli_query($conn,$sql);
   while($row = mysqli_fetch_assoc($res)){
     $name = $row["Item_Name"];
