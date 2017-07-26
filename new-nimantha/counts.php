@@ -128,7 +128,7 @@ include("../include/nav.php");
 			  <div class="col-lg-3 col-md-3">
 			  <br>
 			  <input type="text" class="form-control" name="person" required /><br>
-                  <input type="text" class="form-control" name="number" required />
+                  <input type="text" class="form-control" name="number" pattern="[0][0-9]{9}" required />
 			  </div>
 			 
 			  </div>
