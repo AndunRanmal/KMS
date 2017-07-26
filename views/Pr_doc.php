@@ -29,7 +29,7 @@ include("../include/stock_keeper.php");
                      	<button class="btn btn-primary  fa fa-print" style="float: right; padding-right: 29px;padding-left: 29px;padding-bottom: 12px;margin-right: 5px;" onclick="doit()">Print</button><br><br>
 
                      	<div id="content" style="border-style: inset;border-right-style: inset; height: 600px;background-color: #fff; ">
-                     		<div class="col-md-3"><img src="design/kms1.png" width="240px" height="100px"></div>
+                     		<div class="col-md-3"><img src="design/logo2.png" width="240px" height="100px"></div>
                      		<!-- <img src="design/kms1.png" width="240px" height="100px"> -->
                      		<div class="col-md-9">
                      			<h3 style="font-weight: bold;text-align: center; padding-right: 100px;"><span>Purchase Requisition</span></h3>

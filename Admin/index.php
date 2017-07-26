@@ -1,9 +1,13 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<?php
+session_start();
+$fname = $_SESSION["FName"];
+$lname = $_SESSION["LName"];
+?><head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
+    <title> Admin Dashboard</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -96,7 +100,7 @@
                 <div class="row">
                     <div class="col-lg-12 ">
                         <div class="alert alert-info">
-                             <strong>Welcome Mr.Perera ! </strong> Your pending Task For Today are listed below .
+                             <strong>Welcome Mr.<?php echo $fname ?> ! </strong> Your pending Task For Today are listed below .
                         </div>
                        
                     </div>

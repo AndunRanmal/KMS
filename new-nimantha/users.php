@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-
+<?php
+session_start();
+$fname = $_SESSION["FName"];
+$lname = $_SESSION["LName"];
+$gender = $_SESSION["Gender"];
+$bday = $_SESSION["Bday"];
+$designation = $_SESSION["Designation"];
+$address = $_SESSION["Address"];
+$contact = $_SESSION["Contact"];
+$email = $_SESSION["Email"];
+$img = $_SESSION["Img"];
+?>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -176,8 +187,8 @@ include("../include/nav.php");
                 <div class="row">
                     <div class="col-md-12">
                     <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="orders.php">Edit Profile</a></li>
+                    <li><a href="main.php">Home</a></li>
+                    <li><a href="user.php">Edit Profile</a></li>
                     </ol>
                         <h2> Edit profile</h2>
                     </div>
@@ -193,19 +204,18 @@ include("../include/nav.php");
                             <span>
 								<td align="right"><b>First Name :</b> </br>
 								</td>
-								<td> <input type="text"  class="form-control " name="FirstName" /> </td> 
+								<td> <input type="text"  class="form-control " name="FirstName" value="<?php echo $fname?>" /> </td> 
                             </span>				
 							</tr> 
              </div>	<div class="col-md-6"> 
                             <span>
 								<td align="right"><b>Last Name :</b> </br>
 								</td>
-								<td> <input type="text"  class="form-control " name="LastName" /> </td> 
+								<td> <input type="text"  class="form-control " name="LastName" value="<?php echo $lname?>"/> </td> 
                             </span>				
 							</tr> 
     </div> </br>
                         </br> 
-                        </br>
 
 
                        
@@ -222,72 +232,72 @@ include("../include/nav.php");
                         </tr> 
     
                         </br>
-                        </br>
 
                         <tr>
                             <td align="right"><b>Birthday :</b> </br>
                             </td>
-                            <td><input type="Date" class="form-control" name="Birthday" /></td>
+                            <td><input type="Date" class="form-control" name="Birthday" value="<?php echo $bday?>" /></td>
                         </tr> 
 
                         </br>
                       
-                        </br>
                        
                         <tr>
-                            <td allign="right"> <b>Designation :</b> </td>
-                            </br>
-                            <td> <select id="Designation" name="Designation"> 
-               <option value="Manager">Manager</option>
-               <option value="Chef">Chef</option>
-               <option value="Stock-Keeper">Stock-Keeeper</option>
-                  <option value="Restaurant- Cashier">Restaurant- Cashier</option>
-                  <option value="Auditor">Auditor</option>
-                  <option value="Other">Other</option>
-               </select> </td>
+                            <td allign="right"> <b>Designation :</b> </td></br>
+                         
+                            <td> <select id="Designation" name="Designation" class="form-control" value="<?php echo $designation?>"> 
+                                    <option value="Manager">Manager</option>
+                                    <option value="Chef">Chef</option>
+                                    <option value="Stock-Keeper">Stock-Keeeper</option>
+                                    <option value="Restaurant- Cashier">Restaurant- Cashier</option>
+                                    <option value="Auditor">Auditor</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </td>
                         </tr>
                         </br>
-                        </br>
+                        
 
 
 
 
 
                        <tr>
-                            <td align="right"><b>Address :</b></br>
+                            <td align="right"><b>Address :</b>
                             </td>
                            
-                             <td><textarea class="form-control" rows="5" id="address" name="Address" type="text"></textarea> </td>
+                             <td><textarea class="form-control" rows="5" id="address" name="Address" type="text" value="<?php echo $address ?>">
+                                 <?php echo $address ?>
+                             </textarea> </td>
                         </tr> 
                                
                         </br>
-                        </br>
+                        
 
                         <tr> 
                             <td align="right"><b>Contact Number :</b></br>
                             </td>
-                            <td><input  type="text"  class="form-control" id="UserMobile"   maxlength="10" minlength="10" name="ContactNumber"  data-fv-numeric="true" data-fv-numeric-message="Please enter valid phone numbers" data-fv-phone-country11="IN"    data-fv-field="data[User][mobile]" /></td>
+                            <td><input  type="text"  class="form-control" id="UserMobile"   maxlength="10" minlength="10" name="ContactNumber"  data-fv-numeric="true" data-fv-numeric-message="Please enter valid phone numbers" data-fv-phone-country11="IN"    data-fv-field="data[User][mobile]" value="<?php echo $contact?>" /></td>
                         </tr>
                         </br>
-                        </br>
+                        
 
 
 
                         <tr>
                             <td align="right"><b>EMail:</b> </br>
                             </td>
-                            <td><input type="email" class="form-control" id="email"  name="EMail" /></td> 
+                            <td><input type="email" class="form-control" id="email"  name="EMail" value="<?php echo $email ?>" /></td> 
                         </tr>
                         </br>
                         </br>
                                  
                        <fieldset id="profilepic_controls">
 
-                        <input type="file" name="Photo" id="camerainput1" accept="image/png ,image/jpeg,image/jpg"  size="2mb" capture>
+                        <input type="file" name="Photo"  class="form-control" id="camerainput1" accept="image/png ,image/jpeg,image/jpg"  size="2mb" capture>
                                
                         </fieldset>	 
-                          
-</br> </br>
+                        <br>
 
 
 
@@ -297,7 +307,7 @@ include("../include/nav.php");
 
                         <tr>
                             <td align="right"></td>
-                            <td> <input type="submit" name="user" value="Submit" /></td>
+                            <td> <input type="submit" name="user" value="Submit"  class="btn btn-info"></td>
                         </tr>
                         </br>
                         </br>

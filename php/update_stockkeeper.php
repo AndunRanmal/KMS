@@ -5,8 +5,8 @@ include("../config/config.php");
 if(isset($_POST["save"])){
 	$id = $_POST["pr_code"];
 
-	$sql = "UPDATE `requisition_overview` SET `Last_updated` = NOW(), `Status`=1 WHERE `Id`='$id'";
-	$res = mysqli_query($conn,$sql);
+	// $sql = "UPDATE `requisition_overview` SET `Last_updated` = NOW(), `Status`=1 WHERE `Id`='$id'";
+	// $res = mysqli_query($conn,$sql);
 
 
 	foreach ($_POST['Quantity'] as $key => $value) {

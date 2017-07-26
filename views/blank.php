@@ -267,7 +267,7 @@ include("../include/stock_keeper.php");
                                       </thead>
                                       <tbody>
                                       <?php
-                                            $sql2 = "SELECT * FROM `requisition_overview` WHERE `Status`=1 ";
+                                            $sql2 = "SELECT * FROM `requisition_overview` WHERE `Status`=1 ORDER BY `Approved_date` DESC LIMIT 10 ";
                                             $res = mysqli_query($conn,$sql2);
                                             while ($row = mysqli_fetch_assoc($res)) {
                                               $id = $row['Id'];

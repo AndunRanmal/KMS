@@ -10,7 +10,7 @@
                     </li>
                    
                     <li>
-                        <a href="chef.html"><i class="fa fa-desktop "></i> Dashboard  <span class="badge"></span></a>
+                        <a href="index.php"><i class="fa fa-desktop "></i> Dashboard  <span class="badge"></span></a>
                     </li>
                     <li>
                         <a href=""><i class="fa fa-table "></i> Notifications  <span class="badge"></span></a>

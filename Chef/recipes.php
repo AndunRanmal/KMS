@@ -98,7 +98,7 @@
 
 
 <?php
-include "config/config.php";
+include "../config/config.php";
 include "datetime.php";
 if(isset($_POST["submit"])){
 	$title = $_POST["title"];

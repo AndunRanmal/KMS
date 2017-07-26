@@ -1,9 +1,9 @@
-<?php require 'connection.php';?>
+<?php include("../config/config.php");?>
 <?php
-$error="";
-if ($con->connect_error) {
-    die("Connection failed: " . $con->connect_error);
-}
+// $error="";
+// if ($con->connect_error) {
+//     die("Connection failed: " . $con->connect_error);
+// }
 
     if($_POST["set"]=="insert"){
         $menu = $_POST["menu"];
@@ -15,7 +15,7 @@ if ($con->connect_error) {
         $sql = "insert into `temporder` (`id`, `menu`, `item`, `qty`, `price`)
                 values('".$id."','".$menu."','".$item."','".$qty."','".$tot."')";
         
-        mysqli_query($con,$sql);
+        mysqli_query($conn,$sql);
         
     }
 
@@ -74,6 +74,15 @@ if ($con->connect_error) {
         $UnId = $_POST["unId"];
 
         $sql = "delete from `temporder` where id = '".$id."' and uniquID = '".$UnId."'";
+        mysqli_query($con,$sql);
+        echo $sql;
+    }
+
+
+    if($_POST["set"]=="delOrder"){
+        $UnId = $_POST["unId"];
+
+        $sql = "delete from `new_orders` where Order_number = '".$UnId."'";
         mysqli_query($con,$sql);
         echo $sql;
     }

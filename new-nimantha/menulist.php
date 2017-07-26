@@ -1,10 +1,23 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <title>Customer Report</title>
-    <script src="assets/js/html2canvas.js"></script>
+  <title>Customer Report</title>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+  <style type="text/css">
+@media print
+{
+body * { visibility: hidden; }
+#content * { visibility: visible;margin-bottom: 500px;margin-top: -500px; }
+/*.div2 { position: absolute; top: 40px; left: 30px; }*/
+}
+</style>
 </head>
+<body>
+
+
+
 <?php
 include("../include/nav.php");
-//include("../include/chef.php");
 ?>
 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
@@ -39,7 +52,7 @@ include("../include/nav.php");
                     <li>
                         <a href="menu.php"><i class="fa fa-edit "></i>View Menus  </a>
                     </li>
-					<li>
+                    <li>
                         <a href="counts.php"><i class="fa fa-edit "></i>Select Menu </a>
                     </li>
 
@@ -50,31 +63,29 @@ include("../include/nav.php");
             </div>
 
         </nav>
-<!-- /. NAV SIDE  -->
 <div id="page-wrapper" >
-    <div id="page-inner">
-        
-
-            
-                <div>
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                       <div>
                 <ol class="breadcrumb">
                     <li><a href="main.php">Home</a></li>
                     <li><a href="counts.php">Bulk Order</a></li>
                     <li><a href="menulist.php">Menu List</a></li>
                 </ol>
                 </div>
-			<div id="content">	
-			<div class="col-md-12">
+                     <!-- <button onclick="download();" class="btn btn-primary fa fa-download" style="float: right;padding-bottom: 12px;" id="btn">Download</button>-->
+                     <!--<button class="btn btn-primary  fa fa-print" style="float: right; padding-right: 29px;padding-left: 29px;padding-bottom: 12px;margin-right: 5px;" onclick="doit()">Print</button><br>-->
+                      <div style="background-color: #DDF4FF;height: 950px;width: 1040px;float: center;" id="content">
+                                <div class="col-md-12">
                 <?php
                 include './connect.php';
                 $date = $_POST['date'];
                 $count = $_POST['count'];
                 $time= $_POST['time'];
-
                 $person = $_POST['person'];
                 $number = $_POST['number'];
                 //$from = $_POST['from'];
-
                 $sql4 = "DELETE  FROM insertitem";
                 if (mysqli_query($conn, $sql4)) {
                     //echo "New record created successfully";
@@ -87,36 +98,24 @@ include("../include/nav.php");
                 } else {
                     echo "Error: " . $sql5 . "<br>" . mysqli_error($conn);
                 }
-
                 $a = mysqli_query($conn, "SELECT item FROM insertitem");
-
-
-
                 $checkBox = $_POST['menu'];
-
                 if(isset($_POST['submit']))
                 {
-
                     for ($i=0; $i<sizeof($checkBox); $i++)
                     {
-
                         $query="INSERT INTO insertitem (item) VALUES ('" . $checkBox[$i] . "')";
                         if (mysqli_query($conn, $query)) {
-
                         }else{
                             //mysqli_query($query) or die (mysqli_error() );
                         }
                     }
-
-
                 }
                 while($b = mysqli_fetch_array($a)){
                     $sql11 = "INSERT INTO item(Item_id,mark) VALUES('$b[0]','1')";
                     $sql22= "Update item SET Item_id='$b[0]', mark='1' WHERE Item_id='$b[0]'";
-
                     $result1 = mysqli_query($conn, "SELECT Item_id FROM item WHERE Item_id='$b[0]'");
                     $num_rows = mysqli_num_rows($result1);
-
                     if ($num_rows == 0) {
                         if (mysqli_query($conn, $sql11)) {
                             //echo "New record created successfully";
@@ -131,19 +130,12 @@ include("../include/nav.php");
                         }
                     }
                 }
-
-
-
-
                 $sql1 = "INSERT INTO counts(Date,Count,person,number,time) VALUES( '$date','$count','$person','$number','$time')";
-
                 if (mysqli_query($conn, $sql1)) {
                     //echo "New record created successfully";
                 } else {
                     echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
                 }
-
-
                 $a = mysqli_query($conn,"SELECT Count FROM counts");
                 $b = mysqli_fetch_array($a);
                 //echo $b[0];
@@ -156,16 +148,14 @@ include("../include/nav.php");
                 }
                 while($d = mysqli_fetch_array($c)){
                     $result = ($d[1] * $b[0])/1000;
-                    echo $result;
+                    // echo $result;
                     //echo $d[0].' '. $result.'<br>';
                     $sql11 = "INSERT INTO total(menu_id,menu_name,result,unit) VALUES('$d[2]','$d[0]','$result','$d[3]')";
                     if (mysqli_query($conn, $sql11)) {
                         //echo "New record created successfully";   
                     } else {
                         echo "Error: " . $sql11 . "<br>" . mysqli_error($conn);
-
                     }
-
                 }
                 $a = mysqli_query($conn,"select Date,time, Count, person, number from counts");
                 while($b = mysqli_fetch_array($a)){?>
@@ -207,12 +197,11 @@ include("../include/nav.php");
                     </div>
                 <?php
                 }
-
                 ?>
 
             
 
-        </div>
+        
         <!-- /. ROW  -->
         <hr />
         <div class="row">
@@ -224,7 +213,7 @@ include("../include/nav.php");
 
             </div>
             <div class="col-lg-2 col-md-2">
-                <h4><b>Unit Price</b></h4>
+                <h4><b>Unit Price (Rs)</b></h4>
             </div>
 
             </div>
@@ -238,11 +227,11 @@ include("../include/nav.php");
            $b = mysqli_fetch_array($a);
             $d = mysqli_query($conn,"SELECT item.Item_name,amount,unit,unitprice  FROM item INNER JOIN insertitem ON item.Item_id = insertitem.item");
            $total = 0;
+           $total1 = 0;
             while ($e = mysqli_fetch_array($d)){
-
-            $result = ($e[3]*$b[0]);
-
+                $result = ($e[3]*$b[0]);
                 $total = $result + $total ;
+                $total1 = $total1 + $e[3]
                 ?>
 
             <div class="col-lg-7 col-md-7">
@@ -267,19 +256,37 @@ include("../include/nav.php");
             <div class="col-lg-4 col-md-4">
             </div>
             <div class="col-lg-3 col-md-3">
-                <br>
-                <h4><b>Total</b></h4>
+                
+                <h4><b>Per Head Cost</b></h4>
             </div>
             <div class="col-lg-1 col-md-1">
-                <br>
+               
+                <b><?php
+                echo $total1.'.00';
+                ?></b>
+            </div>
+            </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+            </div>
+            <div class="col-lg-3 col-md-3">
+                
+                <h4><b>Total Cost </b></h4>
+            </div>
+            <div class="col-lg-1 col-md-1">
+                
                 <b><?php
                 echo $total.'.00';
                 ?></b>
             </div>
             </div>
-			</div>
-            
-        <div class="row">
+            </div>
+                        </div>
+                        
+                    </div>
+                   
+                </div>  
+                    <div class="row">
             <div class="col-lg-5 col-md-5">
                 </div>
             <div class="col-lg-2 col-md-2">
@@ -289,40 +296,70 @@ include("../include/nav.php");
                 <div class="col-lg-5 col-md-5">
             </div>
         </div>
-
+                 <!-- /. ROW  -->
+                  <hr />
+              
+                 <!-- /. ROW  -->           
+    </div>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
         </div>
-    <!-- /. PAGE INNER  -->
-</div>
-<!-- /. PAGE WRAPPER  -->
-</div>
-<?php
-include("../include/footer.php");
-?>
+    <div class="footer">
+      
+    
+             <div class="row">
+                <div class="col-lg-12" >
+                    <!-- &copy;  2014 yourdomain.com | Design by: <a href="http://binarytheme.com" style="color:#fff;"  target="_blank">www.binarytheme.com</a> -->
+                </div>
+        </div>
+        </div>
 
-<!-- /. WRAPPER  -->
-<!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-<!-- JQUERY SCRIPTS -->
+<!--<script>
+function doit(){
+if (!window.print){
+alert("You need NS4.x to use this print button!")
+return
+}
+window.print()
+}
+</script>-->
+<!-- <script type="text/javascript">
+var doc = new jsPDF();
+var specialElementHandlers = {
+'#editor': function (element, renderer) {
+return true;
+}
+};
+$(document).ready(function() {
+$('#btn').click(function () {
+doc.fromHTML($('#content').html(), 15, 15, {
+'width': 170,
+'elementHandlers': specialElementHandlers
+});
+doc.save('sample-content.pdf');
+});
+});
+</script> -->
 <script type="text/javascript">
-    function download(){
-        html2canvas($("#content"), {
-            onrendered: function(canvas) {
-                var imgData = canvas.toDataURL(
-                    'image/jpeg');
-                var doc = new jsPDF('l', 'pt','a4');
-                doc.addImage(imgData, 'jpeg',7 ,7 );
-                doc.save('menu_list.pdf');
-            }
-        });
+function download(){
+  html2canvas($("#content"), {
+    onrendered: function(canvas) {         
+        var imgData = canvas.toDataURL(
+            'image/jpeg');              
+        var doc = new jsPDF('l', 'pt','a4');
+        doc.addImage(imgData, 'jpeg',7 ,7 );
+        doc.save('Customer_Report.pdf');
     }
+});
+}
 </script>
+<script src="assets/js/jquery-1.10.2.js"></script>  
+<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type='text/javascript' src="assets/js/jspdf.min.js"></script>
+<script type='text/javascript' src="assets/js/html2canvas.js"></script>
 
-<script src="assets/js/jquery-1.10.2.js"></script>
-<!-- BOOTSTRAP SCRIPTS -->
-<script src="assets/js/bootstrap.min.js"></script>
-<!-- CUSTOM SCRIPTS -->
-<script src="assets/js/custom.js"></script>
-<script src="assets/js/html2canvas.js"></script>
-
-
+<!-- <a href="javascript:doit()"><img src="icon-48-print.png" border=0 align="middle"> -->
 </body>
 </html>

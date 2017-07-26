@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+session_start();
+$fname = $_SESSION["FName"];
+$lname = $_SESSION["LName"];
+?>
 <html>
 <head>
       <meta charset="utf-8" />
@@ -91,7 +96,7 @@ include("../include/nav.php");
                 <div class="row">
                     <div class="col-lg-12 ">
                         <div class="alert alert-info">
-                             <strong>Welcome Mr.Perera  ! </strong> You Have No pending Task For Today.
+                             <strong>Welcome Mr.<?php echo $fname ?> ! </strong> You Have No pending Task For Today.
                         </div>
                        
                     </div>

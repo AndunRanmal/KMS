@@ -26,11 +26,22 @@
 		$rows1=mysqli_num_rows($result1);
 	
 		if($rows==1){
-			
+
+
 			$_SESSION['login_user']	= $myuserid;
 			
 			while ($count=mysqli_fetch_assoc($result)){
 			
+				$_SESSION["FName"] = $count["fname"];
+				$_SESSION["LName"] = $count["lname"];
+				$_SESSION["Gender"] = $count["gender"];
+				$_SESSION["Bday"] = $count["birthday"];
+				$_SESSION["Designation"] = $count["designation"];
+				$_SESSION["Address"] = $count["address"];
+				$_SESSION["Contact"] = $count["contact"];
+				$_SESSION["Email"] = $count["email"];
+				$_SESSION["Img"] = $count["image"];
+				
 			
 			if ($count['designation']=='admin'){
 			
@@ -40,15 +51,15 @@
 			} 
 			else if($count['designation'] == 'Chef'){
 
-					header("location:../chef/chef.html");
+					header("location:../chef/chef.php");
 			}
 			else if($count['designation'] == 'Stock Keeper'){
 
-					header("location:../views/index.html");
+					header("location:../views/index.php");
 			}
 			else if($count['designation'] == 'Manager'){
 
-					header("location:../Manager/manager.php");
+					header("location:../Manager/index.php");
 			}
 			else if($count['designation'] == 'Cashier'){
 

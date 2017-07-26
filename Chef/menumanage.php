@@ -34,7 +34,7 @@ include("../include/chef.php");
 						   
  
  
-                      <h4>Soup</h4>
+                      <h4>Soup</h4><img src="images/chilly.jpg" height="100px;" width="200px;">
                       </a>
                       </div>
                      
@@ -45,7 +45,7 @@ include("../include/chef.php");
                       <div class="div-square">
                            <a href="insertApp.php" >
 <!--	<i class="fa fa-envelope-o fa-5x"></i> -->
-                      <h4>Appertizers</h4>
+                      <h4>Appertizers</h4><img src="images/noodles.jpg" height="100px;" width="200px;">
                       </a>
                       </div>
                      
@@ -55,7 +55,7 @@ include("../include/chef.php");
                       <div class="div-square">
                            <a href="insertLightmeals.php" >
 <!-- <i class="fa fa-lightbulb-o fa-5x"></i> -->
-                      <h4>Light Meals</h4>
+                      <h4>Light Meals</h4><img src="images/french.jpg" height="100px;" width="200px;">
                       </a>
                       </div>
                      
@@ -73,7 +73,7 @@ include("../include/chef.php");
                       <div class="div-square">
                            <a href="menu5.html" >
  <!--<i class="fa fa-clipboard fa-5x"></i> -->
-                      <h4>Sandwiches</h4>
+                      <h4>Sandwiches</h4><img src="images/san.jpg" height="100px;" width="200px;">
                       </a>
                       </div>
                      
@@ -83,7 +83,7 @@ include("../include/chef.php");
                       <div class="div-square">
                            <a href="menu6.html" >
  <!--<i class="fa fa-gear fa-5x"></i> -->
-                      <h4>Wedding Buffet Menu 1</h4>
+                      <h4>Wedding Buffet Menu 1</h4><img src="images/biriyani.jpg" height="100px;" width="200px;">
                       </a>
                       </div>
                      
@@ -93,7 +93,7 @@ include("../include/chef.php");
                       <div class="div-square">
                            <a href="menu4.html" >
 <!-- <i class="fa fa-users fa-5x"></i> -->
-                      <h4>Spicy Bites</h4>
+                      <h4>Spicy Bites</h4><img src="images/seafood.jpg" height="100px;" width="200px;">
                       </a>
                       </div>
                      

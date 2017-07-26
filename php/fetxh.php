@@ -8,7 +8,7 @@ if(isset($_POST["view"]))
   $update_query = "UPDATE `department_requisition` SET `Notification`=1 WHERE `Notification`=0";
   mysqli_query($conn, $update_query);
  }
- $query = "SELECT * FROM `department_requisition` ORDER BY `Dep_req_Id` DESC LIMIT 5";
+ $query = "SELECT * FROM `requisition_overview` ORDER BY `Issued_date` DESC LIMIT 5";
  $result = mysqli_query($conn, $query);
  $output = '';
  
@@ -19,8 +19,7 @@ if(isset($_POST["view"]))
    $output .= '
    <li>
     <a href="#">
-     <strong>'.$row["Requisition_id"].'</strong><br />
-     <small><em>'.$row["Date"].'</em></small>
+     <strong>'.$row["Id"].'</strong><br />
     </a>
    </li>
    <li class="divider"></li>

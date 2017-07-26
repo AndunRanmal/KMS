@@ -1,4 +1,7 @@
-﻿<?php
+﻿<head>
+    <title>Update Purchase Requisition</title>
+</head>
+<?php
 include("../config/config.php");
 include("../include/nav.php");
 include("../include/stock_keeper.php");

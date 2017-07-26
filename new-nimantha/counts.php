@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
+    <title>Bulk Order</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="../views/assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -14,9 +14,16 @@
    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>-->
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-  
+<?php  
+include './connect.php';
+$sql = "SELECT * FROM `counts`";
+  $count = mysqli_query($conn,$sql);
+  $n = 1;
+  while($row = mysqli_fetch_assoc($count)){
     
-   
+    $n++;
+  }    
+?>   
    
       
      
@@ -93,6 +100,7 @@ include("../include/nav.php");
 				   <?php //include './datetime.php';?> 
 				  <div class="row">
 				  <form action="menulist.php"  method= "post">
+				  <input type="hidden" name="id" value="<?php echo $n ?>">
               <div class="col-lg-1 col-md-1">
 			  </div>
 			  <div class="col-lg-3 col-md-3">

@@ -463,43 +463,104 @@
                             </div>
                             <div class="tab-pane fade" id="old">
                                 <h4>Placed Orders</h4>
-                                <table class="table">
-                                    <thead>
-                                        <th>Order Id</th>
-                                        <th>Meal Type</th>
-                                        <th>Menu Type</th>
-                                        <th>Item</th>
-                                        <th>Quntity</th>
-                                        <th>Date</th>
-                                        <th>Price</th>
-                                    </thead>
-                                
+                                <table class="table table-bordered table-hover" id="tab_logic">
+                        <thead>
+                            <tr>
+
+                                <th class="text-center">
+                                    Meal type
+                                </th>
+
+                                <th class="text-center">
+                                    Type of menu
+                                </th>
+
+                                <th class="text-center">
+                                    Type of item
+                                </th>
+
+                                <th class="text-center">
+                                    Date and Time
+                                </th>
+                                <th class="text-center">
+                                    No of Customers
+                                </th>
+                                <th class="text-center">
+                                    Quantity
+                                </th>
+                                <th class="text-center">
+                                    Price (LKR.)
+                                </th>
+                                <th class="text-center">
+
+                                </th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody id="dataTableOrder">
+
+                            <?php
+                             include("../config/config.php");
+                
+                            $error="";
+                            if ($con->connect_error) {
+                                die("Connection failed: " . $con->connect_error);
+                            }
+
+
+                            $sql = "SELECT * FROM  new_orders";
+                            $res = mysqli_query($con,$sql);
+                            
+
+                    
+
+                            while($rq = mysqli_fetch_assoc($res)){
+              
+                        ?>
+                                <tr>
+
+                                    <td>
+                                        <label class="form-control"><?php echo $rq["Meal_type"] ?></label>
+                                    </td>
+
+                                    <td>
+                                        <label class="form-control"><?php echo $rq["Type_of_menu"] ?></label>
+                                    </td>
+                                    <td>
+                                        <label class="form-control"><?php echo $rq["Type_of_item"] ?></label>
+                                    </td>
+                                    <td>
+                                        <label class="form-control"><?php echo $rq["Date"]." ".$rq["Time"] ?></label>
+                                    </td>
+                                    <td>
+                                        <label class="form-control"><?php echo $rq["Customers_count"] ?></label>
+                                    </td>
+                                    <td>
+                                        <label class="form-control"><?php echo $rq["Quantity"] ?></label>
+                                    </td>
+                                    <td>
+                                        <label class="form-control"><?php echo $rq["price"] ?></label>
+                                    </td>
+                                    <td>
+                                        <CENTER><a id='delete_row' onclick="del(<?php echo $rq["Order_number"] ?>)" class=" btn btn-default btn-danger">Delete Order</a></CENTER>
+                                    </td>
+                                </tr>
+
+
                                 <?php
-                                include("../config/config.php");
-                                $sql = "SELECT * FROM `new_orders` ORDER BY `Order_number` DESC LIMIT 10";
-                                $res = mysqli_query($conn,$sql);
-                                while($row = mysqli_fetch_assoc($res)){
-                                    $id = $row["Order_number"];
-                                    $type = $row["Meal_type"];
-                                    $menu = $row["Type_of_menu"];
-                                    $item= $row["Type_of_item"];
-                                    $quantity = $row["Quantity"];
-                                    $date = $row["Date"];
-                                    $price = $row["price"];                                
-                                ?>
-                                    <tr>
-                                        <td><?php echo $id ?></td>
-                                        <td><?php echo $type ?></td>
-                                        <td><?php echo $menu ?></td>
-                                        <td><?php echo $item ?></td>
-                                        <td><?php echo $quantity ?></td>
-                                        <td><?php echo $date ?></td>
-                                        <td><?php echo $price ?></td>
-                                    </tr>
-                                <?php
-                                }
-                                ?>    
-                                </table>
+ 
+                                }   
+                        ?>
+
+
+
+                                    <tr id='addr1'></tr>
+
+
+                        </tbody>
+                    </table>
+                                <!--  -->
                             </div>
                             
 

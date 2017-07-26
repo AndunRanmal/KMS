@@ -5,15 +5,15 @@
 
 
                     <li>
-                        <a href="index.html" ><i class="fa fa-desktop "></i>Dashboard <!-- <span class="badge">Included</span> --></a>
+                        <a href="index.php" ><i class="fa fa-desktop "></i>Dashboard <!-- <span class="badge">Included</span> --></a>
                         <!-- <img src="assets/img/man.jpeg" height="200px" width="250px" style="padding-bottom: 15px;
     padding-left: 15px;"> -->
                     </li>
                    
 
-                    <li>
+                   <!--  <li>
                         <a href="ui.html"><i class="fa fa-table "></i> Notifications </a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="../views/blank.php"><i class="fa fa-edit "></i>Purchase Requisition</a>
                     </li>
@@ -26,9 +26,9 @@
                         <a href="../views/stock_handling.php"><i class="fa fa-bar-chart-o"></i>Stock Handling</a>
                     </li>
 
-                    <li>
+                   <!--  <li>
                         <a href="../views/bin.php"><i class="fa fa-edit "></i>Bin Card </a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="#"><i class="fa fa-qrcode "></i>Profile settings</a>
                     </li>

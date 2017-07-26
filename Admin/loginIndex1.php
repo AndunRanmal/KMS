@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Login Form</title>
-  
+  <link href="assets/css/bootstrap.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
 
         <style>
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
@@ -74,20 +75,67 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 
 <body>
 
-	<h1 style="color:white;font-size:40px;padding-top: 20px;padding-left: 270px;">Sanmira Renaissance Hotel ,  unawatunwa</h1>
-	<img src="s.jpg" alt="Mountain View" style="margin-left:270px; margin-top: 60px; width:270px;height:210px;">
+	<h1 style="color:white;font-size:50px;padding-top: 20px;font-family: 'Playball', cursive;text-align: center;">Sanmira Renaissance Hotel </h1> <h2 style="color:white;font-family: 'Playball', cursive;text-align: center;">Unawatunwa</h2>
+	<div class="col-md-6" style="padding-top: 25px;">
+		<div class="row carousel-holder">
 
-  <div class="login">
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                                <!-- <li data-target="#carousel-example-generic" data-slide-to="4"></li> -->
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src="carousal/2.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="carousal/1.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="carousal/3.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="carousal/4.jpg" alt="">
+                                </div>
+                                <!-- <div class="item">
+                                    <img class="slide-image" src="images/6.jpg" alt="">
+                                </div> -->
+                            </div>
 
-	<h1>Login</h1>
+                            <!-- Arrows to move images -->
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a> 
+
+                        </div>
+                    </div>
+                </div>
+	<<!-- img src="s.jpg" alt="Mountain View" style="margin-left:270px; margin-top: 60px; width:270px;height:210px;"> -->
+	</div>
+  <div class="login" style="padding-left: 50px; margin-left: 150px;">
+
+	<h1 style="font-family: 'Playball', cursive;">Login</h1>
     <form action="login.php" method="post">
     	<input type="text" name="user_id" placeholder="Username" required="required" />
         <input type="password" name="password" placeholder="Password" required="required" />
-        <input style="width:120px; background-color: #00FF00; margin-left: 90px"type="submit" value="Login" name="lg">
+        <input style="width:120px; background-color: #00FF00; margin-left: 50px;float: left;" type="submit" value="Login" name="lg">
     </form>
 </div>
   
     <script src="js/index1.js"></script>
-
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+    
 </body>
 </html>

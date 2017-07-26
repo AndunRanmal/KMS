@@ -66,7 +66,7 @@ include("../include/chef.php");
 					</div>
 							<?php 
 							if($f[2] == "kg" || $f[2] == "L"){
-								$result = $f[1]/1000;
+								$result = $f[1];
 							
 								echo $result.' '.$f[2].'<br>';
 							}else{
