@@ -12,7 +12,7 @@ include("../include/chef.php");
                             <li><a href="menumanage.php">Menu Manage</a></li>
                             <li><a href="insertSoup.php">Soup</a></li>
                         </ol>
-                     <center><h3>Soup </h3>  </center> 
+                     <h2>Soup </h2>   
                     </div>
                 </div> 
 				<div class="row">				
