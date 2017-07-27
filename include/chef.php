@@ -26,7 +26,7 @@
                     </li>
 
                     <li>
-                        <a href="counts.php"><i class="fa fa-edit "></i>Calculate Ingredients </a>
+                        <a href="bulkorder.php"><i class="fa fa-edit "></i>Calculate Ingredients </a>
                     </li>
                     <li>
                         <a href="users.php"><i class="fa fa-edit "></i>Profile Settings </a>
