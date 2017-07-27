@@ -1,3 +1,7 @@
+<html>
+<head>
+<title>Soup</title>
+</head>
 <?php
 include("../include/nav.php");
 include("../include/chef.php");
@@ -208,4 +212,5 @@ $(document).ready(function(){
  
 });
 </script>
+
 

@@ -1,3 +1,5 @@
+<html>
+<head><title>Menu Manage</title></head>
 <?php
 include("../include/nav.php");
 include("../include/chef.php");
