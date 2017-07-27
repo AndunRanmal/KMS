@@ -22,35 +22,9 @@ $lname = $_SESSION["LName"];
 
     
 </head>
-<body>
- <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="adjust-nav">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">
-                   <!--      <img src="assets/img/logo.png" />
- -->
-                    </a>
-                    
-                </div>
-           
-                <span class="logout-spn" >
-                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a> 
-
-
-                </span>
-                <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;"></span> <span class="glyphicon glyphicon-envelope" style="font-size:18px;"></span></a>
-       <ul class="dropdown-menu"></ul>
-      </li>
-     </ul>
-            </div>
-        </div>        
+,<?php
+include("../include/nav.php");
+?>     
         <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
@@ -64,17 +38,17 @@ $lname = $_SESSION["LName"];
                     </li>
                    
 
-                    <li>
+                    <!-- <li>
                         <a href="ui.html"><i class="fa fa-table "></i> Notifications </a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="purreq.php"><i class="fa fa-edit "></i>Purchase Requision </a>
                     </li>
 
 
-                    <li>
+                 <!--    <li>
                         <a href="purorde.php"><i class="fa fa-qrcode "></i>Purchase Order</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="viewrep.php"><i class="fa fa-bar-chart-o"></i>Genarate Reports</a>
                     </li>
@@ -83,7 +57,7 @@ $lname = $_SESSION["LName"];
                         <a href="supdeta.php"><i class="fa fa-edit "></i>Supplier Details </a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-table "></i>Profile Setting</a>
+                        <a href="users.php"><i class="fa fa-table "></i>Profile Setting</a>
                     </li>
                      
                     
@@ -126,7 +100,7 @@ $lname = $_SESSION["LName"];
                      
                       <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                           <div class="div-square">
-                              <a href="stock_handling.php" id="trigger" >
+                              <a href="viewrep.php" id="trigger" >
                 <i class="fa fa-clipboard fa-5x"></i>
                             <h4>Generate Reports</h4>
                             </a>
@@ -135,7 +109,7 @@ $lname = $_SESSION["LName"];
                       
                       <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                           <div class="div-square">
-                              <a href="blank.html" id="trigger">
+                              <a href="supdeta.php" id="trigger">
                 <i class="fa fa-users fa-5x"></i>
                             <h4>Supplier Details</h4>
                             </a>
@@ -143,7 +117,7 @@ $lname = $_SESSION["LName"];
                       </div>
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                             <div class="div-square">
-                                <a href="blank.html" id="trigger">
+                                <a href="users.php" id="trigger">
                   <i class="fa fa-gear fa-5x"></i>
                               <h4>Profile Settings</h4>
                               </a>

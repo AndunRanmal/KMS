@@ -12,23 +12,21 @@
                     <li>
                         <a href="index.php"><i class="fa fa-desktop "></i> Dashboard  <span class="badge"></span></a>
                     </li>
+                    
                     <li>
-                        <a href=""><i class="fa fa-table "></i> Notifications  <span class="badge"></span></a>
-                    </li>
-                    <li>
-                        <a href="menumanage.php"><i class="fa fa-edit "></i>Purchase Requisition  <span class="badge"></span></a>
+                        <a href="pr.php"><i class="fa fa-edit "></i>Purchase Requisition  <span class="badge"></span></a>
                     </li>
 
 
                     <li>
-                        <a href="recipes.html"><i class="fa fa-qrcode "></i>Genrate Reports</a>
+                        <a href="viewrep.php"><i class="fa fa-qrcode "></i>Genrate Reports</a>
                     </li>
                     <li>
-                        <a href="req.php"><i class="fa fa-bar-chart-o"></i>Supplier Details</a>
+                        <a href="supdeta.php"><i class="fa fa-bar-chart-o"></i>Supplier Details</a>
                     </li>
  
                     <li>
-                        <a href="counts.php"><i class="fa fa-edit "></i>Profile Settings </a>
+                        <a href="users.php"><i class="fa fa-edit "></i>Profile Settings </a>
                     </li>
                   <!--  <li>
                         <a href="#"><i class="fa fa-table "></i>View remaining amounts</a>

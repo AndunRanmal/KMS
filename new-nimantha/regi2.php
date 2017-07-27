@@ -29,7 +29,11 @@ if(isset($_POST["submit"])){
     mysqli_query($con,$sql2);
     
     
-    echo "<h1>Order Sent! </h1>";
+    // echo "<h1>Order Sent! </h1>";
+    echo "<script>
+    alert('Order Added Successfully');
+    window.location='orders.php';
+    </script>";
    
 	
 		

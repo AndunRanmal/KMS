@@ -1,43 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add a New Recipe</title>
-  <!-- BOOTSTRAP STYLES-->
-    <link href="../views/assets/css/bootstrap.css" rel="stylesheet" />
+    <title>Simple Responsive Admin</title>
+	<!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
-    <link href="../views/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
         <!-- CUSTOM STYLES-->
-    <link href="../views/assets/css/custom.css" rel="stylesheet" />
-    
-   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-  
-    
-   
-   
-      
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.js"></script>
+	<script src="assets/js/script.js"></script>
+</head>
+<body>
      
-   </head>
-   
-   <body>
-<?php
-include("../include/nav.php");
-include("../include/chef.php");
-?>
+           
+          
+    <?php
+    include("../include/nav.php");
+    include("../include/chef.php");
+    ?>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                    <ol class="breadcrumb">
-                      <li><a href="chef.html">Home</a></li>
-                        <li><a href="addnew.php">New Recipe</a></li>
-                        
-                    </ol>
-                     <h2>Add a New Recipe</h2>   
+                     <h2>ADD NEW FOOD ITEM</h2>   
                     </div>
                 </div>              
                  <!-- /. ROW  -->
@@ -148,9 +140,8 @@ include("../include/chef.php");
             </div>
          <!-- /. PAGE WRAPPER  -->
         </div>
-<?php        
-  include("../include/footer.php");
-?>          
+    <div class="footer"></div>
+          
 
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->

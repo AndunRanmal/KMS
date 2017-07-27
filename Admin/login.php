@@ -71,8 +71,8 @@
 		}
 	}elseif ($rows1==0){
 					echo '<script type="text/javascript">';
-					echo 'alert("Please sign up to proceed");';
-                    echo 'window.location="admin_back.php";';
+					echo 'alert("Please Check your Password and UserName again");';
+                    echo 'window.location="loginIndex1.php";';
 					echo '</script>';
 					}else{
 						echo '<script type="text/javascript">';

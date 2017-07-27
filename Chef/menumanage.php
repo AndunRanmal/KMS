@@ -9,7 +9,7 @@ include("../include/chef.php");
                 <div class="row">
                     <div class="col-lg-12">
                         <ol class="breadcrumb">
-                            <li><a href="chef.html">Home</a></li>
+                            <li><a href="chef.php">Home</a></li>
                             <li><a href="menumanage.php">Menu Manage</a></li>
                         </ol>
                      <h2>Manage Menus</h2>   

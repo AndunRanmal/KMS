@@ -2,7 +2,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
+    <title>Report Generation</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -30,72 +30,19 @@
      
            
           
-    <div id="wrapper">
-         <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="adjust-nav">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">
-                   <!--      <img src="assets/img/logo.png" />
- -->
-                    </a>
-                    
-                </div>
-           
-                <span class="logout-spn" >
-                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a>  
-
-                </span>
-            </div>
-        </div>
+   
         <!-- /. NAV TOP  -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-                 
-
-
-
-                   
-
-                    <li>
-                        <a href="ui.html"><i class="fa fa-table "></i> Notifications </a>
-                    </li>
-                     <li>
-                        <a href="purreq.php"><i class="fa fa-edit "></i>Purchase Requision </a>
-                    </li>
-
-
-                    <li>
-                        <a href="purorde.php"><i class="fa fa-qrcode "></i>Purchase Order</a>
-                    </li>
-                    <li>
-                        <a href="viewrep.php"><i class="fa fa-bar-chart-o"></i>Genarate Reports</a>
-                    </li>
-
-                    <li>
-                        <a href="supdeta.php"><i class="fa fa-edit "></i>Supplier Details </a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-table "></i>Profile Setting</a>
-                    </li>
-                     
-                    
-                </ul>
-                            </div>
-
-        </nav>
+        <?php
+         include("../include/nav.php");
+        include("../include/manager.php");
+        ?>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner" >
                 <div class="row">
                     <div class="col-md-12">
                     <ol class="breadcrumb">
-                    <li><a href="manager.php">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                      <li class="active">VIEW REPORTS</li>
                      <h2>VIEW REPORTS </h2>   
                     </div>

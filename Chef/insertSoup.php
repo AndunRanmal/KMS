@@ -8,7 +8,7 @@ include("../include/chef.php");
                 <div class="row">
                     <div class="col-md-12">
                         <ol class="breadcrumb">
-                            <li><a href="chef.html">Home</a></li>
+                            <li><a href="chef.php">Home</a></li>
                             <li><a href="menumanage.php">Menu Manage</a></li>
                             <li><a href="insertSoup.php">Soup</a></li>
                         </ol>

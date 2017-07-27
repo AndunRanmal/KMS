@@ -140,7 +140,7 @@ $img = $_SESSION["Img"];
         
 <?php
 include("../include/nav.php");
-include("../include/cashier.php");
+include("../include/chef.php");
 ?>
         <!--side bar -->
         
@@ -149,7 +149,7 @@ include("../include/cashier.php");
                 <div class="row">
                     <div class="col-md-12">
                     <ol class="breadcrumb">
-                    <li><a href="main.php">Home</a></li>
+                    <li><a href="chef.php">Home</a></li>
                     <li><a href="user.php">Edit Profile</a></li>
                     </ol>
                         <h2> Edit profile</h2>

@@ -19,75 +19,18 @@
 <body>
      
            
-          
-    <div id="wrapper">
-         <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="adjust-nav">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                      <a class="navbar-brand" href="#">
-                   <!--      <img src="assets/img/logo.png" />
- -->
-                    </a>
-                    
-                </div>
-           
-                <span class="logout-spn" >
-                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a>  
+   <?php
+   include("../include/nav.php");
+   include("../include/chef.php");
 
-                </span>
-            </div>
-        </div>
-        <!-- /. NAV TOP  -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-                 
-
-
-                    <li class="active-link">
-                        
-                    </li>
-                   <li class="">
-                        <a href="chef.html" ><i class="fa fa-desktop "></i>Dashboard <!-- <span class="badge">Included</span> --></a>
-                        <!-- <img src="assets/img/chef.jpg" height="200px" width="238px" style="border-radius: 50%;border: 1px solid #ddd;padding: 5px;">
-                    </li> -->
-
-                    <!-- <li>
-                        <a href=""><i class="fa fa-table "></i> Notifications  <span class="badge"></span></a>
-                    </li> -->
-                    <li>
-                        <a href="menumanage.php"><i class="fa fa-edit "></i>Manage Menus  <span class="badge"></span></a>
-                    </li>
-
-
-                    <li>
-                        <a href="addnew.html"><i class="fa fa-qrcode "></i>Manage recipes</a>
-                    </li>
-                    <li>
-                        <a href="req.php"><i class="fa fa-bar-chart-o"></i>Store Requisition</a>
-                    </li>
-
-                    <li>
-                        <a href="calculate.php"><i class="fa fa-edit "></i>Calculate Ingredients </a>
-                    </li>
-                    
-                    
-                </ul>
-                            </div>
-
-        </nav>
+   ?>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
                     <ol class="breadcrumb">
-                        <li><a href="chef.html">Home</a></li>
+                        <li><a href="chef.php">Home</a></li>
                         <!-- <li><a href="">PR</a></li> -->
                         <!-- <li><a href="blank.php">PO</a></li> -->
                         <li><a href="req.html" class="active">Store Requisition</a></li>

@@ -57,20 +57,21 @@ include("../include/nav.php");
 
 
 
-                    <li>
-                        <a href="users.php"><i class="fa fa-edit "></i>User Profile </a>
-                    </li>
-
+                    
+<!-- 
                     <li>
                         <a href="ui.html"><i class="fa fa-edit "></i>Notifications </a>
                     </li>
-
+ -->
 
                     <li>
                         <a href="menu.php"><i class="fa fa-edit "></i>View Menus  </a>
                     </li>
 					<li>
                         <a href="counts.php"><i class="fa fa-edit "></i>Select Menu </a>
+                    </li>
+                    <li>
+                        <a href="users.php"><i class="fa fa-edit "></i>User Profile </a>
                     </li>
 
 
@@ -115,7 +116,7 @@ include("../include/nav.php");
                   </div>               
                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
-                           <a href="orders.php" id="trigger">
+                           <a href="counts.php" id="trigger">
  <i class="fa fa-circle-o-notch fa-5x"></i>
                       <h4> New Bulk Orders</h4>
                       </a>
@@ -145,6 +146,16 @@ include("../include/nav.php");
                      
                      
                   </div> -->
+                  <!-- <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="counts.php" id="trigger">
+ <i class="fa fa-sort-amount-asc fa-5x" ></i>
+                      <h4 >Select Menu </h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div> -->
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
                            <a href="users.php" id="trigger" >
@@ -155,16 +166,7 @@ include("../include/nav.php");
                      
                      
                   </div>
-				  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                      <div class="div-square">
-                           <a href="counts.php" id="trigger">
- <i class="fa fa-sort-amount-asc fa-5x" ></i>
-                      <h4 >Select Menu </h4>
-                      </a>
-                      </div>
-                     
-                     
-                  </div>
+				  
                  
                           
 

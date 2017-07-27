@@ -22,16 +22,16 @@
 
 
                     <li>
-                        <a href="index.html" ><i class="fa fa-desktop "></i>Dashboard <!-- <span class="badge">Included</span> --></a>
+                        <a href="../index.php" ><i class="fa fa-desktop "></i>Dashboard <!-- <span class="badge">Included</span> --></a>
                         <!-- <img src="assets/img/man2.png" height="200px" width="250px" style="border-radius: 50%;border: 1px solid #ddd;padding: 5px;"> -->
                     </li>
                    
 
-                    <li>
+                    <!-- <li>
                         <a href="ui.html"><i class="fa fa-table "></i> Notifications </a>
-                    </li>
+                    </li> -->
                     <li>
-                        <a href="purreq.html"><i class="fa fa-edit "></i>Report Generation </a>
+                        <a href="charttype1.php"><i class="fa fa-edit "></i>Report Generation </a>
                     </li>
 
 

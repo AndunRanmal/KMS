@@ -509,7 +509,7 @@
                             }
 
 
-                            $sql = "SELECT * FROM  new_orders";
+                            $sql = "SELECT * FROM  `new_orders` ORDER BY `Order_number` DESC";
                             $res = mysqli_query($con,$sql);
                             
 
@@ -543,7 +543,7 @@
                                         <label class="form-control"><?php echo $rq["price"] ?></label>
                                     </td>
                                     <td>
-                                        <CENTER><a id='delete_row' onclick="del(<?php echo $rq["Order_number"] ?>)" class=" btn btn-default btn-danger">Delete Order</a></CENTER>
+                                        <CENTER><a id='delete_row' href="../php/delete_order.php?ref=<?php echo $rq['Order_number'] ?>"  class=" btn btn-default btn-danger">Delete Order</a></CENTER>
                                     </td>
                                 </tr>
 

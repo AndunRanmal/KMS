@@ -58,11 +58,9 @@ $lname = $_SESSION["LName"];
                     </li>
                    
 
+                   
                     <li>
-                        <a href="ui.html"><i class="fa fa-table "></i> Notifications </a>
-                    </li>
-                    <li>
-                        <a href="purreq.html"><i class="fa fa-edit "></i>Report Generation </a>
+                        <a href="kms1/charttype1.php"><i class="fa fa-edit "></i>Report Generation </a>
                     </li>
 
 

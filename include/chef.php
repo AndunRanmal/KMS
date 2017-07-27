@@ -19,7 +19,7 @@
 
 
                     <li>
-                        <a href="recipes.html"><i class="fa fa-qrcode "></i>Manage recipes</a>
+                        <a href="addnew.php"><i class="fa fa-qrcode "></i>Manage recipes</a>
                     </li>
                     <li>
                         <a href="req.php"><i class="fa fa-bar-chart-o"></i>Store Requestion</a>
@@ -27,6 +27,9 @@
 
                     <li>
                         <a href="counts.php"><i class="fa fa-edit "></i>Calculate Ingredients </a>
+                    </li>
+                    <li>
+                        <a href="users.php"><i class="fa fa-edit "></i>Profile Settings </a>
                     </li>
                     
                      

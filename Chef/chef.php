@@ -32,28 +32,9 @@ $lname = $_SESSION["LName"];
      
            
           
-    <div id="wrapper">
-         <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="adjust-nav">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">
-                   <!--      <img src="assets/img/logo.png" />
- -->
-                    </a>
-                    
-                </div>
-           
-                <span class="logout-spn" >
-                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a>  
-
-                </span>
-            </div>
-        </div>
+    <?php
+    include("../include/nav.php");
+    ?>
         <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
@@ -78,14 +59,17 @@ $lname = $_SESSION["LName"];
 
 
                     <li>
-                        <a href="addnew.html"><i class="fa fa-qrcode "></i>Manage recipes</a>
+                        <a href="addnew.php"><i class="fa fa-qrcode "></i>Manage recipes</a>
                     </li>
                     <li>
                         <a href="req.php"><i class="fa fa-bar-chart-o"></i>Store Requestion</a>
                     </li>
 
                     <li>
-                        <a href="calculate.php"><i class="fa fa-edit "></i>Calculate Ingredients </a>
+                        <a href="bulkorder.php"><i class="fa fa-edit "></i>Calculate Ingredients </a>
+                    </li>
+                    <li>
+                        <a href="users.php"><i class="fa fa-edit "></i>Profile Settings </a>
                     </li>
                     
                     
@@ -131,7 +115,7 @@ $lname = $_SESSION["LName"];
 				                                
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
-                           <a href="addnew.html" id="trigger">
+                           <a href="addnew.php" id="trigger">
  <i class="fa fa-pencil fa-5x" ></i>
                       <h4 >Manage recipes</h4>
                       </a>
@@ -151,7 +135,7 @@ $lname = $_SESSION["LName"];
                   </div>
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
-                           <a href="calculate.php" id="trigger">
+                           <a href="bulkorder.php" id="trigger">
  <i class="fa fa-sort-amount-asc fa-5x" ></i>
                       <h4 >Calculate Ingredients </h4>
                       </a>
@@ -161,14 +145,14 @@ $lname = $_SESSION["LName"];
                   </div>
                   
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                      		<div class="div-square">
-                           		<a href="blank.html" id="trigger">
- 								<i class="fa fa-gear fa-5x"></i>
-                      			<h4>Profile Settings</h4>
-                      			</a>
-                      		</div><br><br>
+                            <div class="div-square">
+                                <a href="users.php" id="trigger">
+                  <i class="fa fa-gear fa-5x"></i>
+                              <h4>Profile Settings</h4>
+                              </a>
+                            </div><br><br>
 
-                  		</div>
+                        </div>
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       
                      

@@ -42,7 +42,7 @@ include '../chef/connect.php';
           <li><a href="../chef/bulkorder.php">Bulk Orders</a></li>
           
       </ol>
-  <div id="chartContainer" style="height: 300px; width: 100%;">
+  <div id="chartContainer" style="height: 400px; width: 100%;">
   </div>
 
 <script type="text/javascript">
@@ -62,18 +62,19 @@ include '../chef/connect.php';
       data: [
       {
         type: "column",
-        name: "Items Needed",
-        legendText: "Items Needed",
-        showInLegend: true,
-        dataPoints: <?php echo json_encode($items, JSON_NUMERIC_CHECK); ?>
-      },
-      {
-        type: "column",
         name: "Stock In Hand",
         legendText: "Stock In Hand",
         showInLegend: true,
         dataPoints: <?php echo json_encode($stock, JSON_NUMERIC_CHECK); ?>
       },
+      {
+        type: "column",
+        name: "Items Needed",
+        legendText: "Items Needed",
+        showInLegend: true,
+        dataPoints: <?php echo json_encode($items, JSON_NUMERIC_CHECK); ?>
+      },
+      
       // {
       //   type: "column",
       //   dataPoints: [
@@ -101,24 +102,35 @@ chart.render();
   <table class="table table-bordered">
     <thead>
       <th>Item Name</th>
-      <th>Ingredients Needed</th>
       <th>Stock In Hand</th>
+      <th>Total Ingredients Needed</th>
+      <th>Amount Needs to Purchase</th>
+      
     </thead>
     <?php
-  $sql = "SELECT `Item_Name`, `Quantity`, sum(result) AS remain FROM `stock` , `total`  WHERE stock.Item_Name = total.menu_name AND total.order_id = $id GROUP BY `menu_id`";
+  $sql = "SELECT `Item_Name`, `Quantity`, stock.Unit ,sum(result) AS remain FROM `stock` , `total`  WHERE stock.Item_Name = total.menu_name AND total.order_id = $id GROUP BY `menu_id`";
   $res = mysqli_query($conn,$sql);
   while($row = mysqli_fetch_assoc($res)){
     $name = $row["Item_Name"];
     $quantity1 = $row["Quantity"];
     $quantity2 = $row["remain"];
-    // $unit = $row["Unit"];
+    $unit = $row["Unit"];
    
   ?>
     <tbody>
       <tr>
         <td><?php echo $name ?></td>
-        <td><?php echo $quantity2 ?></td>
-        <td><?php echo $quantity1 ?></td>
+        <td><?php echo $quantity1, $unit ?></td>
+        <td><?php echo $quantity2, $unit ?></td>
+        <?php 
+        $remain = $quantity2-$quantity1;
+        if($remain< 0){
+          echo "<td style='background-color:#42f48c;font-weight:bold'>Stock is enough</td>";
+        }else{
+          echo "<td style='background-color:#fc6767;font-weight:bold'>".$remain."</td>" ;
+        }
+             ?>
+        
       </tr>
     </tbody>
     <?php
