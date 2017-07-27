@@ -23,8 +23,36 @@ $lname = $_SESSION["LName"];
     
 </head>
 ,<?php
-include("../include/nav.php");
-?>     
+// include("../include/nav.php");
+?>   
+<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="adjust-nav">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                   <!--      <img src="assets/img/logo.png" />
+ -->
+                    </a>
+                    
+                </div>
+           
+                <span class="logout-spn" >
+                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a> 
+
+
+                </span>
+                <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;"></span> <span class="glyphicon glyphicon-envelope" style="font-size:18px;"></span></a>
+       <ul class="dropdown-menu"></ul>
+      </li>
+     </ul>
+            </div>
+        </div>         
         <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">

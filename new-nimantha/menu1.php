@@ -31,7 +31,7 @@
                     <div class="col-md-12">
                     <ol class="breadcrumb">
                     <li><a href="main.php">Home</a></li>
-                    <li><a href="menu.php">View Menus</a></li>
+                    <li><a href="orders.php">View Menus</a></li>
                     </ol>
                     </div>
                     <?php

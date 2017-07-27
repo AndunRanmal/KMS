@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
+    <title>Report Types</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -58,6 +58,10 @@
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
+                    <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stock_handling.php">Stock Handling</a></li>
+                </ol>
                      <!--<h2>BLANK PAGE </h2>-->   
                     </div>
                 </div>
@@ -71,11 +75,10 @@
 
 
 
-                <form action="chart.html" method="get" style="margin-top: 80px;margin-left: 40px;">
+    <form action="chart.html" method="get" style="margin-top: 80px;margin-left: 40px;">
 
-
-      <div id="radio">
-        <label style="color:black"> see the reoprt by   :</label>
+    <div id="radio">
+        <label style="color:black"> See the Reports By   :</label>
         <input name ="radio" name="type" type ="radio"  value="overroll" style="font-color:black">overroll
         <input name ="radio" name="type" type="radio" value="year" style="color:black">year
         <input name ="radio" name="type" type="radio" value="foodtype" style="color:black">type
@@ -124,15 +127,9 @@
             </div>
          <!-- /. PAGE WRAPPER  -->
         </div>
-    <div class="footer">
-      
-    
-             <div class="row">
-                <div class="col-lg-12" >
-                    &copy;  2014 yourdomain.com | Design by: <a href="http://binarytheme.com" style="color:#fff;"  target="_blank">www.binarytheme.com</a>
-                </div>
-        </div>
-        </div>
+    <?php
+include("../../include/footer.php");
+    ?>
           
 
      <!-- /. WRAPPER  -->

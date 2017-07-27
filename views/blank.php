@@ -193,14 +193,16 @@ include("../include/stock_keeper.php");
                                            </select></td>
                                            <td><input type="text" name="Remarks[]" class="form-control" required pattern="[\<|\>|\?|\!|\{|]"></td>
                                          </tr>
-                                         <tr>
-                                           <td style="text-align: left;"><input type="button" value="Add a New Row" class="btn btn-info" onClick="addRow('tableid')" /></td>
+                                         <!-- <tr>
+                                           <td style="text-align: left;"></td>
                                          </tr>
                                          <tr>
-                                           <td style="text-align: left;"><input type="submit" name="submit" value="Forward" class="btn btn-primary"></td>
-                                         </tr>
-                                       </tbody>
-                                      </table>
+                                           <td style="text-align: left;"></td>
+                                         </tr> -->
+                                       </tbody> </table>
+                                       <input type="button" value="Add a New Row" class="btn btn-info" onClick="addRow('tableid')" />
+                                       <input type="submit" name="submit" value="Forward" class="btn btn-primary">
+                                     
                                        
                                      </form>
                                      

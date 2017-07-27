@@ -22,7 +22,7 @@ include("../config/config.php");
                   	<button onclick="download();" class="btn btn-primary fa fa-download" style="float: right;padding-bottom: 12px;" id="btn">Download</button>
                    	<button class="btn btn-primary  fa fa-print" style="float: right; padding-right: 29px;padding-left: 29px;padding-bottom: 12px;margin-right: 5px;" onclick="doit()">Print</button><br><br>
                    	<div id="content" style="border-style: inset;border-right-style: inset; height: 600px;background-color: #fff; ">
-                     	<div class="col-md-3"><img src="design/kms1.png" width="240px" height="100px"></div>
+                     	<div class="col-md-3"><img src="design/logo2.png" width="240px" height="100px"></div>
                      		<!-- <img src="design/kms1.png" width="240px" height="100px"> -->
                      	<div class="col-md-9">
                    			<h3 style="font-weight: bold;text-align: center; padding-right: 100px;"><span>Purchase Order</span></h3>
@@ -65,10 +65,11 @@ include("../config/config.php");
 							<?php
 								$id = $_GET["ref"];
 								$ven = "SELECT * FROM `purchase_order` WHERE `Order_id`='$id'";
+								// echo $ven;
 								$result = mysqli_query($conn,$ven); 
 								$count = 0;
 								$sum = 0;
-								if(mysqli_num_rows($result)==1){
+								if(mysqli_num_rows($result)>0){
 								while($row = mysqli_fetch_assoc($result)){
 									$item = $row["Item_code"];
 									$quantity = $row["Quantity"];
@@ -77,6 +78,7 @@ include("../config/config.php");
 									$date = $row["Date_wanted"];
 									$count += 1;
 			                        $sum += $quantity * $unit_price ;
+			                        // echo $item;
 			                        // $sql ="INSERT INTO `purchase_order` (`Item_code`,`Quantity`,`Unit`,`Unit_price`,`Date_wanted`,`Vendor_Id`)VALUES('$item',$quantity,'$unit',$unit_price,'$date','$vendor')";
 			                        // // echo $sql;
 			                        // mysqli_query($conn,$sql);
@@ -90,10 +92,10 @@ include("../config/config.php");
 									</tr>
 							<?php }
 								}else{
-										echo '<script type="text/javascript">';
-			                            echo 'alert("Sorry! Your PR Id is not Available");';
-			                            echo 'window.location="po.php";';
-			                            echo '</script>';
+										// echo '<script type="text/javascript">';
+			       //                      echo 'alert("Sorry! Your PR Id is not Available");';
+			       //                      echo 'window.location="po.php";';
+			       //                      echo '</script>';
 								}  
 							?>		<tr>
 										<td style="text-align: center;"> Total </td>

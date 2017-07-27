@@ -23,19 +23,19 @@ if(isset($_POST["submit"])){
 		$remarks = $_POST["Remarks"][$key];
 
 
-		$sql = "INSERT INTO `department_requisition` (`Item_code`,`Unit_price`,`Quantity`,`Unit`,`Date_wanted`,`Vendor_Id`,`Date`,`Remarks`,`Requisition_id`,`PO_Id`) VALUES ('$name',$unit_price,$quantity,'$unit','$req_date','$vendor','NOW()','$remarks','$id',0)";
-		echo $sql;
-		// if(mysqli_query($conn,$sql)){
-		// 	echo "<script>
-		// 	alert('Successfully Purchase Requisition Forwarded to Manager');
-		// 	window.location=('../views/blank.php');
-		// 	</script>";
-		// }else{
-		// 	echo "<script>
+		$sql = "INSERT INTO `department_requisition` (`Item_code`,`Unit_price`,`Quantity`,`Unit`,`Date_wanted`,`Vendor_Id`,`Date`,`Remarks`,`Requisition_id`,`PO_Id`) VALUES ('$name',$unit_price,$quantity,'$unit','$req_date','$vendor',NOW(),'$remarks','$id',0)";
+		// echo $sql;
+		if(mysqli_query($conn,$sql)){
+			echo "<script>
+			alert('Successfully Purchase Requisition Forwarded to Manager');
+			window.location=('../views/blank.php');
+			</script>";
+		}else{
+			echo "<script>
 			
-		// 	</script>";
+			</script>";
 			
-		// }
+		}
 
 
 		
