@@ -165,7 +165,7 @@ include("../include/manager.php");
                                 </div> 
              <button class="btn btn-primary" id="accept" onclick="window.location=('../php/accept.php?ref=<?php echo $pr ?>')">Accept</button>
              <button class="btn btn-success" id="edit">Edit</button>
-             <button class="btn btn-danger" id="remark">Reject</button><br><br>
+            <!--  <button class="btn btn-danger" id="remark">Reject</button><br><br> -->
            
              <div id="input" style="display: none;">
              <form >

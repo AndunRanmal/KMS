@@ -41,7 +41,7 @@ $lname = $_SESSION["LName"];
                 </div>
            
                 <span class="logout-spn" >
-                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a> 
+                  <a class="btn btn-primary" href="../php/logout.php" style="color:#fff;">LOGOUT</a> 
 
 
                 </span>
@@ -126,14 +126,14 @@ $lname = $_SESSION["LName"];
                       </div>
 
                      
-                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <<!-- div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                           <div class="div-square">
                               <a href="viewrep.php" id="trigger" >
                 <i class="fa fa-clipboard fa-5x"></i>
                             <h4>Generate Reports</h4>
                             </a>
                           </div>
-                      </div>
+                      </div> -->
                       
                       <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                           <div class="div-square">

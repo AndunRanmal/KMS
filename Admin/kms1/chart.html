@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
+    <title>Report On Overall Income</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -40,8 +40,7 @@
      
            
           
-    <div id="wrapper">
-         <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="adjust-nav">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
@@ -50,52 +49,55 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">
-                        <img src="assets/img/logo.png" />
+                   <!--      <img src="assets/img/logo.png" />
+ -->
                     </a>
+                    
                 </div>
-              
-                 <span class="logout-spn" >
-                  <a href="#" style="color:#fff;">LOGOUT</a>  
+           
+                <span class="logout-spn" >
+                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a> 
+
 
                 </span>
+                
             </div>
-        </div>
+        </div>       
         <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                  
 
- <li >
-                        <a href="index.html" ><i class="fa fa-desktop "></i>Dashboard <span class="badge">Included</span></a>
+
+                    <li>
+                        <a href="../index.php" ><i class="fa fa-desktop "></i>Dashboard <!-- <span class="badge">Included</span> --></a>
+                        <!-- <img src="assets/img/man2.png" height="200px" width="250px" style="border-radius: 50%;border: 1px solid #ddd;padding: 5px;"> -->
                     </li>
                    
 
+                    <!-- <li>
+                        <a href="ui.html"><i class="fa fa-table "></i> Notifications </a>
+                    </li> -->
                     <li>
-                        <a href="ui.html"><i class="fa fa-table "></i>UI Elements  <span class="badge">Included</span></a>
-                    </li>
-                    <li class="active-link">
-                        <a href="blank.html"><i class="fa fa-edit "></i>Blank Page  <span class="badge">Included</span></a>
+                        <a href="charttype1.php"><i class="fa fa-edit "></i>Report Generation </a>
                     </li>
 
 
+                    <li>
+                        <a href="viewStaff.php"><i class="fa fa-qrcode "></i>View Staff</a>
+                    </li>
+                    <li>
+                        <a href="charttype1.php"><i class="fa fa-bar-chart-o"></i>Edit Staff</a>
+                    </li>
 
-                 <li>
-                        <a href="#"><i class="fa fa-qrcode "></i>My Link One</a>
-                    </li>
+                    <!-- <li>
+                        <a href="compareyear.php"><i class="fa fa-edit "></i></a>
+                    </li> -->
                     <li>
-                        <a href="charttype1.php"><i class="fa fa-bar-chart-o"></i>charts</a>
+                        <a href="#"><i class="fa fa-table "></i>Profile Setting</a>
                     </li>
-
-                    <li>
-                        <a href="#"><i class="fa fa-edit "></i>My Link Three </a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-table "></i>My Link Four</a>
-                    </li>
-                     <li>
-                        <a href="#"><i class="fa fa-edit "></i>My Link Five </a>
-                    </li>
+                    
                 </ul>
                             </div>
 
@@ -105,6 +107,10 @@
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
+                    <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stock_handling.php">Stock Handling</a></li>
+                </ol>
                      <!--<h2>BLANK PAGE </h2>   -->
                     </div>
                 </div>   
@@ -116,7 +122,7 @@
 
 
 
-    <div class="chart-container">
+    <div class="chart-container" style="padding-top: 50px;">
       <canvas id="mycanvas"></canvas>
     </div>
 
@@ -140,11 +146,11 @@
     <div class="footer">
       
     
-             <div class="row">
+            <div class="row">
                 <div class="col-lg-12" >
-                    &copy;  2014 yourdomain.com | Design by: <a href="http://binarytheme.com" style="color:#fff;"  target="_blank">www.binarytheme.com</a>
+                    <p style="text-align: right;">Sanmira Renaissance Galle - <a>http://www.unawatunasanmirahotel.com</a></p>
                 </div>
-        </div>
+            </div>
         </div>
           
 

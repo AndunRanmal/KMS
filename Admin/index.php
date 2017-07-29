@@ -40,7 +40,7 @@ $lname = $_SESSION["LName"];
                 </div>
            
                 <span class="logout-spn" >
-                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a>  
+                  <a class="btn btn-primary" href="../php/logout.php" style="color:#fff;">LOGOUT</a>  
 
                 </span>
             </div>

@@ -77,7 +77,7 @@
 					}else{
 						echo '<script type="text/javascript">';
 					echo 'alert("Get the help of forgot password");';
-                    echo 'window.location="../view/pages/fpview.html";';
+                    echo 'window.location="loginIndex1.php";';
 					echo '</script>';
 						}
 					}

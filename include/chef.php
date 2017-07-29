@@ -19,7 +19,7 @@
 
 
                     <li>
-                        <a href="addnew.php"><i class="fa fa-qrcode "></i>Manage recipes</a>
+                        <a href="recipes.php"><i class="fa fa-qrcode "></i>Manage recipes</a>
                     </li>
                     <li>
                         <a href="req.php"><i class="fa fa-bar-chart-o"></i>Store Requestion</a>

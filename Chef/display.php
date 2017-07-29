@@ -86,6 +86,11 @@
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
+                    <ol class="breadcrumb">
+                    <li><a href="chef.php">Home</a></li>
+                    <li><a href="recipes.php">List of Recipes</a></li>
+                    <li><a href="display.php">Recipe</a></li>
+                </ol>
 					<?php
 						include "config/config.php";
 						$Rid = $_GET["id"];
@@ -127,7 +132,7 @@ include "datetime.php";
 	$query2 = "SELECT Recipe_Id FROM recipes WHERE Title = '$Rid'" ;
 	$result2 = mysqli_query($conn, $query2);
 	$row1=mysqli_fetch_array($result2);
-	//echo $row1[0];
+	// echo $row1[0];
 	//$query3= "SELECT Ingredients, Qty FROM ingredients WHERE RecipeID = '$row1[0]'";
 	$result3 = mysqli_query($conn, "SELECT Ingredient, Qty FROM ingredients WHERE RecipeID = '$row1[0]'");
 	

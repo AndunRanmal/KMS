@@ -59,7 +59,7 @@ $lname = $_SESSION["LName"];
 
 
                     <li>
-                        <a href="addnew.php"><i class="fa fa-qrcode "></i>Manage recipes</a>
+                        <a href="recipes.php"><i class="fa fa-qrcode "></i>Manage recipes</a>
                     </li>
                     <li>
                         <a href="req.php"><i class="fa fa-bar-chart-o"></i>Store Requestion</a>
@@ -115,7 +115,7 @@ $lname = $_SESSION["LName"];
 				                                
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
-                           <a href="addnew.php" id="trigger">
+                           <a href="recipes.php" id="trigger">
  <i class="fa fa-pencil fa-5x" ></i>
                       <h4 >Manage recipes</h4>
                       </a>

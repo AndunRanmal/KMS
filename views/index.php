@@ -41,7 +41,7 @@ $lname = $_SESSION["LName"];
                 </div>
            
                 <span class="logout-spn" >
-                  <a class="btn btn-primary" href="#" style="color:#fff;">LOGOUT</a> 
+                  <a class="btn btn-primary" href="../php/logout.php" style="color:#fff;">LOGOUT</a> 
 
 
                 </span>
@@ -127,7 +127,17 @@ $lname = $_SESSION["LName"];
                       		<h4>Purchase Order</h4>
                       		</a>
                         </div>
-                     	</div> 
+                     	</div>
+                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="req.php" id="trigger">
+ <i class="fa fa-file-text-o fa-5x" ></i>
+                      <h4 >Store requisition</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div> 
                      	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       		<div class="div-square">
                            		<a href="stock_handling.php" id="trigger" >
